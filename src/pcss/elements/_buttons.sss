@@ -1,0 +1,48 @@
+// buttons
+button
+  &:focus
+    outline: none
+
+.btn
+  position: relative
+  display: inline-block
+  position: relative
+  text-align: center
+  transition: all $transitionSpeed $ease
+  &:focus, &:active
+    outline: none
+  &::after
+    position: absolute 0
+    display: block
+    content: ' '
+    opacity: 0
+    border-radius: 30px
+    transition: all $transitionSpeed $ease
+
+  &--red
+    background: $colorRed
+    color: white
+    font-size: 15px
+    font-weight: 600
+    padding: 12px 15px
+    border-radius: 30px
+    &::after
+      opacity: 0
+      border: 2px solid white
+    &:hover
+      background: color($colorRed a(90%))
+      &::after
+        opacity: 1
+        position: absolute 5px
+  &--muted
+    color: $colorMute
+    font-size: 15px
+    font-weight: 600
+    border: 2px solid $colorMute
+    padding: 12px 15px
+    border-radius: 30px
+    &:hover
+      background: $colorMute
+      color: white
+  &--150
+    width: 150px

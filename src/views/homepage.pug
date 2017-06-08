@@ -1,0 +1,86 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page
+      // SECTION::START
+      .hero
+        .container
+          .hero__content
+            .hero__title Find Freelance Clinical Work Instantly and Get Paid Faster
+            .hero__caption Employers save money. Providers earn more
+            .hero__cta
+              .hero__benefits
+                span - No intermediaries
+                span - 100% Online
+                span - No Surprises
+                span - No Hassle
+              a(href='#').btn.btn--red Get started with a Free Account
+      
+      // WHAT IS LOCUMROCKET
+      .about
+        .container
+          .heading
+            .heading__main What is LocumRocket ?
+            .heading__sub LocumRocket is a tech-driven platform that  is transforming healthcare staffing by making it easier, faster and cheaper. Through our online marketplace, health care professionals are matched directly with healthcare facilities looking for temporary help. No broker. No hassle. No surprises
+          .about__wrapper
+            .about__col
+              .about__col__content
+                .about__name For Medical Professionals
+                .about__img
+                  img(src='images/el/aboutPro.png' srcset='images/el/aboutPro@2x.png 2x')
+                .about__line
+                  .about__line__name Find awesome opportunities
+                  .about__line__desc Search thousands of freelance jobs and pick the ones that best fit your needs and skills
+                .about__line
+                  .about__line__name Get hired quickly
+                  .about__line__desc Apply online and get hired directly by the facility. Everything is done 100% online.
+                .about__line
+                  .about__line__name Get paid more
+                  .about__line__desc We charge employers significantly less than traditional staffing agencies, which means more for you. 
+                .about__cta
+                  a(href='#').btn.btn--red.btn--150 Get Started
+                  a(href='#').about__cta__more Learn more
+            // col
+            .about__col
+              .about__col__content
+                .about__name For Facilities
+                .about__img
+                  img(src='images/el/aboutFacility.png' srcset='images/el/aboutFacility@2x.png 2x')
+                .about__line
+                  .about__line__name Find the perfect candidate
+                  .about__line__desc Have access to thousands of qualified medical professionals and find somebody perfect for the job
+                .about__line
+                  .about__line__name Hire quickly and easily
+                  .about__line__desc Hire the right  medical freelancer for the job with the click of a button. Everything is done 100% online.
+                .about__line
+                  .about__line__name Save tons of money
+                  .about__line__desc We take a flat 20% commission. That’s it! That’s way, way cheaper than traditional staffing agencies.
+                .about__cta
+                  .about__cta__row
+                    a(href='#').btn.btn--red.btn--150 Get Started
+                    a(href='#').btn.btn--muted.btn--150 Request Demo
+                    
+                  a(href='#').about__cta__more Learn more    
+      
+      // TESTIMONIALS
+      .testimonials
+        .container
+          .heading
+            .heading__main What People Are Saying
+            
+          .testimonials__slider
+            .testimonials__slide
+              .testimonials__content With LocumRocket, I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!
+              .testimonials__author John <br> MD – Family Medicine
+            // next slide
+            .testimonials__slide
+              .testimonials__content With LocumRocket, I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!
+              .testimonials__author John <br> MD – Family Medicine
+
+    include shared/footer.pug
+    include shared/scripts.pug
