@@ -6,7 +6,7 @@ doctype html
 
   body
     include shared/header.pug
-    .page
+    .page.static-header
       // LEARN MORE::START
       .more-hero
         .container
@@ -102,7 +102,11 @@ doctype html
                 p Once your work is completed, fill our your timesheet and get paid seamlessly. 
                 p That’s it! No hidden fees. No 3rd party. No hassle. No surprises.
                 
-        
+      .more-cta
+        .container
+          .more-cta__text Ready to Start Your Journey? <br> Join LocumRocket For Free!
+          a(href='#modalRegWelcome').btn.btn--red.btn--huge.js-popup Get Started
+          
     include shared/footer.pug
     include shared/modal-reg.pug
     include shared/scripts.pug

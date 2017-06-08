@@ -64,7 +64,7 @@
       transform: translateY(-50%)
       z-index: 3
       color: $fontColor
-    input
+    input, select
       display: block
       width: 100%
       -webkit-appearance: none
@@ -75,10 +75,40 @@
       z-index: 1
       padding: 15px 20px 15px 120px
       background: transparent
+  &--select
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 15px
+      background: svg-load('../../images/svg/select.svg') no-repeat center
+      size: 9px 5px
+      z-index: 5
+
 
   &--focused
     background: white
     border-color: $colorGreen
+
+.ui-textarea
+  textarea
+    font-size: 14px
+    display: block
+    width: 100%
+    -webkit-appearance: none
+    background: white
+    color: $grayColor
+    border: 1px solid $borderColor
+    border-radius: 4px
+    padding: 12px 15px
+    background: color(#F8F8F8 a(50%))
+    border-color: #BDCDD6
+    transition: all $transitionSpeed $ease
+    &:focus
+      background: white
+      border-color: $colorGreen
 
 .js-datepicker
   background-image: svg-load('../../images/svg/calendar.svg')

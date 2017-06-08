@@ -25,25 +25,28 @@ $(document).ready(function(){
 	});
 
   // HEADER SCROLL
-  _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
-    var vScroll = _window.scrollTop();
-    var header = $('.header').not('.header--static');
-    var headerHeight = header.height();
-    var heroHeight = $('.hero').outerHeight() - headerHeight;
+  if ( $('.static-header').length == 0 ){
+    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
+      var vScroll = _window.scrollTop();
+      var header = $('.header').not('.header--static');
+      var headerHeight = header.height();
+      var heroHeight = $('.hero').outerHeight() - headerHeight;
 
-    if ( vScroll > headerHeight ){
-      header.addClass('header--transformed');
-    } else {
-      header.removeClass('header--transformed');
-    }
+      if ( vScroll > headerHeight ){
+        header.addClass('header--transformed');
+      } else {
+        header.removeClass('header--transformed');
+      }
 
-    if ( vScroll > heroHeight ){
-      header.addClass('header--fixed');
-    } else {
-      header.removeClass('header--fixed');
-    }
+      if ( vScroll > heroHeight ){
+        header.addClass('header--fixed');
+      } else {
+        header.removeClass('header--fixed');
+      }
 
-  });
+    });
+  }
+
 
   // hamburger
   $('.hamburger').on('click', function(){
@@ -55,6 +58,15 @@ $(document).ready(function(){
   // scrollbars
   $('.scrollbar-dynamic').scrollbar();
 
+
+  // SET ACTIVE CLASS FOR HEADING
+  $('.header__navi a').each(function(i,val){
+    if ( $(val).attr('href') == window.location.pathname.substring(1) ){
+      $(val).addClass('active')
+    } else {
+      $(val).removeClass('active')
+    }
+  });
 
   //////////
   // SLIDERS
@@ -74,27 +86,27 @@ $(document).ready(function(){
   //////////
   // MODALS
   //////////
-  $('*[data-modal]').on('click', function(){
-    // remove all active first
-    $('.modal').removeClass('opened');
-
-    // find by id
-    var target = $(this).data('modal');
-    $('#'+target).addClass('opened');
-
-    window.location.hash = target;
-  });
-
-  $('.modal__close').on('click', function(){
-    $(this).closest('.modal').removeClass('opened');
-    window.location.hash = "";
-  });
-
-  // CHECK SAVED STATE
-  if(window.location.hash) {
-    var hash = window.location.hash.substring(1);
-    $('#'+hash).addClass('opened');
-  }
+  // $('*[data-modal]').on('click', function(){
+  //   // remove all active first
+  //   $('.modal').removeClass('opened');
+  //
+  //   // find by id
+  //   var target = $(this).data('modal');
+  //   $('#'+target).addClass('opened');
+  //
+  //   window.location.hash = target;
+  // });
+  //
+  // $('.modal__close').on('click', function(){
+  //   $(this).closest('.modal').removeClass('opened');
+  //   window.location.hash = "";
+  // });
+  //
+  // // CHECK SAVED STATE
+  // if(window.location.hash) {
+  //   var hash = window.location.hash.substring(1);
+  //   $('#'+hash).addClass('opened');
+  // }
 
 
 
@@ -129,22 +141,39 @@ $(document).ready(function(){
 
 
   // HOW IT WORKS PAGE
+
+  if(window.location.hash && $('.more-info').length > 0) {
+    var hash = window.location.hash.substring(1).toLowerCase();
+    toggleTab(hash);
+  }
+
   // toggler
   $('.more-toggler__tab').on('click', function(){
-    var selectedTab = $(this).data('section');
+    toggleTab( $(this).data('section') );
+  });
 
-    $(this).siblings().removeClass('active');
-    $(this).addClass('active');
-
-    $('.more-info').each(function(i, val){
-      if ( $(val).data('section') == selectedTab ){
+  function toggleTab(state){
+    // switch toggle
+    $('.more-toggler__tab').each(function(i, val){
+      if ( $(val).data('section') == state ){
         $(val).addClass('active');
       } else {
         $(val).removeClass('active');
       }
     });
 
-  });
+    // switch pannel
+    $('.more-info').each(function(i, val){
+      if ( $(val).data('section') == state ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active');
+      }
+    });
+
+    // save state
+    window.location.hash = state
+  }
 
   // Sticky Toggler
    _window.scrolled(10, function () {
@@ -170,9 +199,8 @@ $(document).ready(function(){
 
   // Masked input
   $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
+  $("input[type='tel']").mask("999-999-9999");
+
 
 
   // DATEPICKER

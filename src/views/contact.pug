@@ -6,8 +6,42 @@ doctype html
 
   body
     include shared/header.pug
-    .page
-      
+    .page.static-header
+      // contact
+      .contact
+        .container
+          .heading
+            .heading__main Get in Touch
+            .heading__sub Questions, comments and feedback – let us know!
+          .contact__socials
+            a(href='#').contact__social-item
+              i.icon.icon-twitter
+              span Twitter
+            a(href='#').contact__social-item
+              i.icon.icon-linkedin
+              span LinkedIn  
+            a(href='#').contact__social-item
+              i.icon.icon-facebook
+              span Facebook
+            a(href='#').contact__social-item
+              i.icon.icon-email
+              span support@LocumRocket.com
+          form(action='').form.form--center
+            .form-container
+              .form-inputs
+                .ui-input.ui-input--line
+                  label Name
+                  input(type='text' placeholder='Your name')  
+                .ui-input.ui-input--line
+                  label Email
+                  input(type='email' placeholder='your@email.com')
+                
+                .ui-textarea.ui-textarea--line
+                  textarea(placeholder='Let us know … ' rows='3')
+                  
+              a(href='#').btn.btn--form 
+                span Get in touch
+                i.icon.icon-next
       
       
       

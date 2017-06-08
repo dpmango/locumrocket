@@ -1,0 +1,65 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page.static-header
+      // LEARN MORE::START
+      .demo
+        .container
+          .heading.heading--wide
+            .heading__main Physicians love us. Senior administrators do too
+            .heading__sub.heading__sub--smaller-pad With LocumRocket, hire great medical professionals better, faster and cheaper
+          .demo__wrapper
+            .demo__description
+              .demo__image
+                img(src='images/demoMbp.png' srcset='images/demoMbp@2x.png 2x')
+              .demo__text
+                .demo__text__heading Schedule a one-on-one demo
+                .demo__text__description 
+                  p Learn more about our technology can reduce your hiring costs by over 70%. 
+                  p See why some of the largest hospitals in the US trust LocumRocket with their short-term clinical staffing needs
+
+                  
+            .demo__cta
+              form(action='').form
+                .form-container
+                  .form-inputs
+                    .ui-input.ui-input--line
+                      label First name
+                      input(type='text' placeholder='First name')
+                    .ui-input.ui-input--line
+                      label Last name
+                      input(type='text' placeholder='Last name') 
+                    .ui-input.ui-input--line
+                      label Work Email
+                      input(type='email' placeholder='your@email.com')
+                    .ui-input.ui-input--line
+                      label Phone
+                      input(type='tel' placeholder='000-000-0000') 
+                    .ui-input.ui-input--line
+                      label Company
+                      input(type='text' placeholder='Apple Inc.')
+                    .ui-input.ui-input--line.ui-input--select
+                      label Employees
+                      select(placeholder='-Select total number')
+                        option(disabled selected) -Select total number
+                        option() less than 5
+                        option() 5 to 25
+                        option() 50 to 100
+                        option() 100 to 250
+                        option() 250 to 500
+                        option() more than 500
+                        
+                    
+                
+                  a(href='#').btn.btn--form 
+                    span Shedule Demo
+                    i.icon.icon-next
+
+    include shared/footer.pug
+    include shared/modal-reg.pug
+    include shared/scripts.pug
