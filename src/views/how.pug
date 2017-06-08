@@ -1,0 +1,108 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    .page
+      // LEARN MORE::START
+      .more-hero
+        .container
+          .heading
+            .heading__main Learn More About LocumRocket
+            .heading__sub 100% Online. No Hassle. No Surprises
+          .more-hero__stand
+            .more-hero__stand__image
+              img(src='images/mbp.png' srcset='images/mbp@2x.png 2x')
+            .heading
+              .heading__main Freelance Clinical Work on Your Terms
+              .heading__sub LocumRocket is a simple yet revolutionary platform that  is reinventing <br> the way healthcare staffing is done
+          
+          .more-toggler
+            .more-toggler__wrapper
+              .more-toggler__tab(data-section='pro') For Medical Professionals
+              .more-toggler__tab(data-section='facility').active For Facilities
+            
+      // INFO BLOCKS
+      .more-info(data-section='facility').active
+        .container
+          .more-info__row
+            .more-info__image
+              img(src='images/el/moreDoctor.png' srcset='images/el/moreDoctor@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Easily Find Qualified Medical Professionals
+              .more-info__text__desc 
+                p Easily connect with thousands of qualified medical professionals looking for freelance work across the US. 
+                p Pressed for time? No worries! Our algorithm will suggest a list of potential candidates to help you pick somebody perfect for the job.
+                p We pre-screen candidates to give you peace of mind.
+          // next row
+          .more-info__row.more-info__row--reverse
+            .more-info__image
+              img(src='images/el/moreDevices.png' srcset='images/el/moreDevices@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Easily Find Qualified Medical Professionals
+              .more-info__text__desc 
+                p Hire the perfect medical freelancer for the job with the click of a button
+                p Manage the entire process, from start to finish, online via our platform. 
+                p No more dealing with expensive third-party brokers. 
+          // next row
+          .more-info__row
+            .more-info__image
+              img(src='images/el/moreGrowth.png' srcset='images/el/moreGrowth@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Save Tons of Money
+              .more-info__text__desc 
+                p You set the rates for the job and negotiate directly with the hire. 
+                p Every week, the hire fills out a timesheet with the hours worked. Once you approve the timesheet, you seamlessly pay the provider through our platform. 
+                p We charge a flat 20% commission. That’s it! 
+                p That’s way, way, way cheaper than going through traditional recruiters.  
+                p No hidden fees. No hassle. No surprises. 
+                  
+                  
+      // For Professionals  
+      .more-info(data-section='pro')
+        .container
+          .more-info__row
+            .more-info__image
+              img(src='images/el/moreDevices.png' srcset='images/el/moreDevices@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Find the right freelance opportunity for free
+              .more-info__text__desc 
+                p Search thousands of awesome jobs across the US. It’s FREE!
+                p Search by type of facilities, salaries and many more criteria. 
+                p See pay rates up front. 
+          // next row
+          .more-info__row.more-info__row--reverse
+            .more-info__image
+              img(src='images/el/moreHandshake.png' srcset='images/el/moreHandshake@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Get hired quickly
+              .more-info__text__desc 
+                p LocumRocket makes it easy to connect with  employers and begin doing great work.
+                p You get to apply directly with the recruiting facility. 
+                p You choose the job that works best for you. 
+                p No agency or intermediary. You’re the boss!
+          // next row
+          .more-info__row
+            .more-info__image
+              img(src='images/el/moreDoctor.png' srcset='images/el/moreDoctor@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Focus on what you do <br> best and love
+              .more-info__text__desc 
+                p Provide awesome care to your patients. 
+          // next row
+          .more-info__row.more-info__row--reverse
+            .more-info__image
+              img(src='images/el/moreCards.png' srcset='images/el/moreCards@2x.png 2x')
+            .more-info__text
+              .more-info__text__name Get paid quickly &  seamlessly
+              .more-info__text__desc 
+                p Once your work is completed, fill our your timesheet and get paid seamlessly. 
+                p That’s it! No hidden fees. No 3rd party. No hassle. No surprises.
+                
+        
+    include shared/footer.pug
+    include shared/modal-reg.pug
+    include shared/scripts.pug

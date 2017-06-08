@@ -128,7 +128,42 @@ $(document).ready(function(){
   });
 
 
+  // HOW IT WORKS PAGE
+  // toggler
+  $('.more-toggler__tab').on('click', function(){
+    var selectedTab = $(this).data('section');
 
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $('.more-info').each(function(i, val){
+      if ( $(val).data('section') == selectedTab ){
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active');
+      }
+    });
+
+  });
+
+  // Sticky Toggler
+   _window.scrolled(10, function () {
+     var stickyEl = $('.more-toggler');
+     var windowBottomScroll = _window.scrollTop() + _window.height();
+     var stopPoint = _document.height() - $('.more-hero').outerHeight();
+
+     if (windowBottomScroll >= stopPoint + 35) {
+       stickyEl.addClass('more-toggler--transformed');
+     } else if (windowBottomScroll < stopPoint) {
+       stickyEl.removeClass('more-toggler--transformed');
+     }
+
+     if (windowBottomScroll >= stopPoint + 100) {
+       stickyEl.addClass('more-toggler--float');
+     } else if (windowBottomScroll < stopPoint) {
+       stickyEl.removeClass('more-toggler--float');
+     }
+   });
 
 
   // EXTRA

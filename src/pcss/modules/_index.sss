@@ -147,3 +147,96 @@
   &__author
     margin-top: 70px
     font-size: 18px
+
+
+// MORE
+.more
+  &-hero
+    position: relative
+    background: $colorGreen
+    color: white
+    padding-top: 70px
+    padding-bottom: 120px
+    &__stand
+      margin-top: 100px
+      padding: 0 20px 80px 20px
+      background: #1AA9B4
+      text-align: center
+      &__image
+        transform: translate3d(0,-45px,0)
+        margin-bottom: 35px
+        img
+          max-width: 100%
+  &-toggler
+    position: absolute
+    bottom: -36px
+    left: 50%
+    transform: translateX(-50%)
+    transition: transform $transitionSpeed $ease
+    &--transformed
+      position: fixed
+      opacity: 0
+      transform: translate3d(-50%,-100%,0)
+    &--float
+      opacity: 1
+      top: 80px
+      bottom: auto
+      transform: translate3d(-50%,0%,0)
+
+    &__wrapper
+      background: $colorRed
+      border-radius: 40px
+      padding: 10px
+      font-size: 17px
+      box-shadow: 0px 10px 20px color(black a(20%))
+    &__tab
+      display: inline-block
+      width: 240px
+      padding: 17px 10px
+      text-align: center
+      color: color(white a(70%))
+      border-right: 1px solid color(white a(20%))
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:last-child
+        border-right: 0
+      &.active
+        font-weight: 600
+        color: white
+      &:hover
+        color: white
+
+
+  &-info
+    padding-top: 160px
+    display: none
+    &.active
+      display: block
+    &__row
+      display: flex
+      justify-content: space-between
+      flex-direction: row-reverse
+      align-items: center
+      margin-bottom: 140px
+      &--reverse
+        flex-direction: row
+    &__image
+      flex: 0 1 50%
+      text-align: center
+      img
+        max-width: 100%
+    &__text
+      flex: 0 1 50%
+      &__name
+        font-family: 'Montserrat'
+        font-weight: 600
+        font-size: 32px
+        line-height: 1.2
+        margin-bottom: 25px
+      &__desc
+        font-size: 22px
+        p
+          margin: 0
+          padding: 0
+          padding: 5px 0
+          line-height: 1.36
