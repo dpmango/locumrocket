@@ -28,3 +28,65 @@
         .modal__bottom__row
           span Already have an account?
           a(href='#modalLogin').js-popup Login here
+
+
+// LOGIN
+.popup-dialog.mfp-hide#modalLogin
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Welcome to LocumRocket
+          .heading__sub Login to your account
+      
+      .modal__form
+        form(action='#').modal__form-container
+          .modal__form-inputs
+            .ui-input.ui-input--line
+              label Email
+              input(type='email' placeholder='your@email.com')
+            .ui-input.ui-input--line
+              label Password
+              input(type='password' placeholder='password')  
+            .ui-checkbox
+              input(type='checkbox' name='remember_me' id='remember_me')
+              label(for='remember_me') Remember Me
+          a(href='#').btn.btn--form 
+            span Sign In
+            i.icon.icon-next
+              
+      .modal__bottom
+        .modal__bottom__row
+          span Forgot your password?
+          a(href='#modalRecover').js-popup Recover password
+        .modal__bottom__row
+          span Don’t have a account?
+          a(href='#modalRegWelcome').js-popup Get started
+    
+
+// RECOVER
+.popup-dialog.mfp-hide#modalRecover
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Welcome to LocumRocket
+          .heading__sub Recover account passowrd
+      
+      .modal__form
+        form(action='#').modal__form-container
+          .modal__form-inputs
+            .ui-input.ui-input--line
+              label Email
+              input(type='email' placeholder='your@email.com')
+
+          a(href='#').btn.btn--form Recover
+              
+      .modal__bottom
+        .modal__bottom__row
+          span Remember you password?
+          a(href='#modalLogin').js-popup Login here
+        .modal__bottom__row
+          span Don’t have a account?
+          a(href='#modalRegWelcome').js-popup Get started
+    

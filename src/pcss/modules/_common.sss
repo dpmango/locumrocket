@@ -29,7 +29,7 @@
         color: $colorRed
 
     .btn
-      margin-right: 0
+      margin-right: 50px
 
   .hamburger
     display: none
@@ -44,6 +44,12 @@
     opacity: 1
     transform: translate3d(0, 0px, 0)
     box-shadow: 0px 0px 6px color(black a(10%))
+
+@media($desktop)
+  .header
+    &__navi
+      .btn
+        margin-right: 0
 
 @media($tablet)
   .header
@@ -77,7 +83,6 @@
   border-left: 1px solid $borderColor
   transition: transform $transitionSpeed $ease
   transform: translate3d(100%, 0, 0)
-  box-shadow: 0px -10px 20px color(black a(40%))
   &__wrapper
     padding: 120px 40px 40px 40px
     display: flex
@@ -95,6 +100,7 @@
         color: $colorRed
   &.active
     transform: translate3d(0, 0, 0)
+    box-shadow: 0px -10px 20px color(black a(40%))
 
 @media($mobile)
   .mobile-navi

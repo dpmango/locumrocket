@@ -176,10 +176,10 @@ $(document).ready(function () {
       })();
     }
 
-    [].slice.call(document.querySelectorAll('.input--dynamic input')).forEach(function (inputEl) {
+    [].slice.call(document.querySelectorAll('.ui-input input')).forEach(function (inputEl) {
       // in case the input is already filled..
       if (inputEl.value.trim() !== '') {
-        classie.add(inputEl.parentNode, 'input--focused');
+        classie.add(inputEl.parentNode, 'ui-input--focused');
       }
 
       // events:
@@ -188,12 +188,12 @@ $(document).ready(function () {
     });
 
     function onInputFocus(ev) {
-      classie.add(ev.target.parentNode, 'input--focused');
+      classie.add(ev.target.parentNode, 'ui-input--focused');
     }
 
     function onInputBlur(ev) {
       if (ev.target.value.trim() === '') {
-        classie.remove(ev.target.parentNode, 'input--focused');
+        classie.remove(ev.target.parentNode, 'ui-input--focused');
       }
     }
   })();

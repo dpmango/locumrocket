@@ -8,6 +8,7 @@
   &__content
     height: calc(100vh - 75px)
     max-width: 550px
+    margin-right: 50px
     margin-left: auto
     display: flex
     flex-direction: column
@@ -37,6 +38,17 @@
   .btn
     font-size: 17px
     padding: 15px
+
+
+@media($desktop)
+  .hero
+    background-position: 30% center
+    &__content
+      margin-right: 0
+
+@media($mobile)
+  .hero
+    background-position: 15% center
 
 
 // ABOUT

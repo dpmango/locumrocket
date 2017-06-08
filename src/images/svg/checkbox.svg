@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="11px" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>checkbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.4-Signup---Facility-4-4" transform="translate(-601.000000, -746.000000)" fill-rule="nonzero" fill="#3AC9D3">
+            <g id="hero-copy">
+                <g id="signupform" transform="translate(549.000000, 138.000000)">
+                    <g id="adress" transform="translate(50.000000, 604.000000)">
+                        <g id="field-copy-3">
+                            <g id="checkbox-copy-2">
+                                <g id="checked-2-copy" transform="translate(2.000000, 4.000000)">
+                                    <path d="M0.473668639,6.05 C0.363017751,5.94 0.307692308,5.775 0.307692308,5.665 C0.307692308,5.555 0.363017751,5.39 0.473668639,5.28 L1.24822485,4.51 C1.46952663,4.29 1.80147929,4.29 2.02278107,4.51 L2.07810651,4.565 L5.12100592,7.81 C5.2316568,7.92 5.39763314,7.92 5.50828402,7.81 L12.9218935,0.165 L12.9772189,0.165 L12.9772189,0.165 C13.1985207,-0.055 13.5304734,-0.055 13.7517751,0.165 L14.5263314,0.935 C14.7476331,1.155 14.7476331,1.485 14.5263314,1.705 L14.5263314,1.705 L5.67426036,10.835 C5.56360947,10.945 5.45295858,11 5.28698225,11 C5.12100592,11 5.01035503,10.945 4.89970414,10.835 L0.584319527,6.215 L0.473668639,6.05 Z" id="checkbox"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

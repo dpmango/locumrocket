@@ -21,7 +21,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper"><a class="header__logo" href="#"><i class="icon icon-logo"></i></a>
-        <div class="header__navi"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
+        <div class="header__navi"><a href="how.html">How it works</a><a href="contact.html">Contact us</a><a class="js-popup" href="#modalLogin">Log in</a><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
           <div class="hamburger hamburger--squeeze">
             <div class="hamburger-box">
               <div class="hamburger-inner"></div>
@@ -34,7 +34,7 @@
   <!-- MOBILE-NAVI-->
   <div class="mobile-navi">
     <div class="mobile-navi__wrapper">
-      <div class="mobile-navi__menu"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a></div><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
+      <div class="mobile-navi__menu"><a href="how.html">How it works</a><a href="contact.html">Contact us</a><a class="js-popup" href="#modalLogin">Log in</a></div><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
     </div>
   </div>
   <div class="page">
@@ -169,6 +169,68 @@
       </div>
     </div>
   </div>
+  <!-- LOGIN-->
+  <div class="popup-dialog mfp-hide" id="modalLogin">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Welcome to LocumRocket</div>
+            <div class="heading__sub">Login to your account</div>
+          </div>
+        </div>
+        <div class="modal__form">
+          <form class="modal__form-container" action="#">
+            <div class="modal__form-inputs">
+              <div class="ui-input ui-input--line">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com">
+              </div>
+              <div class="ui-input ui-input--line">
+                <label>Password</label>
+                <input type="password" placeholder="password">
+              </div>
+              <div class="ui-checkbox">
+                <input type="checkbox" name="remember_me" id="remember_me">
+                <label for="remember_me">Remember Me</label>
+              </div>
+            </div><a class="btn btn--form" href="#"> <span>Sign In</span><i class="icon icon-next"></i></a>
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Forgot your password?</span><a class="js-popup" href="#modalRecover">Recover password</a></div>
+          <div class="modal__bottom__row"><span>Don’t have a account?</span><a class="js-popup" href="#modalRegWelcome">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- RECOVER-->
+  <div class="popup-dialog mfp-hide" id="modalRecover">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Welcome to LocumRocket</div>
+            <div class="heading__sub">Recover account passowrd</div>
+          </div>
+        </div>
+        <div class="modal__form">
+          <form class="modal__form-container" action="#">
+            <div class="modal__form-inputs">
+              <div class="ui-input ui-input--line">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com">
+              </div>
+            </div><a class="btn btn--form" href="#">Recover</a>
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Remember you password?</span><a class="js-popup" href="#modalLogin">Login here</a></div>
+          <div class="modal__bottom__row"><span>Don’t have a account?</span><a class="js-popup" href="#modalRegWelcome">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->
   <link rel="stylesheet" href="css/secondary.css" type="text/css">
@@ -182,6 +244,7 @@
   <script src="components/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
   <script src="js/libs/jquery.maskedinput.min.js"></script>
   <script src="js/libs/jquery.scrollbar.min.js"></script>
+  <script src="js/classie.js"></script>
   <script src="js/utilities.js"></script>
   <script src="js/main.js"></script>
   <!--endbuild-->

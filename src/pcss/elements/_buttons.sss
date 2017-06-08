@@ -34,6 +34,32 @@ button
       &::after
         opacity: 1
         position: absolute 5px
+  &--form
+    background: $colorRed
+    color: white
+    font-size: 17px
+    font-weight: 600
+    padding: 15px 15px
+    border-radius: 0px
+    width: 100%
+    span
+      display: inline-block
+      transform: translate3d(15px, 0,0)
+      transition: all $transitionSpeed $ease
+    .icon-next
+      font-size: 11px
+      margin-left: 10px
+      transform: translate3d(30px, 0,0)
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &:hover
+      background: color($colorRed a(95%))
+      span
+        transform: translate3d(0px, 0,0)
+      .icon-next
+        opacity: 1
+        transform: translate3d(0px, 0,0)
+
   &--muted
     color: $colorMute
     font-size: 15px
