@@ -10,53 +10,131 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
-#small-dialog
-  background: white
-  padding: 20px 30px
-  text-align: left
-  max-width: 600px
-  margin: 40px auto
-  position: relative
+.modal
+  &__wrapper
+    display: flex
+    flex-direction: column
+    color: white
+    margin: 0px
+    position: relative
+    min-height: 100vh
+    padding-top: 7vh
+    padding-bottom: 20px
+
+    .heading
+      max-width: 100%
+      &__sub
+        font-size: 18px
+        margin-top: 20px
+  &__heading
+    flex: 0 1 auto
+  &__role
+    padding-top: 50px
+    padding-bottom: 50px
+    flex: 0 0 auto
+    display: flex
+    max-width: 970px
+    margin: auto
+    &__name
+      font-family: 'Montserrat'
+      font-weight: 600
+      margin-bottom: 30px
+      font-size: 24px
+    &__img
+      max-width: 100%
+    &__caption
+      margin-top: 25px
+      margin-bottom: 25px
+      font-size: 18px
+      font-weight: 700
+    .btn
+      margin-top: auto
+
+  &__col
+    position: relative
+    flex: 0 1 50%
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding: 20px
+    cursor: pointer
+    transition: background $transitionSpeed $ease
+    &:first-child
+      &::after
+        display: block
+        position: absolute
+        right: 0
+        top: 25px
+        bottom: 20px
+        content: ' '
+        background: white
+        width: 1px
+    &:last-child
+      border-right: 0
+    &:hover
+      background: color(white a(10%))
+    &__content
+      flex: 1 0 auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+
+  &__bottom
+    flex: 0 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    text-align: center
+    font-size: 14px
+    &__row
+      margin-bottom: 10px
+      span
+        color: color(white a(70%))
+      a
+        display: inline-block
+        margin-left: 5px
+        color: white
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorRed
+
+
+
 
 // Fade-zoom animation for first dialog
 
-.my-mfp-zoom-in
-  .zoom-anim-dialog
+.popup-buble
+  button.mfp-close
+    background: color(white a(50%)) svg-load('../../images/svg/modal-close.svg') no-repeat center
+    background-size: 20px 20px
+    transition: all $transitionSpeed $ease
+    border-radius: 50%
+    size: 50px
+    font-size: 0
+    opacity: 1
+    top: 5vh
+    right: 20px
+    &:hover
+      background-color: white
+
+  .popup-dialog
     opacity: 0
     transition: all 0.2s ease-in-out
     transform: scale(0.8)
-  &.mfp-ready .zoom-anim-dialog
+  &.mfp-ready .popup-dialog
     opacity: 1
     transform: scale(1)
-  &.mfp-removing .zoom-anim-dialog
+  &.mfp-removing .popup-dialog
     transform: scale(0.8)
     opacity: 0
   &.mfp-bg
+    background: $colorGreen
     opacity: 0
-    transition: opacity 0.3s ease-out
+    transition: opacity 0.3s $ease
   &.mfp-ready.mfp-bg
-    opacity: 0.8
-  &.mfp-removing.mfp-bg
-    opacity: 0
-
-
-// Fade-move animation
-
-.my-mfp-slide-bottom
-  .zoom-anim-dialog
-    opacity: 0
-    transition: all 0.2s ease-out
-    transform: translateY(-20px) perspective(600px) rotateX(10deg)
-  &.mfp-ready .zoom-anim-dialog
     opacity: 1
-    transform: translateY(0) perspective(600px) rotateX(0)
-  &.mfp-removing .zoom-anim-dialog
-    opacity: 0
-    transform: translateY(-10px) perspective(600px) rotateX(10deg)
-  &.mfp-bg
-    opacity: 0
-    transition: opacity 0.3s ease-out
-  &.mfp-ready.mfp-bg
-    opacity: 0.8
   &.mfp-removing.mfp-bg
     opacity: 0

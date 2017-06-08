@@ -19,7 +19,7 @@ doctype html
                 span - 100% Online
                 span - No Surprises
                 span - No Hassle
-              a(href='#').btn.btn--red Get started with a Free Account
+              a(href='#modalRegWelcome').btn.btn--red.js-popup Get started with a Free Account
       
       // WHAT IS LOCUMROCKET
       .about
@@ -43,7 +43,7 @@ doctype html
                   .about__line__name Get paid more
                   .about__line__desc We charge employers significantly less than traditional staffing agencies, which means more for you. 
                 .about__cta
-                  a(href='#').btn.btn--red.btn--150 Get Started
+                  a(href='#modalRegWelcome').btn.btn--red.btn--150.js-popup Get Started
                   a(href='#').about__cta__more Learn more
             // col
             .about__col
@@ -62,7 +62,7 @@ doctype html
                   .about__line__desc We take a flat 20% commission. That’s it! That’s way, way cheaper than traditional staffing agencies.
                 .about__cta
                   .about__cta__row
-                    a(href='#').btn.btn--red.btn--150 Get Started
+                    a(href='#modalRegWelcome').btn.btn--red.btn--150.js-popup Get Started
                     a(href='#').btn.btn--muted.btn--150 Request Demo
                     
                   a(href='#').about__cta__more Learn more    
@@ -79,8 +79,9 @@ doctype html
               .testimonials__author John <br> MD – Family Medicine
             // next slide
             .testimonials__slide
-              .testimonials__content With LocumRocket, I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!
-              .testimonials__author John <br> MD – Family Medicine
+              .testimonials__content I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!
+              .testimonials__author Marry <br> MD – Family Medicine
 
     include shared/footer.pug
+    include shared/modal-reg.pug
     include shared/scripts.pug

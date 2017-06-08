@@ -1,0 +1,30 @@
+// MODALS
+.popup-dialog.mfp-hide#modalRegWelcome
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Ready to Join the LocumRocket Community?
+          .heading__sub Sign-up is fast, easy and free
+      
+      .modal__role
+        .modal__col
+          .modal__col__content
+            .modal__role__name For Medical Professionals
+            .modal__role__img
+              img(src='images/el/iconPro.png' srcset='images/el/iconPro@2x.png 2x')
+            .modal__role__caption Find the right opportunity and get hired quickly
+            a(href='#modalRegPro').btn.btn--red.btn--150.js-popup Work
+          
+        .modal__col
+          .modal__col__content
+            .modal__role__name For Facilities
+            .modal__role__img
+              img(src='images/el/iconFacility.png' srcset='images/el/iconFacility@2x.png 2x')
+            .modal__role__caption Easily find great medical freelancers and save money
+            a(href='#modalRegFacility').btn.btn--red.btn--150.js-popup Hire
+      
+      .modal__bottom
+        .modal__bottom__row
+          span Already have an account?
+          a(href='#modalLogin').js-popup Login here

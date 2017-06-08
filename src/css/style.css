@@ -797,7 +797,7 @@ button:focus {
 }
 .ui-checkbox input:checked + label {}
 .ui-checkbox input:checked + label:before {
-    border-color: #4ab68f;
+    border-color: #3AC9D3;
 }
 .ui-checkbox input:checked + label:after {
     -webkit-transform: translateY(-50%) scale(1);
@@ -1075,9 +1075,14 @@ button:focus {
 .footer__nav a {
     display: block;
     margin-bottom: 20px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 .footer__nav a:last-child {
     margin-bottom: 0;
+}
+.footer__nav a:hover {
+    color: #EF4836;
 }
 .footer__socials {
     display: -webkit-box;
@@ -1097,19 +1102,21 @@ button:focus {
 .footer__socials a {
     padding: 10px;
     font-size: 25px;
+}
+.footer__socials .icon {
     -webkit-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
 }
-.footer__socials a.icon-twitter {}
-.footer__socials a.icon-twitter:hover {
+.footer__socials .icon-twitter {}
+.footer__socials .icon-twitter:hover {
     color: #00aced;
 }
-.footer__socials a.icon-linkedin {}
-.footer__socials a.icon-linkedin:hover {
+.footer__socials .icon-linkedin {}
+.footer__socials .icon-linkedin:hover {
     color: #007bb6;
 }
-.footer__socials a.icon-facebook {}
-.footer__socials a.icon-facebook:hover {
+.footer__socials .icon-facebook {}
+.footer__socials .icon-facebook:hover {
     color: #3b5998;
 }
 .footer__bottom {

@@ -118,8 +118,11 @@
     a
       display: block
       margin-bottom: 20px
+      transition: all $transitionSpeed $ease
       &:last-child
         margin-bottom: 0
+      &:hover
+        color: $colorRed
 
   &__socials
     flex: 0 1 140px
@@ -129,16 +132,17 @@
     a
       font-size: 25px
       padding: 10px
+    .icon
       transition: color $transitionSpeed $ease
-      &.icon-twitter
-        &:hover
-          color: $twitter
-      &.icon-linkedin
-        &:hover
-          color: $linkedin
-      &.icon-facebook
-        &:hover
-          color: $facebook
+    .icon-twitter
+      &:hover
+        color: $twitter
+    .icon-linkedin
+      &:hover
+        color: $linkedin
+    .icon-facebook
+      &:hover
+        color: $facebook
 
 
   &__bottom

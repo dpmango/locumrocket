@@ -9,6 +9,7 @@
   <!--build:css css/styles.css-->
   <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
   <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <!--endbuild-->
   <meta name="description" content=""><!--[if lt IE 9]>
@@ -20,7 +21,7 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper"><a class="header__logo" href="#"><i class="icon icon-logo"></i></a>
-        <div class="header__navi"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a><a class="btn btn--red btn--150" href="#">Register</a>
+        <div class="header__navi"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
           <div class="hamburger hamburger--squeeze">
             <div class="hamburger-box">
               <div class="hamburger-inner"></div>
@@ -33,7 +34,7 @@
   <!-- MOBILE-NAVI-->
   <div class="mobile-navi">
     <div class="mobile-navi__wrapper">
-      <div class="mobile-navi__menu"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a></div><a class="btn btn--red btn--150" href="#">Register</a>
+      <div class="mobile-navi__menu"><a href="#">How it works</a><a href="#">Contact us</a><a href="#">Log in</a></div><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a>
     </div>
   </div>
   <div class="page">
@@ -44,7 +45,7 @@
           <div class="hero__title">Find Freelance Clinical Work Instantly and Get Paid Faster</div>
           <div class="hero__caption">Employers save money. Providers earn more</div>
           <div class="hero__cta">
-            <div class="hero__benefits"><span>- No intermediaries</span><span>- 100% Online</span><span>- No Surprises</span><span>- No Hassle</span></div><a class="btn btn--red" href="#">Get started with a Free Account</a>
+            <div class="hero__benefits"><span>- No intermediaries</span><span>- 100% Online</span><span>- No Surprises</span><span>- No Hassle</span></div><a class="btn btn--red js-popup" href="#modalRegWelcome">Get started with a Free Account</a>
           </div>
         </div>
       </div>
@@ -73,7 +74,7 @@
                 <div class="about__line__name">Get paid more</div>
                 <div class="about__line__desc">We charge employers significantly less than traditional staffing agencies, which means more for you. </div>
               </div>
-              <div class="about__cta"><a class="btn btn--red btn--150" href="#">Get Started</a><a class="about__cta__more" href="#">Learn more</a></div>
+              <div class="about__cta"><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Get Started</a><a class="about__cta__more" href="#">Learn more</a></div>
             </div>
           </div>
           <!-- col-->
@@ -94,7 +95,7 @@
                 <div class="about__line__desc">We take a flat 20% commission. That’s it! That’s way, way cheaper than traditional staffing agencies.</div>
               </div>
               <div class="about__cta">
-                <div class="about__cta__row"><a class="btn btn--red btn--150" href="#">Get Started</a><a class="btn btn--muted btn--150" href="#">Request Demo</a></div><a class="about__cta__more" href="#">Learn more    </a>
+                <div class="about__cta__row"><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Get Started</a><a class="btn btn--muted btn--150" href="#">Request Demo</a></div><a class="about__cta__more" href="#">Learn more    </a>
               </div>
             </div>
           </div>
@@ -114,8 +115,8 @@
           </div>
           <!-- next slide-->
           <div class="testimonials__slide">
-            <div class="testimonials__content">With LocumRocket, I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!</div>
-            <div class="testimonials__author">John <br> MD – Family Medicine</div>
+            <div class="testimonials__content">I get to choose where and when I work. The entire process is so much faster and easier than using a traditional agency!</div>
+            <div class="testimonials__author">Marry <br> MD – Family Medicine</div>
           </div>
         </div>
       </div>
@@ -136,6 +137,38 @@
       </div>
     </div>
   </footer>
+  <!-- MODALS-->
+  <div class="popup-dialog mfp-hide" id="modalRegWelcome">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Sign-up is fast, easy and free</div>
+          </div>
+        </div>
+        <div class="modal__role">
+          <div class="modal__col">
+            <div class="modal__col__content">
+              <div class="modal__role__name">For Medical Professionals</div>
+              <div class="modal__role__img"><img src="images/el/iconPro.png" srcset="images/el/iconPro@2x.png 2x"></div>
+              <div class="modal__role__caption">Find the right opportunity and get hired quickly</div><a class="btn btn--red btn--150 js-popup" href="#modalRegPro">Work</a>
+            </div>
+          </div>
+          <div class="modal__col">
+            <div class="modal__col__content">
+              <div class="modal__role__name">For Facilities</div>
+              <div class="modal__role__img"><img src="images/el/iconFacility.png" srcset="images/el/iconFacility@2x.png 2x"></div>
+              <div class="modal__role__caption">Easily find great medical freelancers and save money</div><a class="btn btn--red btn--150 js-popup" href="#modalRegFacility">Hire</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Already have an account?</span><a class="js-popup" href="#modalLogin">Login here</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->
   <link rel="stylesheet" href="css/secondary.css" type="text/css">

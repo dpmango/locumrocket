@@ -66,7 +66,8 @@ $(document).ready(function () {
     arrows: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 1
+    slidesToShow: 1,
+    fade: true
   });
 
   //////////
@@ -96,54 +97,34 @@ $(document).ready(function () {
 
   // Magnific Popup
   // var startWindowScroll = 0;
-  // $('.popup-with-zoom-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: true,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-zoom-in',
-  //   callbacks: {
-  //     beforeOpen: function() {
-  //       startWindowScroll = _window.scrollTop();
-  //       $('html').addClass('mfp-helper');
-  //     },
-  //     close: function() {
-  //       $('html').removeClass('mfp-helper');
-  //       _window.scrollTop(startWindowScroll);
-  //     }
-  //   }
-  // });
-  //
-  // $('.popup-with-move-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: false,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-slide-bottom'
-  // });
-  //
-  // $('.popup-gallery').magnificPopup({
-  // 	delegate: 'a',
-  // 	type: 'image',
-  // 	tLoading: 'Loading image #%curr%...',
-  // 	mainClass: 'mfp-img-mobile',
-  // 	gallery: {
-  // 		enabled: true,
-  // 		navigateByImgClick: true,
-  // 		preload: [0,1]
-  // 	},
-  // 	image: {
-  // 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-  // 	}
-  // });
+  $('.js-popup').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'popup-buble',
+    callbacks: {
+      beforeOpen: function beforeOpen() {
+        // startWindowScroll = _window.scrollTop();
+        // $('html').addClass('mfp-helper');
+      },
+      close: function close() {
+        // $('html').removeClass('mfp-helper');
+        // _window.scrollTop(startWindowScroll);
+      }
+    }
+  });
+
+  // Emultae modal clicks
+  $('.modal__col').on('click', function () {
+    $(this).find('.btn').click();
+  });
+
+  // EXTRA
 
   // Masked input
   $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
@@ -167,11 +148,6 @@ $(document).ready(function () {
       connect: true,
       tooltips: true,
       step: 1,
-      // pips: { // Show a scale with the slider
-      // 	mode: 'steps',
-      // 	stepped: true,
-      // 	density: 4
-      // },
       range: {
         'min': [80],
         'max': [120]
@@ -184,33 +160,6 @@ $(document).ready(function () {
     // docs on noUiSlider
     // https://refreshless.com/nouislider/slider-read-write/
   }
-
-  // STICKY MAP RESULTS
-  _window.scrolled(10, function () {
-    var stickyEl = $('.results__map');
-    var windowBottomScroll = _window.scrollTop() + _window.height();
-    var stopPoint = _document.height() - $('footer').outerHeight();
-
-    if (windowBottomScroll >= stopPoint) {
-      stickyEl.addClass('results__map--stop');
-    } else if (windowBottomScroll < stopPoint) {
-      stickyEl.removeClass('results__map--stop');
-    }
-  });
-
-  // OPTIONAL
-  // hero parallax on mousemove
-
-  var movementStrength = 50;
-  var height = movementStrength / _window.height();
-  var width = movementStrength / _window.width();
-  $(".hero").mousemove(function (e) {
-    var pageX = e.pageX - _window.width() / 2;
-    var pageY = e.pageY - _window.height() / 2;
-    var newvalueX = width * pageX * -1 - 25;
-    var newvalueY = height * pageY * -1 - 50;
-    $('.hero-bg').css("background-position", newvalueX + "px     " + newvalueY + "px");
-  });
 
   // INPUTS FOCUS
 
