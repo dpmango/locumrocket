@@ -132,9 +132,10 @@ $(document).ready(function () {
   });
 
   // Emultae modal clicks
-  $('.modal__col').on('click', function () {
-    $(this).find('.btn').click();
-  });
+  // $('.modal__col').on('click', function(){
+  //   $(this).find('.btn').click();
+  // });
+
 
   // HOW IT WORKS PAGE
 

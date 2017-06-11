@@ -137,18 +137,21 @@
     justify-content: space-between
     a
       font-size: 25px
-      padding: 10px
-    .icon
-      transition: color $transitionSpeed $ease
-    .icon-twitter
+      padding: 10px 10px
+      margin-right: 12px
+      &:first-child
+        margin-left: -5px
+      &:last-child
+        margin-right: 0
+      .icon
+        transition: color $transitionSpeed $ease
       &:hover
-        color: $twitter
-    .icon-linkedin
-      &:hover
-        color: $linkedin
-    .icon-facebook
-      &:hover
-        color: $facebook
+        .icon-twitter
+          color: $twitter
+        .icon-linkedin
+          color: $linkedin
+        .icon-facebook
+          color: $facebook
 
 
   &__bottom

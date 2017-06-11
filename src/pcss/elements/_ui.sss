@@ -55,7 +55,7 @@
     height: 55px
     overflow: hidden
     transition: all $transitionSpeed $ease
-    > label
+    > label:not(.ui-input__validation)
       font-size: 14px
       font-weight: 700
       position: absolute
@@ -91,6 +91,9 @@
   &--focused
     background: white
     border-color: $colorGreen
+  &.has-error
+    border-color: $colorRed
+
 
 .ui-textarea
   textarea
@@ -109,6 +112,10 @@
     &:focus
       background: white
       border-color: $colorGreen
+  &.has-error
+    textarea
+      border-color: $colorRed
+
 
 .js-datepicker
   background-image: svg-load('../../images/svg/calendar.svg')

@@ -96,6 +96,7 @@ html.mfp-helper
       a
         display: inline-block
         margin-left: 5px
+        margin-right: 5px
         color: white
         transition: all $transitionSpeed $ease
         border-bottom: 1px solid transparent
@@ -119,6 +120,77 @@ html.mfp-helper
 
       .ui-input
         margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+    .btn--form
+      border-bottom-right-radius: 10px
+      border-bottom-left-radius: 10px
+
+  &__beta
+    flex: 1 1 auto
+    max-width: 970px
+    display: flex
+    align-items: center
+    margin: 0 auto
+    padding: 40px 0
+    &__left
+      flex: 0 1 43%
+      text-align: center
+    &__image
+      margin-bottom: 50px
+      img
+        max-width: 100%
+    &__text
+      font-size: 22px
+      text-align: left
+      line-height: 1.36
+      font-family: 'Montserrat'
+    &__right
+      flex: 0 1 57%
+      .modal__form
+        position: relative
+        margin-right: 0
+    &__abstract
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate3d(-135px,-60%,0)
+
+  &__thanks
+    flex: 0 0 auto
+    max-width: 970px
+    margin: auto
+    padding: 40px 0
+    text-align: center
+    &__image
+      position: relative
+      img
+        position: relative
+        max-width: 100%
+        z-index: 2
+    &__abstract
+      position: absolute
+      left: 50%
+      bottom: 20px
+      transform: translateX(-50%)
+      img
+        z-index: 1
+
+  &__socials
+    margin-top: 40px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    .modal__beta__text
+      text-align: center
+      margin-bottom: 10px
+      font-weight: 600
+      letter-spacing: -.5px
+    .footer__socials
+      max-width: 140px
+      margin-right: auto
+
+
 
 // Fade-zoom animation for first dialog
 

@@ -1,4 +1,6 @@
 // MODALS
+
+// REGISTRATION WELCOME
 .popup-dialog.mfp-hide#modalRegWelcome
   .container
     .modal__wrapper
@@ -8,27 +10,26 @@
           .heading__sub Sign-up is fast, easy and free
       
       .modal__role
-        .modal__col
+        a(href='#modalRegPro').modal__col.js-popup
           .modal__col__content
             .modal__role__name For Medical Professionals
             .modal__role__img
               img(src='images/el/iconPro.png' srcset='images/el/iconPro@2x.png 2x')
             .modal__role__caption Find the right opportunity and get hired quickly
-            a(href='#modalRegPro').btn.btn--red.btn--150.js-popup Work
+            .btn.btn--red.btn--150 Work
           
-        .modal__col
+        a(href='#modalRegFacility').modal__col.js-popup
           .modal__col__content
             .modal__role__name For Facilities
             .modal__role__img
               img(src='images/el/iconFacility.png' srcset='images/el/iconFacility@2x.png 2x')
             .modal__role__caption Easily find great medical freelancers and save money
-            a(href='#modalRegFacility').btn.btn--red.btn--150.js-popup Hire
+            .btn.btn--red.btn--150 Hire
       
       .modal__bottom
         .modal__bottom__row
           span Already have an account?
           a(href='#modalLogin').js-popup Login here
-
 
 // LOGIN
 .popup-dialog.mfp-hide#modalLogin
@@ -40,18 +41,18 @@
           .heading__sub Login to your account
       
       .modal__form
-        form(action='#').modal__form-container
+        form(action='#').modal__form-container.js-login-form
           .modal__form-inputs
             .ui-input.ui-input--line
               label Email
-              input(type='email' placeholder='your@email.com')
+              input(type='email' name='email' placeholder='your@email.com')
             .ui-input.ui-input--line
               label Password
-              input(type='password' placeholder='password')  
+              input(type='password' name='password' placeholder='password')  
             .ui-checkbox
               input(type='checkbox' name='remember_me' id='remember_me')
               label(for='remember_me') Remember Me
-          a(href='#').btn.btn--form 
+          button(type='submit').btn.btn--form 
             span Sign In
             i.icon.icon-next
               
@@ -63,7 +64,6 @@
           span Don’t have a account?
           a(href='#modalRegWelcome').js-popup Get started
     
-
 // RECOVER
 .popup-dialog.mfp-hide#modalRecover
   .container
@@ -74,13 +74,13 @@
           .heading__sub Recover account passowrd
       
       .modal__form
-        form(action='#').modal__form-container
+        form(action='#').modal__form-container.js-recover-form
           .modal__form-inputs
             .ui-input.ui-input--line
               label Email
-              input(type='email' placeholder='your@email.com')
+              input(type='email' name='email' placeholder='your@email.com')
 
-          a(href='#').btn.btn--form Recover
+          button(type='submit').btn.btn--form Recover
               
       .modal__bottom
         .modal__bottom__row
@@ -90,3 +90,124 @@
           span Don’t have a account?
           a(href='#modalRegWelcome').js-popup Get started
     
+// REG PRO
+.popup-dialog.mfp-hide#modalRegPro
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Ready to Join the LocumRocket Community?
+          .heading__sub Our platform is currently in beta phase. <br> Please enter your email address below to request early access
+      
+      .modal__beta
+        .modal__beta__left
+          .modal__beta__image
+            img(src='images/el/signupDoctor.png' srcset='images/el/signupDoctor@2x.png 2x')
+          .modal__beta__text With LocumRocket, find freelance clinical work instantly. Get paid more and get paid faster! What’s not to like?
+        
+        .modal__beta__right
+          .modal__form
+            .modal__beta__abstract
+              img(src='images/el/modalBetaAbstract.png' srcset='images/el/modalBetaAbstract@2x.png 2x')
+            form(action='#').modal__form-container.js-regBetaPro-form
+              .modal__form-inputs
+                .ui-input.ui-input--line
+                  label Email
+                  input(type='email' name='email' placeholder='your@email.com')
+
+              button(type='submit').btn.btn--form
+                span Request Access
+                i.icon.icon-next
+                  
+// REG FACILITY
+.popup-dialog.mfp-hide#modalRegFacility
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Ready to Join the LocumRocket Community?
+          .heading__sub Our platform is currently in beta phase. <br> Please enter your email address below to request early access
+      
+      .modal__beta
+        .modal__beta__left
+          .modal__beta__image
+            img(src='images/el/signupHospital.png' srcset='images/el/signupHospital@2x.png 2x')
+          .modal__beta__text LocumRocket is the fastest and most-affordable way to meet your short-term clinical staffing needs. <br> 100% online. No third-party brokers. No hassle. 
+        
+        .modal__beta__right
+          .modal__form
+            .modal__beta__abstract
+              img(src='images/el/modalBetaAbstract.png' srcset='images/el/modalBetaAbstract@2x.png 2x')
+            form(action='#').modal__form-container.js-regBetaFacility-form
+              .modal__form-inputs
+                .ui-input.ui-input--line
+                  label Email
+                  input(type='email' name='email' placeholder='your@email.com')
+
+              button(type='submit').btn.btn--form
+                span Request Access
+                i.icon.icon-next
+
+// THANKS FACILITY
+.popup-dialog.mfp-hide#modalThanksFacility
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Thank You For Joining Our Beta Release!
+          .heading__sub We’ll be in touch shortly about next steps.
+      
+      .modal__thanks
+        .modal__thanks__image
+          img(src='images/el/signupHospital.png' srcset='images/el/signupHospital@2x.png 2x')
+          .modal__thanks__abstract
+            img(src='images/el/abstractSucess.png' srcset='images/el/abstractSucess@2x.png 2x')
+        
+        .modal__socials
+          .modal__beta__text Stay in touch!
+          .footer__socials
+            a(href='#' target='_blank')
+              i.icon.icon-twitter
+            a(href='#' target='_blank')
+              i.icon.icon-linkedin
+            a(href='#' target='_blank')
+              i.icon.icon-facebook 
+                    
+      .modal__bottom
+        .modal__bottom__row
+          span Return to
+          a(href='homepage.html') Homepage
+          span or
+          a(href='contact.html') Contact us
+
+// THANKS PRO
+.popup-dialog.mfp-hide#modalThanksPro
+  .container
+    .modal__wrapper
+      .modal__heading
+        .heading
+          .heading__main Thank You For Joining Our Beta Release!
+          .heading__sub We’ll be in touch shortly about next steps.
+      
+      .modal__thanks
+        .modal__thanks__image
+          img(src='images/el/signupDoctor.png' srcset='images/el/signupDoctor@2x.png 2x')
+          .modal__thanks__abstract
+            img(src='images/el/abstractSucess.png' srcset='images/el/abstractSucess@2x.png 2x')
+        
+        .modal__socials
+          .modal__beta__text Stay in touch!
+          .footer__socials
+            a(href='#' target='_blank')
+              i.icon.icon-twitter
+            a(href='#' target='_blank')
+              i.icon.icon-linkedin
+            a(href='#' target='_blank')
+              i.icon.icon-facebook 
+                    
+      .modal__bottom
+        .modal__bottom__row
+          span Return to
+          a(href='homepage.html') Homepage
+          span or
+          a(href='contact.html') Contact us

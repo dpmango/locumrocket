@@ -543,7 +543,11 @@ body, html {
     background-image: url('../images/el/logo@2x.png');
 }
 /* buttons */
-button {}
+button {
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
 button:focus {
     outline: none;
 }
@@ -831,7 +835,7 @@ button:focus {
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
-.ui-input--line > label {
+.ui-input--line > label:not(.ui-input__validation) {
     position: absolute;
     top: 50%;
     left: 20px;
@@ -878,6 +882,9 @@ button:focus {
     border-color: #3AC9D3;
     background: white;
 }
+.ui-input.has-error {
+    border-color: #EF4836;
+}
 .ui-textarea textarea {
     display: block;
     padding: 12px 15px;
@@ -896,6 +903,9 @@ button:focus {
 .ui-textarea textarea:focus {
     border-color: #3AC9D3;
     background: white;
+}
+.ui-textarea.has-error textarea {
+    border-color: #EF4836;
 }
 .js-datepicker {
     background-image: svg-load('../../images/svg/calendar.svg');
@@ -1218,23 +1228,27 @@ button:focus {
         -ms-flex-pack: justify;
 }
 .footer__socials a {
-    padding: 10px;
+    margin-right: 12px;
+    padding: 10px 10px;
     font-size: 25px;
 }
-.footer__socials .icon {
+.footer__socials a .icon {
     -webkit-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out;
 }
-.footer__socials .icon-twitter {}
-.footer__socials .icon-twitter:hover {
+.footer__socials a:first-child {
+    margin-left: -5px;
+}
+.footer__socials a:last-child {
+    margin-right: 0;
+}
+.footer__socials a:hover .icon-twitter {
     color: #00aced;
 }
-.footer__socials .icon-linkedin {}
-.footer__socials .icon-linkedin:hover {
+.footer__socials a:hover .icon-linkedin {
     color: #007bb6;
 }
-.footer__socials .icon-facebook {}
-.footer__socials .icon-facebook:hover {
+.footer__socials a:hover .icon-facebook {
     color: #3b5998;
 }
 .footer__bottom {

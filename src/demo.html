@@ -116,6 +116,7 @@
     </div>
   </footer>
   <!-- MODALS-->
+  <!-- REGISTRATION WELCOME-->
   <div class="popup-dialog mfp-hide" id="modalRegWelcome">
     <div class="container">
       <div class="modal__wrapper">
@@ -125,22 +126,19 @@
             <div class="heading__sub">Sign-up is fast, easy and free</div>
           </div>
         </div>
-        <div class="modal__role">
-          <div class="modal__col">
+        <div class="modal__role"><a class="modal__col js-popup" href="#modalRegPro">
             <div class="modal__col__content">
               <div class="modal__role__name">For Medical Professionals</div>
               <div class="modal__role__img"><img src="images/el/iconPro.png" srcset="images/el/iconPro@2x.png 2x"></div>
-              <div class="modal__role__caption">Find the right opportunity and get hired quickly</div><a class="btn btn--red btn--150 js-popup" href="#modalRegPro">Work</a>
-            </div>
-          </div>
-          <div class="modal__col">
+              <div class="modal__role__caption">Find the right opportunity and get hired quickly</div>
+              <div class="btn btn--red btn--150">Work</div>
+            </div></a><a class="modal__col js-popup" href="#modalRegFacility">
             <div class="modal__col__content">
               <div class="modal__role__name">For Facilities</div>
               <div class="modal__role__img"><img src="images/el/iconFacility.png" srcset="images/el/iconFacility@2x.png 2x"></div>
-              <div class="modal__role__caption">Easily find great medical freelancers and save money</div><a class="btn btn--red btn--150 js-popup" href="#modalRegFacility">Hire</a>
-            </div>
-          </div>
-        </div>
+              <div class="modal__role__caption">Easily find great medical freelancers and save money</div>
+              <div class="btn btn--red btn--150">Hire</div>
+            </div></a></div>
         <div class="modal__bottom">
           <div class="modal__bottom__row"><span>Already have an account?</span><a class="js-popup" href="#modalLogin">Login here</a></div>
         </div>
@@ -158,21 +156,22 @@
           </div>
         </div>
         <div class="modal__form">
-          <form class="modal__form-container" action="#">
+          <form class="modal__form-container js-login-form" action="#">
             <div class="modal__form-inputs">
               <div class="ui-input ui-input--line">
                 <label>Email</label>
-                <input type="email" placeholder="your@email.com">
+                <input type="email" name="email" placeholder="your@email.com">
               </div>
               <div class="ui-input ui-input--line">
                 <label>Password</label>
-                <input type="password" placeholder="password">
+                <input type="password" name="password" placeholder="password">
               </div>
               <div class="ui-checkbox">
                 <input type="checkbox" name="remember_me" id="remember_me">
                 <label for="remember_me">Remember Me</label>
               </div>
-            </div><a class="btn btn--form" href="#"> <span>Sign In</span><i class="icon icon-next"></i></a>
+            </div>
+            <button class="btn btn--form" type="submit"> <span>Sign In</span><i class="icon icon-next"></i></button>
           </form>
         </div>
         <div class="modal__bottom">
@@ -193,18 +192,135 @@
           </div>
         </div>
         <div class="modal__form">
-          <form class="modal__form-container" action="#">
+          <form class="modal__form-container js-recover-form" action="#">
             <div class="modal__form-inputs">
               <div class="ui-input ui-input--line">
                 <label>Email</label>
-                <input type="email" placeholder="your@email.com">
+                <input type="email" name="email" placeholder="your@email.com">
               </div>
-            </div><a class="btn btn--form" href="#">Recover</a>
+            </div>
+            <button class="btn btn--form" type="submit">Recover</button>
           </form>
         </div>
         <div class="modal__bottom">
           <div class="modal__bottom__row"><span>Remember you password?</span><a class="js-popup" href="#modalLogin">Login here</a></div>
           <div class="modal__bottom__row"><span>Don’t have a account?</span><a class="js-popup" href="#modalRegWelcome">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- REG PRO-->
+  <div class="popup-dialog mfp-hide" id="modalRegPro">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Our platform is currently in beta phase. <br> Please enter your email address below to request early access</div>
+          </div>
+        </div>
+        <div class="modal__beta">
+          <div class="modal__beta__left">
+            <div class="modal__beta__image"><img src="images/el/signupDoctor.png" srcset="images/el/signupDoctor@2x.png 2x"></div>
+            <div class="modal__beta__text">With LocumRocket, find freelance clinical work instantly. Get paid more and get paid faster! What’s not to like?</div>
+          </div>
+          <div class="modal__beta__right">
+            <div class="modal__form">
+              <div class="modal__beta__abstract"><img src="images/el/modalBetaAbstract.png" srcset="images/el/modalBetaAbstract@2x.png 2x"></div>
+              <form class="modal__form-container js-regBetaPro-form" action="#">
+                <div class="modal__form-inputs">
+                  <div class="ui-input ui-input--line">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com">
+                  </div>
+                </div>
+                <button class="btn btn--form" type="submit"><span>Request Access</span><i class="icon icon-next"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- REG FACILITY-->
+  <div class="popup-dialog mfp-hide" id="modalRegFacility">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Our platform is currently in beta phase. <br> Please enter your email address below to request early access</div>
+          </div>
+        </div>
+        <div class="modal__beta">
+          <div class="modal__beta__left">
+            <div class="modal__beta__image"><img src="images/el/signupHospital.png" srcset="images/el/signupHospital@2x.png 2x"></div>
+            <div class="modal__beta__text">LocumRocket is the fastest and most-affordable way to meet your short-term clinical staffing needs. <br> 100% online. No third-party brokers. No hassle. </div>
+          </div>
+          <div class="modal__beta__right">
+            <div class="modal__form">
+              <div class="modal__beta__abstract"><img src="images/el/modalBetaAbstract.png" srcset="images/el/modalBetaAbstract@2x.png 2x"></div>
+              <form class="modal__form-container js-regBetaFacility-form" action="#">
+                <div class="modal__form-inputs">
+                  <div class="ui-input ui-input--line">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com">
+                  </div>
+                </div>
+                <button class="btn btn--form" type="submit"><span>Request Access</span><i class="icon icon-next"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- THANKS FACILITY-->
+  <div class="popup-dialog mfp-hide" id="modalThanksFacility">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Thank You For Joining Our Beta Release!</div>
+            <div class="heading__sub">We’ll be in touch shortly about next steps.</div>
+          </div>
+        </div>
+        <div class="modal__thanks">
+          <div class="modal__thanks__image"><img src="images/el/signupHospital.png" srcset="images/el/signupHospital@2x.png 2x">
+            <div class="modal__thanks__abstract"><img src="images/el/abstractSucess.png" srcset="images/el/abstractSucess@2x.png 2x"></div>
+          </div>
+          <div class="modal__socials">
+            <div class="modal__beta__text">Stay in touch!</div>
+            <div class="footer__socials"><a href="#" target="_blank"><i class="icon icon-twitter"></i></a><a href="#" target="_blank"><i class="icon icon-linkedin"></i></a><a href="#" target="_blank"><i class="icon icon-facebook"> </i></a></div>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Return to</span><a href="homepage.html">Homepage</a><span>or</span><a href="contact.html">Contact us</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- THANKS PRO-->
+  <div class="popup-dialog mfp-hide" id="modalThanksPro">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Thank You For Joining Our Beta Release!</div>
+            <div class="heading__sub">We’ll be in touch shortly about next steps.</div>
+          </div>
+        </div>
+        <div class="modal__thanks">
+          <div class="modal__thanks__image"><img src="images/el/signupDoctor.png" srcset="images/el/signupDoctor@2x.png 2x">
+            <div class="modal__thanks__abstract"><img src="images/el/abstractSucess.png" srcset="images/el/abstractSucess@2x.png 2x"></div>
+          </div>
+          <div class="modal__socials">
+            <div class="modal__beta__text">Stay in touch!</div>
+            <div class="footer__socials"><a href="#" target="_blank"><i class="icon icon-twitter"></i></a><a href="#" target="_blank"><i class="icon icon-linkedin"></i></a><a href="#" target="_blank"><i class="icon icon-facebook"> </i></a></div>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Return to</span><a href="homepage.html">Homepage</a><span>or</span><a href="contact.html">Contact us</a></div>
         </div>
       </div>
     </div>
@@ -220,10 +336,12 @@
   <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
   <script src="components/air-datepicker/dist/js/datepicker.min.js"></script>
   <script src="components/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+  <script src="components/jquery-validation/dist/jquery.validate.min.js"></script>
   <script src="js/libs/jquery.maskedinput.min.js"></script>
   <script src="js/libs/jquery.scrollbar.min.js"></script>
   <script src="js/classie.js"></script>
   <script src="js/utilities.js"></script>
+  <script src="js/validate.js"></script>
   <script src="js/main.js"></script>
   <!--endbuild-->
 </body>
