@@ -66,7 +66,7 @@ gulp.task('build', function (callback) {
     'pug',
     'postcss',
     'babel',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'images', 'fonts', 'phpcopy'],
     'cssnano',
     callback
   )
@@ -246,6 +246,11 @@ gulp.task('images', function(){
 gulp.task('fonts', function() {
   return gulp.src('./src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('phpcopy', function() {
+  return gulp.src('./src/php/**/*')
+  .pipe(gulp.dest('dist/php'))
 })
 
 gulp.task('clean:dist', function() {

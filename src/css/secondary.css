@@ -397,6 +397,9 @@ button:focus {
     font-size: 16px;
     -webkit-appearance: none;
 }
+.ui-input--line select {
+    cursor: pointer;
+}
 .ui-input--select {}
 .ui-input--select:after {
     position: absolute;

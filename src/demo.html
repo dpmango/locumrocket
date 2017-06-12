@@ -57,32 +57,32 @@
             </div>
           </div>
           <div class="demo__cta">
-            <form class="form" action="">
+            <form class="form js-demo-form" action="">
               <div class="form-container">
                 <div class="form-inputs">
                   <div class="ui-input ui-input--line">
                     <label>First name</label>
-                    <input type="text" placeholder="First name">
+                    <input type="text" name="first_name" placeholder="First name">
                   </div>
                   <div class="ui-input ui-input--line">
                     <label>Last name</label>
-                    <input type="text" placeholder="Last name">
+                    <input type="text" name="last_name" placeholder="Last name">
                   </div>
                   <div class="ui-input ui-input--line">
                     <label>Work Email</label>
-                    <input type="email" placeholder="your@email.com">
+                    <input type="email" name="email" placeholder="your@email.com">
                   </div>
                   <div class="ui-input ui-input--line">
                     <label>Phone</label>
-                    <input type="tel" placeholder="000-000-0000">
+                    <input type="tel" name="phone" placeholder="000-000-0000">
                   </div>
                   <div class="ui-input ui-input--line">
                     <label>Company</label>
-                    <input type="text" placeholder="Apple Inc.">
+                    <input type="text" name="company" placeholder="Apple Inc.">
                   </div>
                   <div class="ui-input ui-input--line ui-input--select">
                     <label>Employees</label>
-                    <select placeholder="-Select total number">
+                    <select placeholder="-Select total number" name="employees">
                       <option disabled selected>-Select total number</option>
                       <option>less than 5</option>
                       <option>5 to 25</option>
@@ -92,7 +92,8 @@
                       <option>more than 500</option>
                     </select>
                   </div>
-                </div><a class="btn btn--form" href="#"> <span>Shedule Demo</span><i class="icon icon-next"></i></a>
+                </div>
+                <button class="btn btn--form" type="submit"> <span>Shedule Demo</span><i class="icon icon-next"></i></button>
               </div>
             </form>
           </div>

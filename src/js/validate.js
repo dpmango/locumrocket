@@ -47,14 +47,14 @@ $(document).ready(function () {
   var validatePhone = {
     required: true,
     normalizer: function normalizer(value) {
-      var PHONE_MASK = '+X (XXX) XXX-XXXX';
+      var PHONE_MASK = 'XXX-XXX-XXXX';
       if (!value || value === PHONE_MASK) {
         return value;
       } else {
         return value.replace(/[^\d]/g, '');
       }
     },
-    minlength: 11,
+    minlength: 10,
     digits: true
 
     ////////
@@ -198,6 +198,26 @@ $(document).ready(function () {
       text: {
         required: true
       }
+    }
+  });
+
+  /////////////////////
+  // DEMO FORM
+  ////////////////////
+  $(".js-demo-form").validate({
+    errorPlacement: noPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      first_name: {
+        required: true
+      },
+      phone: validatePhone
     }
   });
 });

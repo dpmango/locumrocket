@@ -881,6 +881,9 @@ button:focus {
     font-size: 16px;
     -webkit-appearance: none;
 }
+.ui-input--line select {
+    cursor: pointer;
+}
 .ui-input--select {}
 .ui-input--select:after {
     position: absolute;
@@ -2336,6 +2339,7 @@ button:focus {
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+    padding-right: 20px;
     -webkit-box-flex: 0;
 }
 .demo__cta {
@@ -2343,6 +2347,7 @@ button:focus {
         -ms-flex: 0 1 430px;
             flex: 0 1 430px;
     margin-left: auto;
+    padding-left: 20px;
     -webkit-box-flex: 0;
 }
 .demo__image img {
@@ -2366,6 +2371,81 @@ button:focus {
     padding: 0;
     padding: 5px 0;
     line-height: 1.36;
+}
+@media(max-width: 992px) {
+    .demo {}
+    .demo__text {}
+    .demo__text__heading {
+        font-size: 30px;
+    }
+    .demo__text__description {
+        font-size: 20px;
+    }
+}
+@media(max-width: 800px) {
+    .demo {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    .demo__wrapper {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .demo__description {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        padding-right: 0;
+        -webkit-box-flex: 0;
+    }
+    .demo__image {
+        text-align: center;
+    }
+    .demo__image img {
+        max-width: 75%;
+    }
+    .demo__text {
+        text-align: center;
+    }
+    .demo__cta {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        margin-top: 50px;
+        padding-left: 0;
+        width: 100%;
+        -webkit-box-flex: 0;
+    }
+    .demo__cta .form {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@media(max-width: 520px) {
+    .demo {}
+    .demo__image img {
+        max-width: 100%;
+    }
+}
+@media(max-width: 414px) {
+    .demo {}
+    .demo__text {}
+    .demo__text__heading {
+        font-size: 24px;
+    }
+    .demo__text__description {
+        font-size: 16px;
+    }
+    .demo__cta {
+        margin-top: 10px;
+    }
 }
 /* SOME INNER PAGES CONTENT */
 
