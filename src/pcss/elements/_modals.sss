@@ -41,7 +41,9 @@ html.mfp-helper
       margin-bottom: 30px
       font-size: 24px
     &__img
-      max-width: 100%
+      flex: 0 0 110px
+      img
+        max-width: 100%
     &__caption
       margin-top: 25px
       margin-bottom: 25px
@@ -226,3 +228,104 @@ html.mfp-helper
     opacity: 1
   &.mfp-removing.mfp-bg
     opacity: 0
+
+
+@media($desktop)
+  .modal
+    &__beta
+      &__text
+        font-size: 20px
+
+
+  .popup-buble
+    button.mfp-close
+      right: 10px
+      top: 10px
+      size: 40px
+      background-size: 15px 15px
+
+@media(width <= 900px)
+  .modal
+    &__beta
+      &__left
+        text-align: left
+        padding-right: 20px
+      &__right
+        padding-left: 20px
+      &__abstract
+        display: none
+
+
+@media(width <= 800px)
+  .modal
+    &__role
+      margin-left: -25px
+      margin-right: -25px
+      flex-direction: column
+    &__col
+      flex: 0 0 auto
+      &:first-child
+        padding-bottom: 40px
+        &::after
+          top: auto
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+      &:last-child
+        padding-top: 40px
+
+    &__beta
+      flex-direction: column-reverse
+      align-items: flex-start
+      &__left
+        flex: 0 0 auto
+        padding-right: 0
+        text-align: center
+      &__text
+        text-align: center
+      &__right
+        width: 100%
+        flex: 0 0 auto
+        padding-left: 0
+        .modal__form
+          margin-right: auto
+          padding-top: 0
+          padding-bottom: 80px
+
+@media($mobile)
+  .modal
+    &__beta
+      &__image
+        margin-bottom: 20px
+        img
+          max-width: 45%
+
+    &__thanks
+      .footer__socials
+        margin-top: 0
+        margin-left: auto
+        margin-right: auto
+      &__abstract
+        width: 90%
+
+
+@media(width <= 460px)
+  .modal
+    &__form
+      &-inputs
+        padding: 25px 20px
+    &__beta
+      &__text
+        font-size: 18px
+
+@media($mobile-s)
+  .modal
+    &__role
+      &__name
+        font-size: 20px
+
+    &__form
+      &-inputs
+        .ui-input
+          margin-bottom: 10px
