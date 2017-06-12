@@ -28,8 +28,12 @@
       &:hover:not(.btn), &.active
         color: $colorRed
 
-    .btn
+    .btn--red
+      margin-right: 15px
+    .btn--muted
       margin-right: 50px
+      padding-left: 25px
+      padding-right: 25px
 
   .hamburger
     display: none
@@ -48,18 +52,19 @@
 @media($desktop)
   .header
     &__navi
-      .btn
-        margin-right: 0
+      .btn--red
+        width: 120px
+      .btn--muted
+        margin-right: 0px
 
-@media($tablet)
+@media(width <= 850px)
   .header
     &__navi
       a
         margin-right: 20px
-      .btn
-        width: 120px
 
-@media($mobile)
+
+@media($tablet)
   .header
     &__wrapper
       height: 65px
@@ -71,6 +76,13 @@
     .hamburger
       display: block
 
+@media($mobile)
+  .header
+    &__navi
+      .btn--muted
+        display: none
+
+        
 @media(width <= 480px)
   .header
     &__wrapper
@@ -108,11 +120,13 @@
       transition: all $transitionSpeed $ease
       &:hover
         color: $colorRed
+  .btn--muted
+    margin-top: 20px
   &.active
     transform: translate3d(0, 0, 0)
     box-shadow: 0px -10px 20px color(black a(40%))
 
-@media($mobile)
+@media($tablet)
   .mobile-navi
     display: block
 

@@ -64,7 +64,7 @@ body, html {
 .page {
     margin-top: 75px;
 }
-@media(max-width: 640px) {
+@media(max-width: 768px) {
     .page {
         margin-top: 60px;
     }
@@ -1092,8 +1092,13 @@ button:focus {
 .header__navi a:hover:not(.btn), .header__navi a.active {
     color: #EF4836;
 }
-.header__navi .btn {
+.header__navi .btn--red {
+    margin-right: 15px;
+}
+.header__navi .btn--muted {
     margin-right: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 .header--transformed {
     position: fixed;
@@ -1114,20 +1119,20 @@ button:focus {
 }
 @media(max-width: 992px) {
     .header {}
-    .header__navi .btn {
-        margin-right: 0;
+    .header__navi .btn--red {
+        width: 120px;
+    }
+    .header__navi .btn--muted {
+        margin-right: 0px;
     }
 }
-@media(max-width: 768px) {
+@media(max-width: 850px) {
     .header {}
     .header__navi a {
         margin-right: 20px;
     }
-    .header__navi .btn {
-        width: 120px;
-    }
 }
-@media(max-width: 640px) {
+@media(max-width: 768px) {
     .header .hamburger {
         display: block;
     }
@@ -1139,6 +1144,12 @@ button:focus {
     }
     .header__navi .btn {
         font-size: 15px;
+    }
+}
+@media(max-width: 640px) {
+    .header {}
+    .header__navi .btn--muted {
+        display: none;
     }
 }
 @media(max-width: 480px) {
@@ -1168,6 +1179,9 @@ button:focus {
     transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
+}
+.mobile-navi .btn--muted {
+    margin-top: 20px;
 }
 .mobile-navi__wrapper {
     display: -webkit-box;
@@ -1213,7 +1227,7 @@ button:focus {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 }
-@media(max-width: 640px) {
+@media(max-width: 768px) {
     .mobile-navi {
         display: block;
     }
