@@ -240,6 +240,27 @@
     &--smaller-pad
       margin-top: 10px
 
+@media($desktop)
+  .heading
+    &__main
+      font-size: 32px
+    &__sub
+      font-size: 15px
+      margin-top: 20px
+      &--smaller-pad
+        margin-top: 10px
+
+@media($mobile)
+  .heading
+    &__main
+      font-size: 28px
+    &__sub
+      font-size: 14px
+      margin-top: 15px
+      &--smaller-pad
+        margin-top: 10px
+
+
 
 .slick-arrow
   position: absolute
@@ -278,3 +299,13 @@
   right: 0
   &::before
     content: "\EA01"
+
+
+@media($mobile-s)
+  .slick-arrow
+    &::before
+      font-size: 30px
+  .slick-prev
+    left: -5px
+  .slick-next
+    right: -5px
