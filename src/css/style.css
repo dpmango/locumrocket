@@ -63,6 +63,11 @@ body, html {
         margin-top: 60px;
     }
 }
+@media(max-width: 480px) {
+    .page {
+        margin-top: 55px;
+    }
+}
 /* CUSTOM 6 COL FLEX GRID */
 .row {
     display: -webkit-box;
@@ -541,6 +546,12 @@ body, html {
     width: 205px;
     height: 38px;
     background-image: url('../images/el/logo@2x.png');
+}
+@media(max-width: 480px) {
+    .icon-logo {
+        width: 190px;
+        height: 34px;
+    }
 }
 /* buttons */
 button {
@@ -1106,6 +1117,18 @@ button:focus {
         font-size: 15px;
     }
 }
+@media(max-width: 480px) {
+    .header {}
+    .header__wrapper {
+        height: 55px;
+    }
+    .header__navi a {
+        display: none;
+    }
+    .header__navi .btn {
+        display: none;
+    }
+}
 .mobile-navi {
     position: fixed;
     top: 0px;
@@ -1445,6 +1468,7 @@ button:focus {
             justify-content: center;
     margin-right: 50px;
     margin-left: auto;
+    min-height: 600px;
     max-width: 550px;
     height: -webkit-calc(100vh - 75px);
     height: calc(100vh - 75px);
@@ -1493,11 +1517,66 @@ button:focus {
     }
     .hero__content {
         margin-right: 0;
+        max-width: 500px;
+    }
+    .hero__title {
+        font-size: 32px;
+    }
+    .hero__caption {
+        font-size: 20px;
+    }
+    .hero__cta {
+        margin-top: 50px;
     }
 }
 @media(max-width: 640px) {
     .hero {
-        background-position: 15% center;
+        background-position: 25% center;
+    }
+    .hero__content {
+        padding: 30px 0;
+        max-width: 350px;
+    }
+    .hero__title {
+        font-size: 28px;
+    }
+    .hero__caption {
+        font-size: 16px;
+    }
+    .hero__cta {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        margin-top: 30px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .hero__cta .btn {
+        margin-top: 25px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 480px) {
+    .hero {}
+    .hero__content {
+        max-width: 250px;
+        text-align: right;
+    }
+    .hero__title {
+        font-size: 26px;
+    }
+    .hero__benefits {
+        font-size: 14px;
+    }
+    .hero__cta {
+        -webkit-align-items: flex-end;
+                align-items: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
     }
 }
 /* ABOUT */

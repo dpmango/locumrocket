@@ -6,6 +6,7 @@
   max-height: 800px
   color: white
   &__content
+    min-height: 600px
     height: calc(100vh - 75px)
     max-width: 550px
     margin-right: 50px
@@ -45,11 +46,47 @@
     background-position: 30% center
     &__content
       margin-right: 0
+      max-width: 500px
+    &__title
+      font-size: 32px
+    &__caption
+      font-size: 20px
+    &__cta
+      margin-top: 50px
+
+
+
 
 @media($mobile)
   .hero
-    background-position: 15% center
+    background-position: 25% center
+    &__content
+      padding: 30px 0
+      max-width: 350px
+    &__title
+      font-size: 28px
+    &__caption
+      font-size: 16px
+    &__cta
+      margin-top: 30px
+      flex-direction: column
+      align-items: flex-start
+      .btn
+        margin-top: 25px
+        font-size: 15px
 
+
+@media(width <= 480px)
+  .hero
+    &__content
+      text-align: right
+      max-width: 250px
+    &__title
+      font-size: 26px
+    &__benefits
+      font-size: 14px
+    &__cta
+      align-items: flex-end
 
 // ABOUT
 .about

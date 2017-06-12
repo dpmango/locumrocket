@@ -69,6 +69,12 @@
     height: 38px;
     background-image: url('../images/el/logo@2x.png');
 }
+@media(max-width: 480px) {
+    .icon-logo {
+        width: 190px;
+        height: 34px;
+    }
+}
 /* buttons */
 button {
     border: 0;
