@@ -259,6 +259,7 @@
     position: absolute
     bottom: -36px
     left: 50%
+    min-width: 520px
     transform: translateX(-50%)
     transition: transform $transitionSpeed $ease
     &--transformed
@@ -267,7 +268,7 @@
       transform: translate3d(-50%,-100%,0)
     &--float
       opacity: 1
-      top: 80px
+      top: 60px
       bottom: auto
       transform: translate3d(-50%,0%,0)
 
@@ -276,10 +277,11 @@
       border-radius: 40px
       padding: 10px
       font-size: 17px
+      display: flex
       box-shadow: 0px 10px 20px color(black a(20%))
     &__tab
       display: inline-block
-      width: 240px
+      width: 260px
       padding: 17px 10px
       text-align: center
       color: color(white a(70%))
@@ -343,6 +345,135 @@
       line-height: 1.4
 
 
+@media($wide)
+  .more
+    &-info
+      padding-top: 130px
+      &__row
+        margin-bottom: 120px
+        margin-left: 5%
+        margin-right: 5%
+      &__image
+        flex: 0 1 45%
+        padding: 0 20px
+        img
+          max-width: 80%
+      &__text
+        flex: 0 1 55%
+        &__name
+          font-size: 30px
+        &__desc
+          font-size: 20px
+
+
+@media($desktop)
+  .more
+    &-hero
+      &__stand
+        &__image
+          margin-bottom: 15px
+    &-info
+      &__image
+        flex: 0 1 40%
+      &__text
+        flex: 0 1 60%
+        &__name
+          font-size: 28px
+        &__desc
+          font-size: 18px
+
+@media($tablet)
+  .more
+    &-info
+      padding-top: 100px
+      &__row
+        margin-bottom: 80px
+        flex-direction: column
+        align-items: flex-start
+      &__image
+        flex: 0 0 auto
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+        img
+          max-width: 60%
+      &__text
+        flex: 0 0 auto
+
+
+@media($mobile)
+  .more
+    &-hero
+      padding-bottom: 90px
+      &__stand
+        padding-bottom: 60px
+    &-toggler
+      bottom: -26px
+      min-width: 0px
+      &--float
+        top: 40px
+      &__wrapper
+        padding: 8px
+        font-size: 15px
+      &__tab
+        display: inline-block
+        min-width: 200px
+        width: auto
+        padding: 12px 10px
+
+    &-info
+      &__image
+        margin-bottom: 30px
+        img
+          max-width: 50%
+      &__text
+        &__name
+          font-size: 24px
+        &__desc
+          font-size: 16px
+
+
+@media(width <= 480px)
+  .more
+    &-hero
+      &__stand
+        &__image
+          transform: translate3d(-12.5%,-45px,0)
+          img
+            max-width: 125%
+
+@media($mobile-s)
+  .more
+    &-hero
+      padding-top: 40px
+      &__stand
+        margin-top: 75px
+    &-toggler
+      bottom: -30px
+      &__wrapper
+        font-size: 14px
+        align-items: center
+      &__tab
+        min-width: 150px
+        padding: 8px 10px
+
+    &-info
+      &__row
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 60px
+        text-align: center
+        justify-content: center
+      &__image
+        margin-bottom: 20px
+      &__text
+        width: 100%
+
+    &-cta
+      padding-top: 60px
+      padding-bottom: 55px
+
+
 // CONTACT
 .contact
   position: relative
@@ -365,14 +496,12 @@
       font-size: 24px
       &.icon-twitter, &.icon-facebook
         font-size: 26px
-      &.icon-emil
+      &.icon-email
         font-size: 22px
     &:hover
       opacity: .7
-
     span
       margin-left: 15px
-
     &:last-child
       margin-right: 0
 
@@ -392,6 +521,44 @@
     color: $fontColor
     .ui-input
       margin-bottom: 15px
+
+
+@media($tablet)
+  .contact
+    padding-top: 50px
+    padding-bottom: 80px
+    &__socials
+      margin-top: 30px
+    &__social-item
+      margin-right: 30px
+      margin-bottom: 10px
+
+@media(width <= 460px)
+  .form
+    &-inputs
+      padding: 25px 20px
+
+@media($mobile-s)
+  .contact
+    &__social-item
+      font-size: 14px
+      margin-right: 25px
+      span
+        margin-left: 10px
+      .icon
+        font-size: 20px
+        &.icon-twitter, &.icon-facebook
+          font-size: 22px
+        &.icon-email
+          font-size: 18px
+
+  .form
+    &-inputs
+      .ui-input
+        margin-bottom: 10px
+
+
+
 
 // DEMO
 .demo
