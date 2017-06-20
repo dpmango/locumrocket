@@ -195,12 +195,71 @@ $(document).ready(function(){
    });
 
 
-  // EXTRA
+  /////////////////
+  // DASHBOARD PAGE
+  ////////////////
+
+  // dashboard header toggable
+  $('.header__user__clickable').on('click', function(){
+    $(this).parent().toggleClass('active');
+  });
+
+
+  // alerts
+  var saveAlertTogglerState = ''
+  $('.alerts__toggler').on('click', function(){
+    var alerts = $(this).parent().find('.js-toggableAlert').toggleClass('visible');
+    if ( $(this).data('hidden') == '1' ){
+      saveAlertTogglerState = $(this).find('a').text();
+      $(this).find('a').text('collapse alerts');
+      $(this).data('hidden', '0')
+    } else {
+      $(this).find('a').text(saveAlertTogglerState);
+      $(this).data('hidden', '1')
+    }
+  });
+
+  $('.alert .icon-close').on('click', function(){
+    $(this).parent().fadeOut();
+  });
+
+
+  // DASHBOARD SEARCH
+  $('.js-toggleSearchFilters').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).closest('.d-search').find('.d-search__collapsable').slideToggle();
+  });
+
+  // SORTABLE TOGGLER
+  $('.sortable__filter > span').on('click', function(){
+    $(this).closest('.sortable').toggleClass('active')
+  });
+
+  $('.sortable__dropdown span').on('click', function(){
+    $(this).closest('.sortable').removeClass('active');
+    var selectedVal = $(this).data('val');
+    console.log(selectedVal);
+
+    $(this).closest('.sortable').find('.sortable__filter > span').text(selectedVal);
+  });
+
+  // Universal toggler
+  var saveTogglerStateText = ''
+  $('.show-more').on('click', function(){
+    var alerts = $(this).closest('.js-showMoreList').find('div[data-visible="0"]').slideToggle();
+    if ( $(this).data('hidden') == '1' ){
+      saveTogglerStateText = $(this).find('a').text();
+      $(this).find('a').text( $(this).data('alttext') );
+      $(this).data('hidden', '0')
+    } else {
+      $(this).find('a').text(saveTogglerStateText);
+      $(this).data('hidden', '1')
+    }
+  });
 
   // Masked input
   $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
   $("input[type='tel']").mask("999-999-9999");
-
 
 
   // DATEPICKER
@@ -208,6 +267,48 @@ $(document).ready(function(){
     language: 'en',
     range: true,
     multipleDatesSeparator: " - "
+  });
+
+
+  // custom selects
+  $('.ui-select__visible').on('click', function(e){
+    var that = this
+    // hide parents
+    $(this).parent().parent().parent().find('.ui-select__visible').each(function(i,val){
+      if ( !$(val).is($(that)) ){
+        $(val).parent().removeClass('active')
+      }
+    });
+
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.ui-select__dropdown span').on('click', function(){
+    // parse value and toggle active
+    var value = $(this).data('value');
+    if (value){
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+
+      // set visible
+      $(this).closest('.ui-select').removeClass('active');
+      $(this).closest('.ui-select').find('input').val(value).trigger('change');
+
+      $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
+    }
+
+  });
+
+  // handle outside click
+  $(document).click(function (e) {
+    var container = new Array();
+    container.push($('.ui-select'));
+
+    $.each(container, function(key, value) {
+        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+            $(value).removeClass('active');
+        }
+    });
   });
 
   // RANGESLIDER

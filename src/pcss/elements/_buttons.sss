@@ -72,9 +72,30 @@ button
     &:hover
       background: $colorMute
       color: white
+  &--ghost
+    border: 2px solid $borderColor
+    padding: 11px 5px
+    font-weight: 600
+    font-size: 15px
+    color: $colorBlue
+    &:hover, &.active
+      color: $fontColor
+      background: $borderColor
+    &.btn--fill
+      background: $borderColor
+      color: $fontColor
+      &:hover
+        color: white
+        background: $colorGreen
+        border-color: $colorGreen
+
   &--150
     width: 150px
   &--huge
     font-size: 17px
     padding: 23px 75px
     border-radius: 50px
+  &--head
+    border-radius: 0
+    &::after
+      border-radius: 0

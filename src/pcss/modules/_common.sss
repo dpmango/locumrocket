@@ -21,7 +21,14 @@
     display: flex
     margin-left: auto
     align-items: center
+    &--dashboard
+      margin-right: auto
+      margin-left: 45px
+      a
+        margin-right: 30px
+
     a
+      position: relative
       display: inline-block
       margin-right: 40px
       transition: all $transitionSpeed $ease
@@ -34,9 +41,138 @@
       margin-right: 50px
       padding-left: 25px
       padding-right: 25px
+    &__tag
+      position: absolute
+      top: -5px
+      right: -10px
+      border-radius: 50%
+      min-height: 12px
+      min-width: 12px
+      text-align: center
+      font-size: 8px
+      font-weight: 700
+      color: white
+      line-height: 1
+      padding: 2px 3px
+      &--green
+        background: $colorGreen
+      &--red
+        background: $colorRed
 
   .hamburger
     display: none
+
+  &__search
+    position: relative
+    flex: 0 1 165px
+    margin-left: auto
+    padding-right: 25px
+    border-right: 1px solid $borderColor
+    input
+      padding: 30px 30px 30px 15px
+      font-size: 12px
+      border: 0
+    button
+      position: absolute
+      top: 50%
+      right: 25px
+      border: 0
+      background: transparent
+      transform: translateY(-50%)
+      color: $colorMute
+      font-size: 18px
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $colorRed
+  &__icons
+    color: $colorMute
+    padding: 0 12px
+    border-right: 1px solid $borderColor
+    a
+      display: inline-block
+      position: relative
+      padding: 24px 12px
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $fontColor
+
+  &__notification
+    font-size: 20px
+    .icon-mark
+      position: absolute
+      top: 22px
+      right: 12px
+      size: 11px
+      border: 1px solid white
+      background: $colorRed
+      border-radius: 50%
+  &__messages
+    font-size: 15px
+
+  &__user
+    position: relative
+    &__clickable
+      padding: 22px 10px 22px 20px
+      position: relative
+      display: flex
+      align-items: center
+      cursor: pointer
+      transition: background $transitionSpeed $ease
+    &__avatar
+      flex: 0 0 30px
+      size: 30px
+      overflow: hidden
+      border: 1px solid $borderColor
+      border-radius: 50%
+      img
+        max-width: 100%
+    &__name
+      font-size: 13px
+      margin: 0 15px
+    .icon-select
+      font-size: 8px
+      color: color($fontColor a(50%))
+      transition: all $transitionSpeed $ease
+    &__dropdown
+      position: absolute
+      top: 68px
+      left: 0
+      right: 0
+      opacity: 0
+      background: white
+      overflow: hidden
+      pointer-events: none
+      border-radius: 8px
+      transform: translate3d(0,20px,0)
+      box-shadow: 0px 0px 5px color(black a(15%))
+      transition: all $transitionSpeed $ease
+      a
+        display: block
+        transition: all $transitionSpeed $ease
+        font-size: 13px
+        padding: 10px 20px
+        background: white
+        border-bottom: 1px solid $borderColor
+        transition: all $transitionSpeed $ease
+        &:hover
+          background: #FAFBFC
+    &:hover
+      .header__user__clickable
+        background: #FAFBFC
+      .icon-select
+        color: $fontColor
+
+    &.active
+      .header__user__clickable
+        background: #FAFBFC
+      .icon-select
+        transform: rotate(180deg)
+      .header__user__dropdown
+        transform: translate3d(0,0,0)
+        opacity: 1
+        pointer-events: all
+
+
 
   &--transformed
     position: fixed
@@ -48,6 +184,9 @@
     opacity: 1
     transform: translate3d(0, 0px, 0)
     box-shadow: 0px 0px 6px color(black a(10%))
+
+
+
 
 @media($desktop)
   .header
@@ -82,7 +221,7 @@
       .btn--muted
         display: none
 
-        
+
 @media(width <= 480px)
   .header
     &__wrapper

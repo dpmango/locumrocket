@@ -55,7 +55,7 @@ gulp.task('watch', function(){
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug-watch']);
   gulp.watch('./src/js/es2015/*.js', ['babel']);
-  gulp.watch('./src/images/svg/*.svg', ['svg-min', 'iconfont']);
+  gulp.watch('./src/images/svg/*.svg', runSequence(['svg-min'], 'iconfont'));
   gulp.watch('./src/js/**/*.js', browserSync.reload);
 })
 

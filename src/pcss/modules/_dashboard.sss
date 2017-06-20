@@ -1,0 +1,403 @@
+//DASHBOARD
+
+// ALERTS
+.alerts
+  margin: 20px auto
+  &__toggler
+    text-align: center
+    font-size: 12px
+    a
+      color: color($fontColor a(70%))
+      border-bottom: 1px dashed color($fontColor a(70%))
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorBlue
+        border-color: $colorBlue
+
+.alert
+  display: none
+  align-items: center
+  justify-content: space-between
+  max-width: 670px
+  margin-left: auto
+  margin-right: auto
+  background: white
+  padding: 10px 15px 8px 15px
+  border-radius: 5px
+  margin-bottom: 10px
+  border: 1px solid $borderColor
+  &--green
+    border-color: $colorForest
+  &--red
+    border-color: $colorRed
+  &.visible
+    display: flex
+  &__text
+    flex: 1 1 auto
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    font-size: 14px
+    a
+      color: $colorBlue
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorRed
+
+  .icon-alert
+    color: color($fontColor a(50%))
+    font-size: 18px
+  .icon-close
+    font-size: 10px
+    color: color($fontColor a(50%))
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $fontColor
+
+
+.d-title
+  font-size: 24px
+  font-family: 'Montserrat'
+  font-weight: 500
+
+.d-box
+  border: 4px solid #EBEBEB
+  background: white
+
+.d-welcome
+  &__wrapper
+    margin-top: 25px
+    margin-left: -15px
+    margin-right: -15px
+    display: flex
+    width: 100%
+  &__left
+    flex: 0 1 33.3%
+    padding: 0 15px
+  &__facility-image
+    font-size: 0
+    margin-bottom: 30px
+    img
+      max-width: 100%
+  &__facility-map
+    display: flex
+    flex-direction: column
+    > div
+      flex: 1 0 auto
+      min-height: 200px
+  &__right
+    flex: 0 1 67.7%
+    padding: 0 15px
+  &__about
+    &__head
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background: color(#BDCDD6 a(10%))
+      padding-left: 25px
+      border-bottom: 1px solid $borderColor
+      &__name
+        font-size: 16px
+        font-weight: 600
+    &__row
+      display: flex
+      padding: 18px 15px
+      border-bottom: 1px solid $borderColor
+      &:nth-child(odd)
+        background: color(#BDCDD6 a(10%))
+      &--2col
+        .d-welcome__about__item
+          flex: 0 1 50%
+      &--3col
+        .d-welcome__about__item
+          flex: 0 1 25%
+          &:nth-child(2), &:nth-child(3)
+            .d-welcome__about__label
+              flex: 0 1 95px
+      &--contacts
+        .d-welcome__about__item
+          flex: 0 1 45%
+          &:nth-child(2), &:nth-child(3)
+            flex-basis: 27%
+
+    &__item
+      display: flex
+      padding: 0 10px
+      flex: 0 1 100%
+    &__label
+      flex: 0 0 95px
+      font-size: 14px
+      color: color($fontColor a(50%))
+    &__value
+      flex: 0 1 auto
+      font-size: 16px
+      font-weight: 600
+      p
+        display: block
+        font-size: 14px
+        margin: 0
+        font-weight: 400
+      a
+        color: $colorBlue
+        transition: all $transitionSpeed $ease
+
+
+
+.d-search
+  margin-top: 55px
+  &__box
+    margin-top: 20px
+    padding: 25px 35px
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__main
+    position: relative
+    border: 2px solid $borderColor
+    flex: 0 1 640px
+    input
+      display: block
+      width: 100%
+      padding: 15px 80px 15px 20px
+      font-size: 14px
+      border: 0
+      background: transparent
+    button
+      background: $colorRed
+      position: absolute
+      top: 0
+      right: 0
+      font-size: 18px
+      color: white
+      padding: 12px
+      width: 46px
+      text-align: center
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      .icon
+        margin-top: 2px
+      &:hover
+        background: $colorGreen
+  &__collapsable
+    display: none
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid $borderColor
+      border-bottom: 1px solid $borderColor
+      margin: 25px 0 20px 0
+      padding: 25px 0
+    &__cta
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &__applied
+        > label
+          display: block
+          margin-bottom: 3px
+          font-size: 12px
+          color: color($fontColor a(50%))
+
+      &__btns
+        flex: 0 1 auto
+        .btn
+          margin-right: 35px
+          &:last-child
+            margin-right: 0
+  &__col
+    flex: 0 1 165px
+    padding: 0 10px
+    &:nth-child(2)
+      flex-basis: 260px
+      padding-left: 0
+    &:nth-child(3)
+      flex-basis: 220px
+    &:nth-child(4)
+      flex-basis: 175px
+      padding-right: 0
+    .ui-group
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+
+
+.show-more
+  a
+    color: $colorBlue
+    border-bottom: 1px dashed $colorBlue
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: transparent
+      color: $colorRed
+
+.js-showMoreList
+  > div[data-visible="0"]
+    display: none
+
+
+// RESULTS
+.d-results
+  margin-top: 55px
+  &__head
+    display: flex
+    justify-content: space-between
+  &__card
+    margin-top: 20px
+    border: 4px solid $borderColor
+    cursor: pointer
+    background: white
+    transition: border $transitionSpeed $ease
+    &:hover
+      border-color: $colorGreen
+    &__content
+      display: flex
+      justify-content: space-between
+    &__col
+      flex: 0 1 400px
+      display: flex
+      flex-direction: column
+      padding: 15px
+      border-right: 1px solid $borderColor
+      &__wrapper
+        flex: 0 0 auto
+        margin: auto 0
+      &:nth-child(1)
+        padding-left: 35px
+      &:nth-child(2)
+        flex-basis: 330px
+      &:nth-child(3)
+        flex-basis: 420px
+        border-right: 0
+        .d-results__card__item__label
+          flex-basis: 130px
+    &__primary
+      display: flex
+      align-items: center
+      &-content
+        flex: 1
+      &-avatar
+        flex: 0 1 100px
+        margin-right: 30px
+    &__avatar
+      position: relative
+      z-index: 2
+      size: 100px
+      overflow: hidden
+      border-radius: 50%
+      border: 2px solid $borderColor
+      img
+        display: block
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0)
+        max-width: 100%
+    &__item
+      display: flex
+      margin-bottom: 13px
+      &:last-child
+        margin-bottom: 0
+      &__label
+        flex: 0 1 95px
+        font-size: 14px
+        color: color($fontColor a(50%))
+      &__value
+        flex: 0 1 auto
+        font-size: 14px
+        font-weight: 600
+      &--jsr
+        margin-top: 5px
+        margin-bottom: 0
+        align-items: center
+        justify-content: space-between
+        .d-results__card__item__label
+          font-size: 12px
+          flex-basis: auto
+        .d-results__card__item__value
+          font-weight: 700
+
+
+    &__cta
+      border-top: 1px solid $borderColor
+      padding-left: 35px
+      display: flex
+      align-items: center
+    &__name
+      font-size: 18px
+      font-family: 'Montserrat'
+      font-weight: 700
+      color: $colorBlue
+    &__rating
+      margin-left: auto
+      margin-right: 40px
+      .icon
+        color: #FDB22B
+        font-size: 16px
+      span
+        display: inline-block
+        font-size: 18px
+        font-weight: 700
+        margin-left: 5px
+        span
+          font-size: 14px
+          margin-left: 7px
+          color: color($fontColor a(50%))
+
+
+
+
+
+// SORTABLE
+.sortable
+  font-size: 14px
+  &__label
+    display: inline-block
+    font-weight: 600
+  &__filter
+    display: inline-block
+    margin-left: 5px
+    position: relative
+    cursor: pointer
+    > span
+      display: inline-block
+      color: $colorBlue
+      border-bottom: 1px dashed $colorBlue
+      transition: all $transitionSpeed $ease
+    .icon
+      font-size: 6px
+      margin-left: 7px
+      color: $colorBlue
+      transition: transform $transitionSpeed $ease
+    &:hover
+      > span
+        color: $fontColor
+        border-color: transparent
+  &__dropdown
+    position: absolute
+    top: 25px
+    right: 0
+    z-index: 5
+    background: white
+    border-radius: 4px
+    transition: all $transitionSpeed $ease
+    opacity: 0
+    pointer-events: none
+    box-shadow: 0px 5px 10px color(black a(10%))
+    transform: translate3d(0,25px,0)
+    span
+      display: block
+      transition: all $transitionSpeed $ease
+      padding: 5px 10px
+      &:hover
+        color: $colorBlue
+  &.active
+    .sortable__filter
+      .icon
+        transform: rotate(180deg)
+    .sortable__dropdown
+      opacity: 1
+      pointer-events: all
+      transform: translate3d(0,0,0)

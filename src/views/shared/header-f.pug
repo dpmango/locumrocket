@@ -1,0 +1,47 @@
+// HEADER::START
+header.header
+  .container
+    .header__wrapper
+      a(href='homepage.html').header__logo
+        i.icon.icon-logo
+      .header__navi.header__navi--dashboard
+        a(href='#') Dashboard
+        a(href='#') My jobs
+          .header__navi__tag.header__navi__tag--green 1
+        a(href='#') Billing
+          .header__navi__tag.header__navi__tag--red 2
+      .header__search
+        input(type='text' placeholder='Search professionals ...')
+        button(type='submit')
+          i.icon.icon-search
+      .header__icons
+        a(href='#').header__notification
+          i.icon.icon-notification
+          i.icon-mark
+        a(href='#').header__messages
+          i.icon.icon-message
+      .header__user
+        .header__user__clickable
+          a(href='#').header__user__avatar
+            img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+          a(href='#').header__user__name Savannah Nichols
+          i.icon.icon-select
+        .header__user__dropdown
+          a(href='#') Profile settings
+          a(href='#') Sign Out
+          
+        
+      .hamburger.hamburger--squeeze
+        .hamburger-box
+          .hamburger-inner
+          
+
+// MOBILE-NAVI
+.mobile-navi
+  .mobile-navi__wrapper
+    .mobile-navi__menu
+      a(href='how.html') How it works
+      a(href='contact.html') Contact us
+      a(href='#modalLogin').js-popup Log in
+    a(href='#modalRegWelcome').btn.btn--red.btn--150.js-popup Register
+    a(href='demo.html').btn.btn--muted Demo

@@ -27,32 +27,56 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.icon-arrow-next:before {
+.icon-alert:before {
     content: "\EA01";
 }
-.icon-arrow-prev:before {
+.icon-arrow-next:before {
     content: "\EA02";
 }
-.icon-checkbox:before {
+.icon-arrow-prev:before {
     content: "\EA03";
 }
-.icon-email:before {
+.icon-checkbox:before {
     content: "\EA04";
 }
-.icon-facebook:before {
+.icon-close:before {
     content: "\EA05";
 }
-.icon-linkedin:before {
+.icon-email:before {
     content: "\EA06";
 }
-.icon-modal-close:before {
+.icon-facebook:before {
     content: "\EA07";
 }
-.icon-next:before {
+.icon-linkedin:before {
     content: "\EA08";
 }
-.icon-twitter:before {
+.icon-message:before {
     content: "\EA09";
+}
+.icon-modal-close:before {
+    content: "\EA0A";
+}
+.icon-next:before {
+    content: "\EA0B";
+}
+.icon-notification:before {
+    content: "\EA0C";
+}
+.icon-rating:before {
+    content: "\EA0D";
+}
+.icon-search:before {
+    content: "\EA0E";
+}
+.icon-select:before {
+    content: "\EA0F";
+}
+.icon-twitter:before {
+    content: "\EA10";
+}
+.icon-verify:before {
+    content: "\EA11";
 }
 /* ICONS */
 .icon {
@@ -181,6 +205,26 @@ button:focus {
     background: #A0B0B9;
     color: white;
 }
+.btn--ghost {
+    padding: 11px 5px;
+    border: 2px solid #EBEBEB;
+    color: #1E8BC3;
+    font-weight: 600;
+    font-size: 15px;
+}
+.btn--ghost:hover, .btn--ghost.active {
+    background: #EBEBEB;
+    color: #2F313A;
+}
+.btn--ghost.btn--fill {
+    background: #EBEBEB;
+    color: #2F313A;
+}
+.btn--ghost.btn--fill:hover {
+    border-color: #3AC9D3;
+    background: #3AC9D3;
+    color: white;
+}
 .btn--150 {
     width: 150px;
 }
@@ -188,6 +232,12 @@ button:focus {
     padding: 23px 75px;
     border-radius: 50px;
     font-size: 17px;
+}
+.btn--head {
+    border-radius: 0;
+}
+.btn--head:after {
+    border-radius: 0;
 }
 .hamburger {
     display: inline-block;
@@ -351,12 +401,13 @@ button:focus {
 /* THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT */
 .ui-input {
     display: block;
-    padding: 12px 15px;
+    padding: 11px 15px;
     width: 100%;
-    border: 1px solid #EBEBEB;
+    border: 1px solid #BDCDD6;
     border-radius: 4px;
     background: white;
     color: $grayColor;
+    font-size: 14px;
     -webkit-appearance: none;
 }
 .ui-input--line {
@@ -550,6 +601,243 @@ button:focus {
 .ui-checkbox--chunk:hover {
     border-color: #ECF0F1;
     background: white;
+}
+/* Checkbox */
+.ui-radio {
+    margin-bottom: 14px;
+}
+.ui-radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+.ui-radio input:checked + label {}
+.ui-radio input:checked + label:before {
+    border-color: #3AC9D3;
+}
+.ui-radio input:checked + label:after {
+    -webkit-transform: translateY(-50%) scale(1);
+        -ms-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+}
+.ui-radio label {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ui-radio label:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #3AC9D3;
+    border-radius: 50%;
+    background: white;
+    content: ' ';
+    vertical-align: middle;
+    cursor: pointer;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.ui-radio label:after {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3AC9D3;
+    content: ' ';
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    -webkit-transform: translateY(-50%) scale(0);
+        -ms-transform: translateY(-50%) scale(0);
+            transform: translateY(-50%) scale(0);
+}
+/* GROUPING */
+.ui-group {
+    margin-bottom: 25px;
+}
+.ui-group > label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.ui-filtrable {
+    font-size: 14px;
+}
+.ui-filtrable a {
+    display: block;
+    padding: 5px 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.ui-filtrable a:hover {
+    color: #1E8BC3;
+}
+.ui-filtrable a.active {
+    color: #1E8BC3;
+    font-weight: 600;
+}
+/*////// */
+/* SELECT */
+/*////// */
+.ui-select {
+    position: relative;
+    font-size: 14px;
+}
+.ui-select__visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    padding: 11px 12px 11px 15px;
+    border: 1px solid #BDCDD6;
+    border-radius: 4px;
+    background: white;
+    color: rgba(47, 49, 58, 0.5);
+    cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.ui-select__visible span {
+    display: inline-block;
+}
+.ui-select__visible .icon-select {
+    -webkit-flex: 0 0 10px;
+        -ms-flex: 0 0 10px;
+            flex: 0 0 10px;
+    margin-top: 2px;
+    font-size: 6px;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+    -webkit-box-flex: 0;
+}
+.ui-select__dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    overflow-y: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: 200px;
+    border-radius: 4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(0,25px,0);
+            transform: translate3d(0,25px,0);
+    pointer-events: none;
+}
+.ui-select__dropdown span {
+    display: block;
+    padding: 8px 15px;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.ui-select__dropdown span:hover:not(.ui-select__dropdown__placeholder) {
+    background: rgba(160, 176, 185, 0.2);
+}
+.ui-select__dropdown span.active {
+    background: #3AC9D3;
+    color: white;
+}
+.ui-select__dropdown span.active:hover {
+    background: #3AC9D3;
+}
+.ui-select__dropdown__placeholder {
+    margin-top: -8px;
+    color: #A0B0B9;
+    font-size: 13px;
+    cursor: default !important;
+}
+.ui-select.active .icon-select {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.ui-select.active .ui-select__dropdown {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+            transform: translate3d(0,0px,0);
+    pointer-events: all;
+}
+.ui-select--right .ui-select__dropdown {
+    top: 0;
+    right: -230px;
+    left: auto;
+    width: 220px;
+    -webkit-transform: translate3d(25px,0px,0);
+            transform: translate3d(25px,0px,0);
+}
+.ui-select--right.active .icon-select {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+/* TAG */
+.ui-tag {
+    margin-right: 10px;
+    padding: 7px 15px;
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    background: rgba(235, 235, 235, 0.25);
+    font-size: 14px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.ui-tag span {
+    display: inline-block;
+    margin-right: 10px;
+}
+.ui-tag .icon {
+    color: rgba(47, 49, 58, 0.5);
+    font-size: 10px;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.ui-tag .icon:hover {
+    color: #EF4836;
+}
+.ui-tag:last-child {
+    margin-right: 0;
+}
+.ui-tag:hover {
+    border: 1px solid rgba(47, 49, 58, 0.25);
+    background: rgba(235, 235, 235, 0.5);
 }
 /* Styles for dialog window */
 .mfp-wrap {

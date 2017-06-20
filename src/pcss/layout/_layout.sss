@@ -40,12 +40,25 @@ body, html
 
 
 .page
+  display: flex
+  flex-direction: column
+  min-height: calc(100vh - 75px)
   margin-top: 75px
+  &--bg
+    background: #FBFBFB
+  &--pad
+    .page__content
+      padding-bottom: 80px
+  &__content
+    flex: 1 1 auto
+
 
 @media($tablet)
   .page
     margin-top: 60px
+    min-height: calc(100vh - 60px)
 
 @media(width <= 480px)
   .page
     margin-top: 55px
+    min-height: calc(100vh - 55px)
