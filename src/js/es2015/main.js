@@ -272,6 +272,12 @@ $(document).ready(function(){
   });
 
 
+  // DASHBOARD HELPERS
+
+  $('.h-feedback__title').on('click', function(){
+    $(this).parent().toggleClass('active');
+  });
+
 
 
   // Masked input

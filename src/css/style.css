@@ -4298,5 +4298,58 @@ button:focus {
     max-height: -webkit-calc(100vh - 115px);
     max-height: calc(100vh - 115px);
 }
+/* feedback */
+.h-feedback {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+.h-feedback__title {
+    padding: 12px 24px;
+    border-top-left-radius: 8px;
+    background: #3AC9D3;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.h-feedback__title:hover {
+    background: #EF4836;
+}
+.h-feedback__content {
+    display: none;
+    min-width: 300px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(0,100%,0);
+            transform: translate3d(0,100%,0);
+}
+.h-feedback__content .form {
+    padding-top: 0;
+}
+.h-feedback__content .form-container {
+    border-radius: 0;
+}
+.h-feedback__content .form-inputs {
+    padding: 20px 30px;
+}
+.h-feedback__content .ui-group {
+    margin-bottom: 15px;
+}
+.h-feedback__content .ui-group label {
+    margin-bottom: 10px;
+}
+.h-feedback.active .h-feedback__title {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+.h-feedback.active .h-feedback__content {
+    display: block;
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
 
 /*# sourceMappingURL=style.css.map */

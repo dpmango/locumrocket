@@ -264,6 +264,12 @@ $(document).ready(function () {
     });
   });
 
+  // DASHBOARD HELPERS
+
+  $('.h-feedback__title').on('click', function () {
+    $(this).parent().toggleClass('active');
+  });
+
   // Masked input
   $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
   $("input[type='tel']").mask("999-999-9999");

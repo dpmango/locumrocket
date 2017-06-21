@@ -1,0 +1,38 @@
+// feedback
+.h-feedback
+  position: fixed
+  right: 0
+  bottom: 0
+  z-index: 9
+  &__title
+    color: white
+    background: $colorGreen
+    padding: 12px 24px
+    font-size: 14px
+    font-weight: 600
+    cursor: pointer
+    border-top-left-radius: 8px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $colorRed
+  &__content
+    display: none
+    min-width: 300px
+    transform: translate3d(0,100%,0)
+    transition: all $transitionSpeed $ease
+    .form
+      padding-top: 0
+      &-container
+        border-radius: 0
+      &-inputs
+        padding: 20px 30px
+    .ui-group
+      margin-bottom: 15px
+      label
+        margin-bottom: 10px
+  &.active
+    .h-feedback__title
+      transform: translate3d(0,0,0)
+    .h-feedback__content
+      display: block
+      transform: translate3d(0,0,0)

@@ -1,0 +1,19 @@
+.h-feedback
+  .h-feedback__title Feedback / Help
+  
+  .h-feedback__content
+    form(action='').form.form--center.js-contact-form
+      .form-container
+        .form-inputs
+          .ui-group
+            label Name
+            input(type='text' name='name' placeholder='Your name').ui-input
+          .ui-group
+            label Email
+            input(type='email' name='email' placeholder='your@email.com').ui-input
+          .ui-group
+            label Your question
+            textarea(placeholder='Let us know … ' name='text' rows='3').ui-input
+          .text-center
+            button(type='submit').btn.btn--red.btn--150 
+              span Get in touch
