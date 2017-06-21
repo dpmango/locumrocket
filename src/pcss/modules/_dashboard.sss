@@ -413,7 +413,7 @@
     display: flex
     justify-content: space-between
   &__card
-    margin-top: 20px
+    margin-top: 15px
     border: 4px solid $borderColor
     cursor: pointer
     background: white
@@ -487,8 +487,6 @@
           flex-basis: auto
         .d-results__card__item__value
           font-weight: 700
-
-
     &__cta
       border-top: 1px solid $borderColor
       padding-left: 35px
@@ -515,8 +513,84 @@
           margin-left: 7px
           color: color($fontColor a(50%))
 
+  &__job
+    display: block
+    margin-top: 15px
+    padding: 20px 35px 15px 35px
+    background: white
+    cursor: pointer
+    border: 4px solid $borderColor
+    transition: border $transitionSpeed $ease
+    &:hover
+      border-color: $colorGreen
+    &__content
+      display: flex
+      justify-content: space-between
+      padding-bottom: 15px
+    &__description
+      flex: 0 1 auto
+    &__numbers
+      flex: 0 1 auto
+      text-align: right
+    &__price
+      color: $colorGreen
+      font-size: 18px
+      font-family: 'Montserrat'
+      font-weight: 600
+    &__commitment
+      font-size: 14px
+      margin-top: 5px
+      color: $fontColor50
+    &__name
+      color: $colorBlue
+      font-size: 18px
+      font-family: 'Montserrat'
+      font-weight: 600
+    &__scope
+      display: flex
+      margin-top: 10px
+      &__item
+        display: flex
+        align-items: center
+        color: $fontColor70
+        font-size: 14px
+        font-weight: 600
+        margin-right: 20px
+        &:last-child
+          margin-right: 0
+        .icon
+          font-size: 12px
+          color: $colorMute
+        span
+          display: inline-block
+          margin-left: 10px
 
 
+    &__text
+      font-size: 14px
+      margin-top: 10px
+
+    &__cta
+      border-top: 1px solid $borderColor
+      padding-top: 15px
+      display: flex
+      align-items: center
+      &__left
+        flex: 0 1 auto
+        display: flex
+        align-items: center
+      &__btns
+        flex: 1 1 auto
+        margin-left: auto
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        a
+          margin-left: 20px
+    &__author
+      font-size: 14px
+      font-weight: 600
+      margin-right: 20px
 
 
 // SORTABLE

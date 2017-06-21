@@ -21,8 +21,9 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper"><a class="header__logo" href="homepage.html"><i class="icon icon-logo"></i></a>
-        <div class="header__navi header__navi--dashboard"><a href="#">Dashboard</a><a href="#">My jobs</a><a href="#">Payroll
-            <div class="header__navi__tag header__navi__tag--red">1</div></a></div>
+        <div class="header__navi header__navi--dashboard"><a href="#">Dashboard</a><a href="#">My jobs
+            <div class="header__navi__tag header__navi__tag--green">1</div></a><a href="#">Billing
+            <div class="header__navi__tag header__navi__tag--red">2</div></a></div>
         <div class="header__search">
           <input type="text" placeholder="Search professionals ...">
           <button type="submit"><i class="icon icon-search"></i></button>
@@ -50,9 +51,16 @@
     <div class="page__content">
       <!-- DASHBOARD ALERTS-->
       <div class="alerts">
-        <div class="alert alert--red visible"><i class="icon icon-alert"></i>
-          <div class="alert__text">Remember to fill out our week timesheet. Go to <a href="#">PAYROLL</a></div><i class="icon icon-close"></i>
+        <div class="alert alert--green visible"><i class="icon icon-alert"></i>
+          <div class="alert__text">A candidate has accepted your job. Go to <a href="#">My Jobs/Filled</a></div><i class="icon icon-close"></i>
         </div>
+        <div class="alert alert--red js-toggableAlert"><i class="icon icon-alert"></i>
+          <div class="alert__text">You have unapproved timesheet(s). Go to<a href="#">BILLING</a></div><i class="icon icon-close"></i>
+        </div>
+        <div class="alert alert--red js-toggableAlert"><i class="icon icon-alert"></i>
+          <div class="alert__text">You have unpaid job(s). Go to<a href="#">BILLING</a></div><i class="icon icon-close"></i>
+        </div>
+        <div class="alerts__toggler" data-hidden="1"><a href="#">show 2 more</a></div>
       </div>
       <!-- DASHBOARD-->
       <div class="d-welcome">
@@ -61,133 +69,81 @@
           <div class="d-welcome__wrapper">
             <!-- facility image and maps-->
             <div class="d-welcome__left">
-              <div class="d-welcome__pro">
-                <div class="d-welcome__pro__avatar"><img src="images/tmp/dashProfessional.jpg" srcset="images/tmp/dashProfessional@2x.jpg 2x"></div>
-                <div class="d-welcome__pro__name"><span>Bob Macron, MD</span><i class="icon icon-verify"></i></div>
-                <div class="d-welcome__pro__location"><i class="icon icon-location"></i><span>Oakland, CA</span></div>
-                <div class="d-welcome__pro__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div>
-                <div class="d-welcome__pro__jsr">
-                  <div class="d-welcome__pro__jsr__head"><span>Job Sucess</span><span>95%</span></div>
-                  <div class="d-welcome__pro__jsr__progress">
-                    <div style="width: 95%;"></div>
-                  </div>
-                </div>
+              <div class="d-welcome__facility-image d-box"><img src="images/tmp/dashHospital.jpg" srcset="images/tmp/dashHospital@2x.jpg 2x"></div>
+              <div class="d-welcome__facility-map d-box">
+                <!-- GOOGLE API-->
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdDq67GS9ongMkjzokPsC5fTxdvEKidfI"></script>
+                <script type="text/javascript" src="js/maps.js"></script>
+                <div class="js-facilityMap"></div>
               </div>
             </div>
             <!-- facility description-->
             <div class="d-welcome__right">
               <div class="d-welcome__about d-box">
                 <div class="d-welcome__about__head">
-                  <div class="d-welcome__about__head__name">My profile details</div><a class="btn btn--red btn--head" href="#">PROFILE SETTINGS</a>
+                  <div class="d-welcome__about__head__name">Facility details</div><a class="btn btn--red btn--150 btn--head" href="#">Edit</a>
                 </div>
                 <!-- row-->
                 <div class="d-welcome__about__row d-welcome__about__row--2col">
                   <div class="d-welcome__about__item">
-                    <div class="d-welcome__about__label">Specialty</div>
-                    <div class="d-welcome__about__value">INTERNAL MEDICINE</div>
+                    <div class="d-welcome__about__label">Facility</div>
+                    <div class="d-welcome__about__value">BELMONT ALBANY VILLAGE</div>
                   </div>
                   <div class="d-welcome__about__item">
-                    <div class="d-welcome__about__label">Degree</div>
-                    <div class="d-welcome__about__value">MD</div>
+                    <div class="d-welcome__about__label">Type</div>
+                    <div class="d-welcome__about__value">Community Hospital</div>
                   </div>
                 </div>
                 <!-- row-->
-                <div class="d-welcome__about__row d-welcome__about__row--2col">
+                <div class="d-welcome__about__row d-welcome__about__row--3col">
                   <div class="d-welcome__about__item">
-                    <div class="d-welcome__about__label">Availability</div>
-                    <div class="d-welcome__about__value">Less than 20h/week</div>
+                    <div class="d-welcome__about__label">Doctors</div>
+                    <div class="d-welcome__about__value">15</div>
                   </div>
                   <div class="d-welcome__about__item">
-                    <div class="d-welcome__about__label">Experience</div>
-                    <div class="d-welcome__about__value">>10 years</div>
+                    <div class="d-welcome__about__label">Clinical staff</div>
+                    <div class="d-welcome__about__value">200</div>
+                  </div>
+                  <div class="d-welcome__about__item">
+                    <div class="d-welcome__about__label">Rooms</div>
+                    <div class="d-welcome__about__value">500</div>
                   </div>
                 </div>
                 <!-- row-->
                 <div class="d-welcome__about__row">
                   <div class="d-welcome__about__item">
-                    <div class="d-welcome__about__label">Introduction</div>
+                    <div class="d-welcome__about__label">Adress</div>
+                    <div class="d-welcome__about__value">23, University Avenue, Berkeley, 94608</div>
+                  </div>
+                </div>
+                <!-- row-->
+                <div class="d-welcome__about__row">
+                  <div class="d-welcome__about__item">
+                    <div class="d-welcome__about__label">Description</div>
                     <div class="d-welcome__about__value"> 
-                      <p>Accumsan sit simpliciter phantasma illud ex volutpat. Illud phantasma industria vexillum scriptor accumsan fuit unquam cum 1500s, cum incognita est a printer tulit unam, et diripienda autem genus est genus ut libero. Non remansit quinque saecula non tantum, sed etiam in saltu electronic condimentum, remanserant per se unum. Is eram in 1960 popularized cum release Cum incognita est a printer tulit unam, et diripienda</p>
+                      <p>BELMONT ALBANY VILLAGE is the only Level One trauma center in Berkeley and Northern San Mateo County. We provide life-saving medical care to the 1.5 million adults and children of Berkeley, San Francisco and northern San Mateo County. We offer comprehensive tertiary services designed to meet the needs of diverse communities. Services include 24-hour emergency care, minimally invasive surgery, high risk obstetrics and Level III Newborn Intensive Care Nursery</p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- next info section    -->
-              <div class="d-welcome__about d-welcome__about--toggable d-box js-showMoreList">
-                <div class="d-welcome__about__head show-more" data-hidden="1" data-alttext="Show less">
-                  <div class="d-welcome__about__head__name">Employment history</div>
-                  <div class="d-welcome__about__head__toggable"><span>Show more</span><i class="icon icon-select"></i></div>
                 </div>
                 <!-- row-->
-                <div class="d-welcome__about__hidden" data-visible="0">
-                  <!-- single record-->
-                  <div class="d-welcome__about__record">
-                    <div class="d-welcome__about__record__top">
-                      <div class="d-welcome__about__record__title">Medical Doctor - Department of cardiology<span>SF GENERAL HOSPITAL</span></div>
-                      <div class="d-welcome__about__record__year">2012 - present</div>
-                    </div>
-                    <div class="d-welcome__about__record__content">The UF Health Cardiology Ocala Heath Brook location is part of UF Health, the Southeast's most comprehensive academic health center, but maintains a community practice environment and has many ancillary services located directly in the practice. </div>
-                  </div>
-                  <!-- single record-->
-                  <div class="d-welcome__about__record">
-                    <div class="d-welcome__about__record__top">
-                      <div class="d-welcome__about__record__title">Resident – Department of cardiology<span>SF GENERAL HOSPITAL</span></div>
-                      <div class="d-welcome__about__record__year">2011 - 2012</div>
-                    </div>
-                    <div class="d-welcome__about__record__content">Responsibilities include providing outpatient general and/or interventional cardiology and cardiac imaging services, as well as shared night and weekend call.</div>
-                  </div>
-                </div>
-              </div>
-              <!-- next info section    -->
-              <div class="d-welcome__about d-welcome__about--toggable d-box js-showMoreList">
-                <div class="d-welcome__about__head show-more" data-hidden="1" data-alttext="Show less">
-                  <div class="d-welcome__about__head__name">Education history</div>
-                  <div class="d-welcome__about__head__toggable"><span>Show more</span><i class="icon icon-select"></i></div>
-                </div>
-                <!-- row-->
-                <div class="d-welcome__about__hidden" data-visible="0">
-                  <!-- single record-->
-                  <div class="d-welcome__about__record">
-                    <div class="d-welcome__about__record__top">
-                      <div class="d-welcome__about__record__title">Medical Doctor - MD<span>University of California, Los Angeles (UCLA)</span></div>
-                      <div class="d-welcome__about__record__year">2008 - 2012</div>
+                <div class="d-welcome__about__row d-welcome__about__row--contacts">
+                  <div class="d-welcome__about__item">
+                    <div class="d-welcome__about__label">Contact</div>
+                    <div class="d-welcome__about__value">
+                       Mary Tyller
+                      <p>Sr. Vice President</p>
                     </div>
                   </div>
-                  <!-- single record-->
-                  <div class="d-welcome__about__record">
-                    <div class="d-welcome__about__record__top">
-                      <div class="d-welcome__about__record__title">Bachelor of Science - BS<span>Los Angeles High scool</span></div>
-                      <div class="d-welcome__about__record__year">2003 - 2008</div>
+                  <div class="d-welcome__about__item">
+                    <div class="d-welcome__about__value">
+                       (510) 345-564
+                      <p>Phone</p>
                     </div>
-                    <div class="d-welcome__about__record__content">Biology major</div>
                   </div>
-                </div>
-              </div>
-              <!-- next info section    -->
-              <div class="d-welcome__about d-welcome__about--toggable d-box js-showMoreList">
-                <div class="d-welcome__about__head show-more" data-hidden="1" data-alttext="Show less">
-                  <div class="d-welcome__about__head__name">Reviews and LocumRocket history</div>
-                  <div class="d-welcome__about__head__toggable"><span>Show more</span><i class="icon icon-select"></i></div>
-                </div>
-                <!-- row-->
-                <div class="d-welcome__about__hidden" data-visible="0">
-                  <!-- single testimonial-->
-                  <div class="d-welcome__about__testimonial">
-                    <div class="d-welcome__about__testimonial__content">
-                      <div class="d-welcome__about__testimonial__title">Cardiologist</div>
-                      <div class="d-welcome__about__testimonial__text">Dr. Macron is a great doctor. He has a amazing bedside manner and is very professional. I can't recommend him enough.</div>
-                      <div class="d-welcome__about__testimonial__author">- Bob Dole, SF GENERAL HOSPITAL</div>
+                  <div class="d-welcome__about__item">
+                    <div class="d-welcome__about__value"> <a href="mailto:mtyller@vill.com">mtyller@vill.com</a>
+                      <p>Email</p>
                     </div>
-                    <div class="d-welcome__about__testimonial__rating"><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><span>4.5</span></div>
-                  </div>
-                  <!-- single testimonial-->
-                  <div class="d-welcome__about__testimonial">
-                    <div class="d-welcome__about__testimonial__content">
-                      <div class="d-welcome__about__testimonial__title">Rock star cardiologist needed!</div>
-                      <div class="d-welcome__about__testimonial__text">He went above and beyond to make sure that patients received the best care.. 100% recommend.</div>
-                      <div class="d-welcome__about__testimonial__author">- John Smith, Sacramento state hosital</div>
-                    </div>
-                    <div class="d-welcome__about__testimonial__rating"><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><i class="icon icon-rating"></i><span>4.5</span></div>
                   </div>
                 </div>
               </div>
@@ -198,7 +154,7 @@
       <!-- SEARCH-->
       <div class="d-search">
         <div class="container">
-          <div class="d-title">Find jobs</div>
+          <div class="d-title">Find a medical professional</div>
           <div class="d-search__box d-box">
             <div class="d-search__top">
               <div class="d-search__main">
@@ -298,119 +254,267 @@
             </div>
           </div>
           <!-- card-->
-          <div class="d-results__job" data-link="#">
-            <div class="d-results__job__content">
-              <!-- top (description)-->
-              <div class="d-results__job__description">
-                <div class="d-results__job__name">Looking for Internal Medicine professional</div>
-                <div class="d-results__job__scope">
-                  <div class="d-results__job__scope__item"><i class="icon icon-location"></i><span>Albany, CA</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-clock"></i><span>Less than 3 months</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-calendar"></i><span>07/01/2017</span></div>
+          <div class="d-results__card">
+            <div class="d-results__card__content">
+              <div class="d-results__card__col">
+                <div class="d-results__card__primary">
+                  <div class="d-results__card__primary-avatar">
+                    <div class="d-results__card__avatar"><img src="images/tmp/doctor_1.jpg" srcset="images/tmp/doctor_1@2x.jpg"></div>
+                    <div class="d-results__card__item d-results__card__item--jsr">
+                      <div class="d-results__card__item__label">Job Sucess</div>
+                      <div class="d-results__card__item__value">80%</div>
+                    </div>
+                  </div>
+                  <div class="d-results__card__primary-content">
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Specialty</div>
+                      <div class="d-results__card__item__value">Internal Medicine</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Location</div>
+                      <div class="d-results__card__item__value">Oakland, CA</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Verification</div>
+                      <div class="d-results__card__item__value"> <span>Verified</span><i class="icon icon-verified"></i></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-results__job__text">Internal Medicine physician needed to cover shifts in Oakland, CA and Berkeley, CA</div>
               </div>
-              <div class="d-results__job__numbers">
-                <div class="d-results__job__price">250$/h</div>
-                <div class="d-results__job__commitment">Less than 5 h/wk</div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Experience:</div>
+                    <div class="d-results__card__item__value">> 10 years</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Availability:</div>
+                    <div class="d-results__card__item__value">< 20 h / week</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Skills:</div>
+                    <div class="d-results__card__item__value">Fellowship, Board certified</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Undergraduate</div>
+                    <div class="d-results__card__item__value">UNIVERSITY OF CALIFORNIA, BERKELEY</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">University:</div>
+                    <div class="d-results__card__item__value">UCLA</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Residency:</div>
+                    <div class="d-results__card__item__value">SF GENERAL HOSPITAL</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- cta elements-->
-            <div class="d-results__job__cta">
-              <div class="d-results__job__cta__left">
-                <div class="d-results__job__author">St Mary’s Hospital</div>
-                <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div>
-              </div>
-              <div class="d-results__job__cta__btns">
-                <div class="show-more"><a href="#">see more</a></div><a class="btn btn--150 btn--action btn--action-green" href="#">Contact</a><a class="btn btn--150 btn--action btn--action-red" href="#">Apply</a>
-              </div>
+            <div class="d-results__card__cta">
+              <div class="d-results__card__name">Bob Macron, MD</div>
+              <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div><a class="btn btn--ghost btn--fill btn--150" href="#">SEE MORE</a>
             </div>
           </div>
           <!-- card-->
-          <div class="d-results__job" data-link="#">
-            <div class="d-results__job__content">
-              <!-- top (description)-->
-              <div class="d-results__job__description">
-                <div class="d-results__job__name">Emergency Medicine MD, DO</div>
-                <div class="d-results__job__scope">
-                  <div class="d-results__job__scope__item"><i class="icon icon-location"></i><span>Berkeley, CA</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-clock"></i><span>Less than 1 months</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-calendar"></i><span>05/12/2017</span></div>
+          <div class="d-results__card">
+            <div class="d-results__card__content">
+              <div class="d-results__card__col">
+                <div class="d-results__card__primary">
+                  <div class="d-results__card__primary-avatar">
+                    <div class="d-results__card__avatar"><img src="images/tmp/doctor_1.jpg" srcset="images/tmp/doctor_1@2x.jpg"></div>
+                    <div class="d-results__card__item d-results__card__item--jsr">
+                      <div class="d-results__card__item__label">Job Sucess</div>
+                      <div class="d-results__card__item__value">80%</div>
+                    </div>
+                  </div>
+                  <div class="d-results__card__primary-content">
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Specialty</div>
+                      <div class="d-results__card__item__value">Internal Medicine</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Location</div>
+                      <div class="d-results__card__item__value">Oakland, CA</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Verification</div>
+                      <div class="d-results__card__item__value"> <span>Verified</span><i class="icon icon-verified"></i></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-results__job__text">Join a team of world-class doctors. With multiple hospitals, we offer comprehensive care and a commitment to exceptional quality, safety and kindness.</div>
               </div>
-              <div class="d-results__job__numbers">
-                <div class="d-results__job__price">220$/h</div>
-                <div class="d-results__job__commitment">Less than 10 h/wk</div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Experience:</div>
+                    <div class="d-results__card__item__value">> 10 years</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Availability:</div>
+                    <div class="d-results__card__item__value">< 20 h / week</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Skills:</div>
+                    <div class="d-results__card__item__value">Fellowship, Board certified</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Undergraduate</div>
+                    <div class="d-results__card__item__value">UNIVERSITY OF CALIFORNIA, BERKELEY</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">University:</div>
+                    <div class="d-results__card__item__value">UCLA</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Residency:</div>
+                    <div class="d-results__card__item__value">SF GENERAL HOSPITAL</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- cta elements-->
-            <div class="d-results__job__cta">
-              <div class="d-results__job__cta__left">
-                <div class="d-results__job__author">Alta Bates Center</div>
-                <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div>
-              </div>
-              <div class="d-results__job__cta__btns">
-                <div class="show-more"><a href="#">see more</a></div><a class="btn btn--150 btn--action btn--action-green" href="#">Contact</a><a class="btn btn--150 btn--action btn--action-red" href="#">Apply</a>
-              </div>
+            <div class="d-results__card__cta">
+              <div class="d-results__card__name">Bob Macron, MD</div>
+              <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div><a class="btn btn--ghost btn--fill btn--150" href="#">SEE MORE</a>
             </div>
           </div>
           <!-- card-->
-          <div class="d-results__job" data-link="#">
-            <div class="d-results__job__content">
-              <!-- top (description)-->
-              <div class="d-results__job__description">
-                <div class="d-results__job__name">Night Hospitalist Physician needed</div>
-                <div class="d-results__job__scope">
-                  <div class="d-results__job__scope__item"><i class="icon icon-location"></i><span>Albany, CA</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-clock"></i><span>Less than 3 months</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-calendar"></i><span>07/01/2017</span></div>
+          <div class="d-results__card">
+            <div class="d-results__card__content">
+              <div class="d-results__card__col">
+                <div class="d-results__card__primary">
+                  <div class="d-results__card__primary-avatar">
+                    <div class="d-results__card__avatar"><img src="images/tmp/doctor_1.jpg" srcset="images/tmp/doctor_1@2x.jpg"></div>
+                    <div class="d-results__card__item d-results__card__item--jsr">
+                      <div class="d-results__card__item__label">Job Sucess</div>
+                      <div class="d-results__card__item__value">80%</div>
+                    </div>
+                  </div>
+                  <div class="d-results__card__primary-content">
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Specialty</div>
+                      <div class="d-results__card__item__value">Internal Medicine</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Location</div>
+                      <div class="d-results__card__item__value">Oakland, CA</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Verification</div>
+                      <div class="d-results__card__item__value"> <span>Verified</span><i class="icon icon-verified"></i></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-results__job__text">Looking for a Hospitalist to begin as soon. Shift schedules are 7:00 pm - 7:00 am. <br> Approximately 6 admissions per night</div>
               </div>
-              <div class="d-results__job__numbers">
-                <div class="d-results__job__price">300$/h</div>
-                <div class="d-results__job__commitment">Less than 5 h/wk</div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Experience:</div>
+                    <div class="d-results__card__item__value">> 10 years</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Availability:</div>
+                    <div class="d-results__card__item__value">< 20 h / week</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Skills:</div>
+                    <div class="d-results__card__item__value">Fellowship, Board certified</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Undergraduate</div>
+                    <div class="d-results__card__item__value">UNIVERSITY OF CALIFORNIA, BERKELEY</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">University:</div>
+                    <div class="d-results__card__item__value">UCLA</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Residency:</div>
+                    <div class="d-results__card__item__value">SF GENERAL HOSPITAL</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- cta elements-->
-            <div class="d-results__job__cta">
-              <div class="d-results__job__cta__left">
-                <div class="d-results__job__author">St Mary’s Hospital</div>
-                <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div>
-              </div>
-              <div class="d-results__job__cta__btns">
-                <div class="show-more"><a href="#">see more</a></div><a class="btn btn--150 btn--action btn--action-green" href="#">Contact</a><a class="btn btn--150 btn--action btn--action-red" href="#">Apply</a>
-              </div>
+            <div class="d-results__card__cta">
+              <div class="d-results__card__name">Bob Macron, MD</div>
+              <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div><a class="btn btn--ghost btn--fill btn--150" href="#">SEE MORE</a>
             </div>
           </div>
           <!-- card-->
-          <div class="d-results__job" data-link="#">
-            <div class="d-results__job__content">
-              <!-- top (description)-->
-              <div class="d-results__job__description">
-                <div class="d-results__job__name">Family Medicine Physician</div>
-                <div class="d-results__job__scope">
-                  <div class="d-results__job__scope__item"><i class="icon icon-location"></i><span>Berkeley, CA</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-clock"></i><span>Less than 1 months</span></div>
-                  <div class="d-results__job__scope__item"><i class="icon icon-calendar"></i><span>05/12/2017</span></div>
+          <div class="d-results__card">
+            <div class="d-results__card__content">
+              <div class="d-results__card__col">
+                <div class="d-results__card__primary">
+                  <div class="d-results__card__primary-avatar">
+                    <div class="d-results__card__avatar"><img src="images/tmp/doctor_1.jpg" srcset="images/tmp/doctor_1@2x.jpg"></div>
+                    <div class="d-results__card__item d-results__card__item--jsr">
+                      <div class="d-results__card__item__label">Job Sucess</div>
+                      <div class="d-results__card__item__value">80%</div>
+                    </div>
+                  </div>
+                  <div class="d-results__card__primary-content">
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Specialty</div>
+                      <div class="d-results__card__item__value">Internal Medicine</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Location</div>
+                      <div class="d-results__card__item__value">Oakland, CA</div>
+                    </div>
+                    <div class="d-results__card__item">
+                      <div class="d-results__card__item__label">Verification</div>
+                      <div class="d-results__card__item__value"> <span>Verified</span><i class="icon icon-verified"></i></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-results__job__text">Seeking a Family Medicine or Emergency Medicine Physician in beautiful, coastal southern California.</div>
               </div>
-              <div class="d-results__job__numbers">
-                <div class="d-results__job__price">225$/h</div>
-                <div class="d-results__job__commitment">Less than 10 h/wk</div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Experience:</div>
+                    <div class="d-results__card__item__value">> 10 years</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Availability:</div>
+                    <div class="d-results__card__item__value">< 20 h / week</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Skills:</div>
+                    <div class="d-results__card__item__value">Fellowship, Board certified</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-results__card__col">
+                <div class="d-results__card__col__wrapper">
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Undergraduate</div>
+                    <div class="d-results__card__item__value">UNIVERSITY OF CALIFORNIA, BERKELEY</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">University:</div>
+                    <div class="d-results__card__item__value">UCLA</div>
+                  </div>
+                  <div class="d-results__card__item">
+                    <div class="d-results__card__item__label">Residency:</div>
+                    <div class="d-results__card__item__value">SF GENERAL HOSPITAL</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- cta elements-->
-            <div class="d-results__job__cta">
-              <div class="d-results__job__cta__left">
-                <div class="d-results__job__author">Alta Bates Center</div>
-                <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div>
-              </div>
-              <div class="d-results__job__cta__btns">
-                <div class="show-more"><a href="#">see more</a></div><a class="btn btn--150 btn--action btn--action-green" href="#">Contact</a><a class="btn btn--150 btn--action btn--action-red" href="#">Apply</a>
-              </div>
+            <div class="d-results__card__cta">
+              <div class="d-results__card__name">Bob Macron, MD</div>
+              <div class="d-results__card__rating"><i class="icon icon-rating"></i><span>4.9<span>10 reviews</span></span></div><a class="btn btn--ghost btn--fill btn--150" href="#">SEE MORE</a>
             </div>
           </div>
         </div>

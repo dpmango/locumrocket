@@ -88,6 +88,22 @@ button
         color: white
         background: $colorGreen
         border-color: $colorGreen
+  &--action
+    color: white
+    padding: 5px 25px
+    font-size: 15px
+    font-weight: 600
+    text-transform: uppercase
+    border-radius: 6px
+    &-red
+      background: $colorRed
+      &:hover
+        background: $colorMute
+    &-green
+      background: $colorGreen
+      &:hover
+        background: $colorMute
+
   &--message
     color: white
     background: color($colorGreen a(50%))

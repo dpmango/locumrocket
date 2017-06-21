@@ -67,6 +67,14 @@ $(document).ready(function () {
     }
   });
 
+  // Create pseudo links
+  $('[data-link]').on('click', function () {
+    var parsedLink = $(this).data('link');
+    if (parsedLink.length >= 2) {
+      window.location.href = parsedLink;
+    }
+  });
+
   //////////
   // SLIDERS
   //////////
@@ -239,15 +247,19 @@ $(document).ready(function () {
 
   // Universal toggler
   var saveTogglerStateText = '';
-  $('.show-more').on('click', function () {
-    var alerts = $(this).closest('.js-showMoreList').toggleClass('active').find('div[data-visible="0"]').slideToggle();
-    if ($(this).data('hidden') == '1') {
-      saveTogglerStateText = $(this).find('a, span').text();
-      $(this).find('a, span').text($(this).data('alttext'));
-      $(this).data('hidden', '0');
+  $('.show-more').on('click', function (e) {
+    if ($(this).closest('.js-showMoreList').is('.js-showMoreList')) {
+      $(this).closest('.js-showMoreList').toggleClass('active').find('div[data-visible="0"]').slideToggle();
+      if ($(this).data('hidden') == '1') {
+        saveTogglerStateText = $(this).find('a, span').text();
+        $(this).find('a, span').text($(this).data('alttext'));
+        $(this).data('hidden', '0');
+      } else {
+        $(this).find('a, span').text(saveTogglerStateText);
+        $(this).data('hidden', '1');
+      }
     } else {
-      $(this).find('a, span').text(saveTogglerStateText);
-      $(this).data('hidden', '1');
+      // continue
     }
   });
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.2-Dash---Freelancer" transform="translate(-356.000000, -1048.000000)" fill-rule="nonzero" fill="#A0B0B9">
+            <g id="jobs-list" transform="translate(215.000000, 994.000000)">
+                <g id="card-copy-4">
+                    <g id="clock" transform="translate(141.000000, 54.000000)">
+                        <path d="M6.5,0 C2.925,0 0,2.925 0,6.5 C0,10.075 2.925,13 6.5,13 C10.075,13 13,10.075 13,6.5 C13,2.925 10.075,0 6.5,0 Z M6.5,11.7 C3.64,11.7 1.3,9.36 1.3,6.5 C1.3,3.64 3.64,1.3 6.5,1.3 C9.36,1.3 11.7,3.64 11.7,6.5 C11.7,9.36 9.36,11.7 6.5,11.7 Z" id="Shape"></path>
+                        <polygon id="Shape" points="6.825 3.25 5.85 3.25 5.85 7.15 9.23 9.23 9.75 8.385 6.825 6.63"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

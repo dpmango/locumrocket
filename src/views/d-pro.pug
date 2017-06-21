@@ -263,63 +263,146 @@ doctype html
                     span(data-val='Rate') Rate
             
             // card
-            .d-results__card
-              .d-results__card__content
-                .d-results__card__col
-                  .d-results__card__primary
-                    .d-results__card__primary-avatar
-                      .d-results__card__avatar
-                        img(src='images/tmp/doctor_1.jpg' srcset='images/tmp/doctor_1@2x.jpg')
-                      .d-results__card__item.d-results__card__item--jsr
-                        .d-results__card__item__label Job Sucess
-                        .d-results__card__item__value 80%
-                    .d-results__card__primary-content
-                      .d-results__card__item
-                        .d-results__card__item__label Specialty
-                        .d-results__card__item__value Internal Medicine
-                      .d-results__card__item
-                        .d-results__card__item__label Location
-                        .d-results__card__item__value Oakland, CA
-                      .d-results__card__item
-                        .d-results__card__item__label Verification
-                        .d-results__card__item__value 
-                          span Verified
-                          i.icon.icon-verified
-                            
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Experience:
-                      .d-results__card__item__value > 10 years
-                    .d-results__card__item
-                      .d-results__card__item__label Availability:
-                      .d-results__card__item__value < 20 h / week
-                    .d-results__card__item
-                      .d-results__card__item__label Skills:
-                      .d-results__card__item__value Fellowship, Board certified
-                    
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Undergraduate
-                      .d-results__card__item__value UNIVERSITY OF CALIFORNIA, BERKELEY
-                    .d-results__card__item
-                      .d-results__card__item__label University:
-                      .d-results__card__item__value UCLA
-                    .d-results__card__item
-                      .d-results__card__item__label Residency:
-                      .d-results__card__item__value SF GENERAL HOSPITAL
-                                        
-              .d-results__card__cta
-                .d-results__card__name Bob Macron, MD
-                .d-results__card__rating
-                  i.icon.icon-rating
-                  span 4.9
-                    span 10 reviews
-                a(href='#').btn.btn--ghost.btn--fill.btn--150 SEE MORE
-                    
+            .d-results__job(data-link='#')
+              .d-results__job__content
+                // top (description)
+                .d-results__job__description
+                  .d-results__job__name Looking for Internal Medicine professional
+                  .d-results__job__scope
+                    .d-results__job__scope__item
+                      i.icon.icon-location
+                      span Albany, CA
+                    .d-results__job__scope__item
+                      i.icon.icon-clock
+                      span Less than 3 months
+                    .d-results__job__scope__item
+                      i.icon.icon-calendar
+                      span 07/01/2017
+                  .d-results__job__text Internal Medicine physician needed to cover shifts in Oakland, CA and Berkeley, CA
+                .d-results__job__numbers
+                  .d-results__job__price 250$/h
+                  .d-results__job__commitment Less than 5 h/wk
+                  
+              // cta elements
+              .d-results__job__cta
+                .d-results__job__cta__left
+                  .d-results__job__author St Mary’s Hospital
+                  .d-results__card__rating
+                    i.icon.icon-rating
+                    span 4.9
+                      span 10 reviews
+                .d-results__job__cta__btns
+                  .show-more
+                    a(href='#') see more
+                  a(href='#').btn.btn--150.btn--action.btn--action-green Contact
+                  a(href='#').btn.btn--150.btn--action.btn--action-red Apply
+                
+            // card
+            .d-results__job(data-link='#')
+              .d-results__job__content
+                // top (description)
+                .d-results__job__description
+                  .d-results__job__name Emergency Medicine MD, DO
+                  .d-results__job__scope
+                    .d-results__job__scope__item
+                      i.icon.icon-location
+                      span Berkeley, CA
+                    .d-results__job__scope__item
+                      i.icon.icon-clock
+                      span Less than 1 months
+                    .d-results__job__scope__item
+                      i.icon.icon-calendar
+                      span 05/12/2017
+                  .d-results__job__text Join a team of world-class doctors. With multiple hospitals, we offer comprehensive care and a commitment to exceptional quality, safety and kindness.
+                .d-results__job__numbers
+                  .d-results__job__price 220$/h
+                  .d-results__job__commitment Less than 10 h/wk
+                  
+              // cta elements
+              .d-results__job__cta
+                .d-results__job__cta__left
+                  .d-results__job__author Alta Bates Center
+                  .d-results__card__rating
+                    i.icon.icon-rating
+                    span 4.9
+                      span 10 reviews
+                .d-results__job__cta__btns
+                  .show-more
+                    a(href='#') see more
+                  a(href='#').btn.btn--150.btn--action.btn--action-green Contact
+                  a(href='#').btn.btn--150.btn--action.btn--action-red Apply
+              
+            // card
+            .d-results__job(data-link='#')
+              .d-results__job__content
+                // top (description)
+                .d-results__job__description
+                  .d-results__job__name Night Hospitalist Physician needed
+                  .d-results__job__scope
+                    .d-results__job__scope__item
+                      i.icon.icon-location
+                      span Albany, CA
+                    .d-results__job__scope__item
+                      i.icon.icon-clock
+                      span Less than 3 months
+                    .d-results__job__scope__item
+                      i.icon.icon-calendar
+                      span 07/01/2017
+                  .d-results__job__text Looking for a Hospitalist to begin as soon. Shift schedules are 7:00 pm - 7:00 am. <br> Approximately 6 admissions per night
 
-                    
+                .d-results__job__numbers
+                  .d-results__job__price 300$/h
+                  .d-results__job__commitment Less than 5 h/wk
+                  
+              // cta elements
+              .d-results__job__cta
+                .d-results__job__cta__left
+                  .d-results__job__author St Mary’s Hospital
+                  .d-results__card__rating
+                    i.icon.icon-rating
+                    span 4.9
+                      span 10 reviews
+                .d-results__job__cta__btns
+                  .show-more
+                    a(href='#') see more
+                  a(href='#').btn.btn--150.btn--action.btn--action-green Contact
+                  a(href='#').btn.btn--150.btn--action.btn--action-red Apply
+                
+            // card
+            .d-results__job(data-link='#')
+              .d-results__job__content
+                // top (description)
+                .d-results__job__description
+                  .d-results__job__name Family Medicine Physician
+                  .d-results__job__scope
+                    .d-results__job__scope__item
+                      i.icon.icon-location
+                      span Berkeley, CA
+                    .d-results__job__scope__item
+                      i.icon.icon-clock
+                      span Less than 1 months
+                    .d-results__job__scope__item
+                      i.icon.icon-calendar
+                      span 05/12/2017
+                  .d-results__job__text Seeking a Family Medicine or Emergency Medicine Physician in beautiful, coastal southern California.
+                .d-results__job__numbers
+                  .d-results__job__price 225$/h
+                  .d-results__job__commitment Less than 10 h/wk
+                  
+              // cta elements
+              .d-results__job__cta
+                .d-results__job__cta__left
+                  .d-results__job__author Alta Bates Center
+                  .d-results__card__rating
+                    i.icon.icon-rating
+                    span 4.9
+                      span 10 reviews
+                .d-results__job__cta__btns
+                  .show-more
+                    a(href='#') see more
+                  a(href='#').btn.btn--150.btn--action.btn--action-green Contact
+                  a(href='#').btn.btn--150.btn--action.btn--action-red Apply
+                          
       include shared/footer.pug
       include shared/feedback.pug
     include shared/modal-reg.pug

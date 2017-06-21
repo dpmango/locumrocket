@@ -36,65 +36,71 @@
 .icon-arrow-prev:before {
     content: "\EA03";
 }
-.icon-call:before {
+.icon-calendar:before {
     content: "\EA04";
 }
-.icon-checkbox:before {
+.icon-call:before {
     content: "\EA05";
 }
-.icon-close:before {
+.icon-checkbox:before {
     content: "\EA06";
 }
-.icon-email:before {
+.icon-clock:before {
     content: "\EA07";
 }
-.icon-facebook:before {
+.icon-close:before {
     content: "\EA08";
 }
-.icon-forward:before {
+.icon-email:before {
     content: "\EA09";
 }
-.icon-linkedin:before {
+.icon-facebook:before {
     content: "\EA0A";
 }
-.icon-location:before {
+.icon-forward:before {
     content: "\EA0B";
 }
-.icon-message:before {
+.icon-linkedin:before {
     content: "\EA0C";
 }
-.icon-modal-close:before {
+.icon-location:before {
     content: "\EA0D";
 }
-.icon-next:before {
+.icon-message:before {
     content: "\EA0E";
 }
-.icon-no-avatar:before {
+.icon-modal-close:before {
     content: "\EA0F";
 }
-.icon-notification:before {
+.icon-next:before {
     content: "\EA10";
 }
-.icon-plus:before {
+.icon-no-avatar:before {
     content: "\EA11";
 }
-.icon-rating:before {
+.icon-notification:before {
     content: "\EA12";
 }
-.icon-search:before {
+.icon-plus:before {
     content: "\EA13";
 }
-.icon-select:before {
+.icon-rating:before {
     content: "\EA14";
 }
-.icon-twitter:before {
+.icon-search:before {
     content: "\EA15";
 }
-.icon-verify:before {
+.icon-select:before {
     content: "\EA16";
 }
-.icon-videocall:before {
+.icon-twitter:before {
     content: "\EA17";
+}
+.icon-verify:before {
+    content: "\EA18";
+}
+.icon-videocall:before {
+    content: "\EA19";
 }
 /* ICONS */
 .icon {
@@ -242,6 +248,26 @@ button:focus {
     border-color: #3AC9D3;
     background: #3AC9D3;
     color: white;
+}
+.btn--action {
+    padding: 5px 25px;
+    border-radius: 6px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+}
+.btn--action-red {
+    background: #EF4836;
+}
+.btn--action-red:hover {
+    background: #A0B0B9;
+}
+.btn--action-green {
+    background: #3AC9D3;
+}
+.btn--action-green:hover {
+    background: #A0B0B9;
 }
 .btn--message {
     display: -webkit-box;
@@ -555,7 +581,7 @@ button:focus {
     border-color: #EF4836;
 }
 .js-datepicker {
-    background-image: svg-load('../../images/svg/calendar.svg');
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='16px' height='12px' viewBox='0 0 16 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Ecalendar%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Pages' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='3.2-Dash---Freelancer' transform='translate(-515.000000, -1049.000000)' fill-rule='nonzero' fill='%23A0B0B9'%3E %3Cg id='jobs-list' transform='translate(215.000000, 994.000000)'%3E %3Cg id='card-copy-4'%3E %3Cg id='calendar' transform='translate(300.000000, 55.000000)'%3E %3Cellipse id='Oval' cx='12.9150877' cy='4.23817617' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='10.4497778' cy='4.23817617' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='7.98443665' cy='4.23817617' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='5.51912671' cy='4.23817617' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='3.05378558' cy='4.23817617' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='12.9150877' cy='6.69553368' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='10.4497778' cy='6.69553368' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='7.98443665' cy='6.69553368' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='3.05378558' cy='6.69553368' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='12.9150877' cy='9.1528601' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='10.4497778' cy='9.1528601' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='7.98443665' cy='9.1528601' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='5.51912671' cy='9.1528601' rx='1' ry='1'/%3E %3Cellipse id='Oval' cx='3.05378558' cy='9.1528601' rx='1' ry='1'/%3E %3Cpath d='M6.67758285,5.2119171 L4.36054581,5.2119171 C4.1782768,5.2119171 4.0305653,5.35915026 4.0305653,5.54082902 L4.0305653,7.85039378 C4.0305653,8.03207254 4.1782768,8.1793057 4.36054581,8.1793057 L6.67758285,8.1793057 C6.85985185,8.1793057 7.00756335,8.03207254 7.00756335,7.85039378 L7.00756335,5.54089119 C7.00756335,5.35918135 6.85982066,5.2119171 6.67758285,5.2119171 Z M6.34760234,7.52145078 L4.69052632,7.52145078 L4.69052632,5.86977202 L6.34757115,5.86977202 L6.34757115,7.52145078 L6.34760234,7.52145078 Z' id='Shape'/%3E %3Cpath d='M14.8688655,0.811834197 L12.445193,0.811834197 L12.445193,0.389689119 C12.445193,0.187834197 12.2810448,0.0242176166 12.0785341,0.0242176166 C11.8760858,0.0242176166 11.7118752,0.187865285 11.7118752,0.389689119 L11.7118752,0.811834197 L9.71574269,0.811834197 L9.71574269,0.389689119 C9.71574269,0.187834197 9.55156335,0.0242176166 9.34908382,0.0242176166 C9.1465731,0.0242176166 8.98242495,0.187865285 8.98242495,0.389689119 L8.98242495,0.811834197 L6.98635478,0.811834197 L6.98635478,0.389689119 C6.98635478,0.187834197 6.82220663,0.0242176166 6.61969591,0.0242176166 C6.41718519,0.0242176166 6.25303704,0.187865285 6.25303704,0.389689119 L6.25303704,0.811834197 L4.25690448,0.811834197 L4.25690448,0.389689119 C4.25690448,0.187834197 4.09275634,0.0242176166 3.89024561,0.0242176166 C3.68773489,0.0242176166 3.52358674,0.187865285 3.52358674,0.389689119 L3.52358674,0.811834197 L1.09988304,0.811834197 C0.493442495,0.811834197 0,1.30364767 0,1.90818653 L0,10.8793679 C0,11.4839067 0.493442495,11.9757513 1.09994542,11.9757513 L14.8688967,11.9757513 C15.4753996,11.9757513 15.9688421,11.4839067 15.9688421,10.8793679 L15.9688421,1.90818653 C15.9688109,1.30364767 15.4753372,0.811834197 14.8688655,0.811834197 Z M14.8688655,11.2448705 L1.09994542,11.2448705 C0.897777778,11.2448705 0.73328655,11.0809119 0.73328655,10.879399 L0.73328655,1.90818653 C0.73328655,1.70667358 0.897777778,1.54271503 1.09994542,1.54271503 L3.52361793,1.54271503 L3.52361793,1.96482902 C3.52361793,2.16662176 3.68776608,2.33030052 3.8902768,2.33030052 C4.09278752,2.33030052 4.25693567,2.16665285 4.25693567,1.96482902 L4.25693567,1.54271503 L6.25306823,1.54271503 L6.25306823,1.96482902 C6.25306823,2.16662176 6.41721637,2.33030052 6.6197271,2.33030052 C6.82223782,2.33030052 6.98638596,2.16665285 6.98638596,1.96482902 L6.98638596,1.54271503 L8.98245614,1.54271503 L8.98245614,1.96482902 C8.98245614,2.16662176 9.14660429,2.33030052 9.34911501,2.33030052 C9.55156335,2.33030052 9.71577388,2.16665285 9.71577388,1.96482902 L9.71577388,1.54271503 L11.7119064,1.54271503 L11.7119064,1.96482902 C11.7119064,2.16662176 11.8760858,2.33030052 12.0785653,2.33030052 C12.281076,2.33030052 12.4452242,2.16665285 12.4452242,1.96482902 L12.4452242,1.54271503 L14.8688967,1.54271503 C15.0710643,1.54271503 15.2355556,1.70667358 15.2355556,1.90818653 L15.2355556,10.8793679 L15.2355867,10.8793679 C15.2355244,11.0809119 15.0710331,11.2448705 14.8688655,11.2448705 Z' id='Shape'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
     background-position: 95% center;
     background-size: 17px 17px;
     background-repeat: no-repeat;
