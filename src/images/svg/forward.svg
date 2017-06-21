@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>forward</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.3-Dash---Messages" transform="translate(-1295.000000, -253.000000)" fill-rule="nonzero" fill="#BDCDD6">
+            <g id="messages" transform="translate(215.000000, 95.000000)">
+                <g id="content-part" transform="translate(330.000000, -2.000000)">
+                    <g id="day" transform="translate(40.000000, 0.000000)">
+                        <g id="message-copy" transform="translate(0.000000, 98.000000)">
+                            <path d="M710,66.4612174 L714.461217,62 L714.461217,63.9828696 L718.921478,63.9828696 C721.221435,63.9828696 723.085696,65.8471304 723.085696,68.1466087 L723.085696,72.5083478 C723.085696,70.207913 721.221435,68.3455652 718.921478,68.3455652 L714.461217,68.3455652 L714.461217,70.922913 L710,66.4612174 Z" id="forward"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,474 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LocumRocket</title>
+  <!--build:css css/styles.css-->
+  <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--endbuild-->
+  <meta name="description" content=""><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+  <!-- HEADER::START-->
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper"><a class="header__logo" href="homepage.html"><i class="icon icon-logo"></i></a>
+        <div class="header__navi header__navi--dashboard"><a href="#">Dashboard</a><a href="#">My jobs
+            <div class="header__navi__tag header__navi__tag--green">1</div></a><a href="#">Billing
+            <div class="header__navi__tag header__navi__tag--red">2</div></a></div>
+        <div class="header__search">
+          <input type="text" placeholder="Search professionals ...">
+          <button type="submit"><i class="icon icon-search"></i></button>
+        </div>
+        <div class="header__icons"><a class="header__notification" href="#"><i class="icon icon-notification"></i><i class="icon-mark"></i></a><a class="header__messages" href="#"><i class="icon icon-message"></i></a></div>
+        <div class="header__user">
+          <div class="header__user__clickable"><a class="header__user__avatar" href="#"><img src="images/tmp/headerAvatar.jpg" srcset="images/tmp/headerAvatar@2x.jpg 2x"></a><a class="header__user__name" href="#">Savannah Nichols</a><i class="icon icon-select"></i></div>
+          <div class="header__user__dropdown"><a href="#">Profile settings</a><a href="#">Sign Out</a></div>
+        </div>
+        <div class="hamburger hamburger--squeeze">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- MOBILE-NAVI-->
+  <div class="mobile-navi">
+    <div class="mobile-navi__wrapper">
+      <div class="mobile-navi__menu"><a href="how.html">How it works</a><a href="contact.html">Contact us</a><a class="js-popup" href="#modalLogin">Log in</a></div><a class="btn btn--red btn--150 js-popup" href="#modalRegWelcome">Register</a><a class="btn btn--muted" href="demo.html">Demo</a>
+    </div>
+  </div>
+  <div class="page page--bg static-header">
+    <div class="page__content">
+      <!-- MESSAGES-->
+      <div class="messages">
+        <div class="container">
+          <div class="messages__wrapper">
+            <div class="messages__chats">
+              <div class="messages__chats__head">
+                <div class="messages__chats__head__search">
+                  <button type="submit"><i class="icon icon-search"></i></button>
+                  <input type="text" placeholder="Search messages..">
+                </div>
+                <div class="messages__chats__head__plus"><a href="#"><i class="icon icon-plus"></i></a></div>
+              </div>
+              <div class="messages__scrollable">
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar"><i class="icon icon-no-avatar"></i></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Mary Trove</div>
+                      <div class="messages__chat__date">1h ago</div>
+                    </div>
+                    <div class="messages__chat__content"> <span>Please find the detailed job description attached. </span></div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar"><img src="images/tmp/doctorAvatar_1.jpg" srcset="images/tmp/doctorAvatar_1@2x.jpg 2x"></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">John Meyer</div>
+                      <div class="messages__chat__date">2h ago</div>
+                    </div>
+                    <div class="messages__chat__content"><span>Ok, I will</span>
+                      <div class="messages__chat__counter">1</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat active">
+                  <div class="messages__chat__avatar"><img src="images/tmp/doctorAvatar_2.jpg" srcset="images/tmp/doctorAvatar_2@2x.jpg 2x"></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Bob Dole</div>
+                      <div class="messages__chat__date">17 May</div>
+                    </div>
+                    <div class="messages__chat__content">You: Have you got my last message ?</div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar"><i class="icon icon-no-avatar"></i></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Mary Trove</div>
+                      <div class="messages__chat__date">17 May</div>
+                    </div>
+                    <div class="messages__chat__content"> <span>This is content of the message which goes a bit be</span></div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar__online"></div>
+                  <div class="messages__chat__avatar"><img src="images/tmp/doctorAvatar_3.jpg" srcset="images/tmp/doctorAvatar_3@2x.jpg 2x"></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">John Meyer</div>
+                      <div class="messages__chat__date">15 May</div>
+                    </div>
+                    <div class="messages__chat__content">HI! How is it going?           </div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar"><img src="images/tmp/doctorAvatar_4.jpg" srcset="images/tmp/doctorAvatar_4@2x.jpg 2x"></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Aubree Warren</div>
+                      <div class="messages__chat__date">7 May</div>
+                    </div>
+                    <div class="messages__chat__content">OK              </div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar__online"></div>
+                  <div class="messages__chat__avatar"><i class="icon icon-no-avatar"></i></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Mary Trove</div>
+                      <div class="messages__chat__date">17 May</div>
+                    </div>
+                    <div class="messages__chat__content"> <span>Yes, this sounds fantatic. Do you have detailed j</span></div>
+                  </div>
+                </div>
+                <!-- chat-->
+                <div class="messages__chat">
+                  <div class="messages__chat__avatar"><i class="icon icon-no-avatar"></i></div>
+                  <div class="messages__chat__scope">
+                    <div class="messages__chat__scope__line">
+                      <div class="messages__chat__author">Mary Trove</div>
+                      <div class="messages__chat__date">17 May</div>
+                    </div>
+                    <div class="messages__chat__content"> <span>This is content of the message which goes a bit be</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="messages__dialog">
+              <div class="messages__dialog__head">
+                <div class="messages__dialog__head__name"><span>Bob Dole</span><span>Last seen 15 minutes ago</span></div>
+                <div class="messages__dialog__head__cta"><a class="btn btn--message" href="#"> <i class="icon icon-call"></i><span>CALL</span></a><a class="btn btn--message" href="#"> <i class="icon icon-videocall"></i><span>VIDEO CALL  </span></a>
+                  <div class="messages__dialog__head__avatar"><img src="images/tmp/doctorAvatar_2.jpg" srcset="images/tmp/doctorAvatar_2@2x.jpg 2x"></div>
+                </div>
+              </div>
+              <div class="messages__scrollable">
+                <!-- thread-->
+                <!-- message-->
+                <div class="messages__dialog__message" data-id="">
+                  <div class="messages__dialog__message__avatar"><img src="images/tmp/headerAvatar.jpg" srcset="images/tmp/headerAvatar@2x.jpg 2x"></div>
+                  <div class="messages__dialog__message__content">
+                    <div class="messages__dialog__message__name">Savannah Nichols</div>
+                    <div class="messages__dialog__message__date">15:24</div>
+                    <div class="messages__dialog__message__text"> <span>Hello! We are currently looking for a great Podiatrist specialist for our facility (BELMONT ALBANY VILLAGE). Our current MD is taking vacation. Would you be interested in taking shift for the following week or two?</span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- message-->
+                <div class="messages__dialog__message" data-id="">
+                  <div class="messages__dialog__message__avatar"><img src="images/tmp/headerAvatar.jpg" srcset="images/tmp/headerAvatar@2x.jpg 2x"></div>
+                  <div class="messages__dialog__message__content">
+                    <div class="messages__dialog__message__name">Savannah Nichols</div>
+                    <div class="messages__dialog__message__date">15:24</div>
+                    <div class="messages__dialog__message__text"> <span>Hello Bob! Yes, this sounds fantatic. Do you have detailed job description for this position?</span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                    <div class="messages__dialog__message__text"> <span>And yes, of course, I am interested. I have an MD in Internal Medicine</span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- message-->
+                <div class="messages__dialog__message" data-id="">
+                  <div class="messages__dialog__message__avatar"><img src="images/tmp/headerAvatar.jpg" srcset="images/tmp/headerAvatar@2x.jpg 2x"></div>
+                  <div class="messages__dialog__message__content">
+                    <div class="messages__dialog__message__name">Savannah Nichols</div>
+                    <div class="messages__dialog__message__date">16:02</div>
+                    <div class="messages__dialog__message__text"> <span>Please send the information at<a href="#">savannah.nichold@gmail.com</a></span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="messages__dialog__day">17 May</div>
+                <!-- message-->
+                <div class="messages__dialog__message" data-id="">
+                  <div class="messages__dialog__message__avatar"><img src="images/tmp/doctorAvatar_2.jpg" srcset="images/tmp/doctorAvatar_2@2x.jpg 2x"></div>
+                  <div class="messages__dialog__message__content">
+                    <div class="messages__dialog__message__name">Bob Dole</div>
+                    <div class="messages__dialog__message__date">12:34</div>
+                    <div class="messages__dialog__message__text"> <span>Savannah, Sorry for my late reply. </span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                    <div class="messages__dialog__message__text"> <span>Please find the detailed job description attached. <br>I will also send this via email to you shortly..</span>
+                      <div class="messages__dialog__message__text__actions"><a href="#"><i class="icon icon-forward"></i></a><a href="#"><i class="icon icon-rating"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER::START-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__nav"><a href="#">About </a><a href="contact.html">Contact us</a></div>
+          <div class="footer__nav"><a href="how.html#pro">Medical Professionals</a><a href="how.html#facility">Facilities</a></div>
+          <div class="footer__nav"><a href="#">Privacy policy</a><a href="#">Terms & conditions </a></div>
+          <div class="footer__socials"><a href="#" target="_blank"><i class="icon icon-twitter"></i></a><a href="#" target="_blank"><i class="icon icon-linkedin"></i></a><a href="#" target="_blank"><i class="icon icon-facebook"> </i></a></div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copy">© LocumRocket 2017</div>
+          <div class="footer__author">All rights reserved</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- MODALS-->
+  <!-- REGISTRATION WELCOME-->
+  <div class="popup-dialog mfp-hide" id="modalRegWelcome">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Sign-up is fast, easy and free</div>
+          </div>
+        </div>
+        <div class="modal__role"><a class="modal__col js-popup" href="#modalRegPro">
+            <div class="modal__col__content">
+              <div class="modal__role__name">For Medical Professionals</div>
+              <div class="modal__role__img"><img src="images/el/iconPro.png" srcset="images/el/iconPro@2x.png 2x"></div>
+              <div class="modal__role__caption">Find the right opportunity and get hired quickly</div>
+              <div class="btn btn--red btn--150">Work</div>
+            </div></a><a class="modal__col js-popup" href="#modalRegFacility">
+            <div class="modal__col__content">
+              <div class="modal__role__name">For Facilities</div>
+              <div class="modal__role__img"><img src="images/el/iconFacility.png" srcset="images/el/iconFacility@2x.png 2x"></div>
+              <div class="modal__role__caption">Easily find great medical freelancers and save money</div>
+              <div class="btn btn--red btn--150">Hire</div>
+            </div></a></div>
+        <div class="modal__bottom">
+          <!-- .modal__bottom__row
+          span Already have an account?
+          a(href='#modalLogin').js-popup Login here
+          
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LOGIN-->
+  <div class="popup-dialog mfp-hide" id="modalLogin">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Welcome to LocumRocket</div>
+            <div class="heading__sub">Login to your account</div>
+          </div>
+        </div>
+        <div class="modal__form">
+          <form class="modal__form-container js-login-form" action="#">
+            <div class="modal__form-inputs">
+              <div class="ui-input ui-input--line">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your@email.com">
+              </div>
+              <div class="ui-input ui-input--line">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="password">
+              </div>
+              <div class="ui-checkbox">
+                <input type="checkbox" name="remember_me" id="remember_me">
+                <label for="remember_me">Remember Me</label>
+              </div>
+            </div>
+            <button class="btn btn--form" type="submit"> <span>Sign In</span><i class="icon icon-next"></i></button>
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Forgot your password?</span><a class="js-popup" href="#modalRecover">Recover password</a></div>
+          <div class="modal__bottom__row"><span>Don’t have a account?</span><a class="js-popup" href="#modalRegWelcome">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- RECOVER-->
+  <div class="popup-dialog mfp-hide" id="modalRecover">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Welcome to LocumRocket</div>
+            <div class="heading__sub">Recover account passowrd</div>
+          </div>
+        </div>
+        <div class="modal__form">
+          <form class="modal__form-container js-recover-form" action="#">
+            <div class="modal__form-inputs">
+              <div class="ui-input ui-input--line">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your@email.com">
+              </div>
+            </div>
+            <button class="btn btn--form" type="submit">Recover</button>
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Remember you password?</span><a class="js-popup" href="#modalLogin">Login here</a></div>
+          <div class="modal__bottom__row"><span>Don’t have a account?</span><a class="js-popup" href="#modalRegWelcome">Get started</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- REG PRO-->
+  <div class="popup-dialog mfp-hide" id="modalRegPro">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Our platform is currently in beta phase. <br> Please enter your email address below to request early access</div>
+          </div>
+        </div>
+        <div class="modal__beta">
+          <div class="modal__beta__left">
+            <div class="modal__beta__image"><img src="images/el/signupDoctor.png" srcset="images/el/signupDoctor@2x.png 2x"></div>
+            <div class="modal__beta__text">With LocumRocket, find freelance clinical work instantly. Get paid more and get paid faster! What’s not to like?</div>
+          </div>
+          <div class="modal__beta__right">
+            <div class="modal__form">
+              <div class="modal__beta__abstract"><img src="images/el/modalBetaAbstract.png" srcset="images/el/modalBetaAbstract@2x.png 2x"></div>
+              <form class="modal__form-container js-regBetaPro-form" action="#">
+                <div class="modal__form-inputs">
+                  <div class="ui-input ui-input--line">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com">
+                  </div>
+                </div>
+                <button class="btn btn--form" type="submit"><span>Request Access</span><i class="icon icon-next"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- REG FACILITY-->
+  <div class="popup-dialog mfp-hide" id="modalRegFacility">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Ready to Join the LocumRocket Community?</div>
+            <div class="heading__sub">Our platform is currently in beta phase. <br> Please enter your email address below to request early access</div>
+          </div>
+        </div>
+        <div class="modal__beta">
+          <div class="modal__beta__left">
+            <div class="modal__beta__image"><img src="images/el/signupHospital.png" srcset="images/el/signupHospital@2x.png 2x"></div>
+            <div class="modal__beta__text">LocumRocket is the fastest and most-affordable way to meet your short-term clinical staffing needs. <br> 100% online. No third-party brokers. No hassle. </div>
+          </div>
+          <div class="modal__beta__right">
+            <div class="modal__form">
+              <div class="modal__beta__abstract"><img src="images/el/modalBetaAbstract.png" srcset="images/el/modalBetaAbstract@2x.png 2x"></div>
+              <form class="modal__form-container js-regBetaFacility-form" action="#">
+                <div class="modal__form-inputs">
+                  <div class="ui-input ui-input--line">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com">
+                  </div>
+                </div>
+                <button class="btn btn--form" type="submit"><span>Request Access</span><i class="icon icon-next"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- THANKS FACILITY-->
+  <div class="popup-dialog mfp-hide" id="modalThanksFacility">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Thank You For Joining Our Beta Release!</div>
+            <div class="heading__sub">We’ll be in touch shortly about next steps.</div>
+          </div>
+        </div>
+        <div class="modal__thanks">
+          <div class="modal__thanks__image"><img src="images/el/signupHospital.png" srcset="images/el/signupHospital@2x.png 2x">
+            <div class="modal__thanks__abstract"><img src="images/el/abstractSucess.png" srcset="images/el/abstractSucess@2x.png 2x"></div>
+          </div>
+          <div class="modal__socials">
+            <div class="modal__beta__text">Stay in touch!</div>
+            <div class="footer__socials"><a href="#" target="_blank"><i class="icon icon-twitter"></i></a><a href="#" target="_blank"><i class="icon icon-linkedin"></i></a><a href="#" target="_blank"><i class="icon icon-facebook"> </i></a></div>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Return to</span><a href="homepage.html">Homepage</a><span>or</span><a href="contact.html">Contact us</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- THANKS PRO-->
+  <div class="popup-dialog mfp-hide" id="modalThanksPro">
+    <div class="container">
+      <div class="modal__wrapper">
+        <div class="modal__heading">
+          <div class="heading">
+            <div class="heading__main">Thank You For Joining Our Beta Release!</div>
+            <div class="heading__sub">We’ll be in touch shortly about next steps.</div>
+          </div>
+        </div>
+        <div class="modal__thanks">
+          <div class="modal__thanks__image"><img src="images/el/signupDoctor.png" srcset="images/el/signupDoctor@2x.png 2x">
+            <div class="modal__thanks__abstract"><img src="images/el/abstractSucess.png" srcset="images/el/abstractSucess@2x.png 2x"></div>
+          </div>
+          <div class="modal__socials">
+            <div class="modal__beta__text">Stay in touch!</div>
+            <div class="footer__socials"><a href="#" target="_blank"><i class="icon icon-twitter"></i></a><a href="#" target="_blank"><i class="icon icon-linkedin"></i></a><a href="#" target="_blank"><i class="icon icon-facebook"> </i></a></div>
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom__row"><span>Return to</span><a href="homepage.html">Homepage</a><span>or</span><a href="contact.html">Contact us</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SECONDARY STYLES-->
+  <!--build:css css/secondary.css-->
+  <link rel="stylesheet" href="css/secondary.css" type="text/css">
+  <!--endbuild-->
+  <!-- SCRIPTS-->
+  <!--build:js js/scripts.min.js-->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/slick-carousel/slick/slick.min.js"></script>
+  <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="components/air-datepicker/dist/js/datepicker.min.js"></script>
+  <script src="components/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+  <script src="components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="js/libs/jquery.maskedinput.min.js"></script>
+  <script src="js/libs/jquery.scrollbar.min.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
+</body>

@@ -1,0 +1,253 @@
+// MESSAGES
+.messages
+  margin: 20px 0
+  &__wrapper
+    display: flex
+    border: 4px solid $borderColor
+
+  &__chats
+    position: relative
+    flex: 0 1 330px
+    background: white
+    border-right: 2px solid $borderColor
+    &__head
+      position: absolute
+      background: white
+      top: 0
+      left: 0
+      right: 0
+      z-index: 9
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 0px 20px
+      height: 50px
+      border-bottom: 1px solid $borderColor
+      &__search
+        position: relative
+        input
+          border: 0
+          padding: 10px 20px 10px 40px
+        button
+          background: transparent
+          font-size: 18px
+          color: $colorMute
+          position: absolute
+          left: 0
+          top: 55%
+          transform: translateY(-50%)
+          transition: all $transitionSpeed $ease
+          &:hover
+            color: $colorBlue
+      &__plus
+        transition: all $transitionSpeed $ease
+        font-size: 18px
+        color: $colorMute
+        &:hover
+          color: $colorBlue
+
+
+  &__chat
+    position: relative
+    display: flex
+    padding: 10px 20px
+    cursor: pointer
+    transition: background $transitionSpeed $ease
+    &__avatar
+      flex: 0 0 50px
+      position: relative
+      overflow: hidden
+      size: 50px
+      border-radius: 50%
+      background: #EBEBEB
+      display: flex
+      justify-content: center
+      align-items: center
+      color: $colorMute
+      font-size: 14px
+      img
+        max-width: 100%
+      &__online
+        position: absolute
+        left: 57px
+        top: 47px
+        size: 12px
+        z-index: 3
+        background: #00B16A
+        border-radius: 50%
+    &__scope
+      flex: 1 1 auto
+      min-width: 0
+      margin-left: 15px
+      padding-top: 5px
+      &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__author
+      font-weight: 700
+    &__date
+      margin-left: auto
+      font-size: 12px
+      color: $fontColor50
+    &__content
+      margin-top: 8px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      font-size: 12px
+      color: $fontColor70
+    &__counter
+      float: right
+      display: inline-block
+      background: $colorBlue
+      color: white
+      font-size: 10px
+      font-weight: 700
+      text-align: center
+      min-width: 15px
+      min-height: 15px
+      padding-top: 2px
+      border-radius: 50%
+
+    &:hover
+      background: color($colorBlue a(10%))
+    &.active
+      background: $colorBlue
+      .messages__chat__author
+        color: white
+      .messages__chat__date
+        color: $white50
+      .messages__chat__content
+        color: $white70
+
+
+  &__dialog
+    position: relative
+    flex: 1 1 auto
+    background: white
+    &__head
+      display: flex
+      align-items: center
+      position: absolute
+      background: white
+      top: 0
+      left: 0
+      right: 0
+      z-index: 9
+      padding: 10px 25px
+      height: 50px
+      border-bottom: 1px solid $borderColor
+      &__name
+        display: flex
+        align-items: center
+        span
+          display: inline-block
+          &:first-child
+            font-size: 14px
+            font-weight: 700
+            margin-right: 15px
+          &:nth-child(2)
+            font-size: 12px
+            color: $colorMute
+      &__cta
+        margin-left: auto
+        display: flex
+        align-items: center
+        .btn
+          margin-right: 15px
+      &__avatar
+        position: relative
+        overflow: hidden
+        size: 30px
+        border-radius: 50%
+        background: #EBEBEB
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $colorMute
+        font-size: 14px
+        img
+          max-width: 100%
+
+    &__message
+      padding: 10px 50px 10px 40px
+      display: flex
+      &__avatar
+        size: 40px
+        flex: 0 0 40px
+        img
+          width: 100%
+      &__content
+        margin-left: 15px
+        flex: 1 1 auto
+        padding-top: 5px
+      &__name
+        display: inline-block
+        font-size: 14px
+        font-weight: 700
+      &__date
+        display: inline-block
+        color: $fontColor50
+        font-size: 12px
+        margin-left: 10px
+      &__text
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 13px
+        line-height: 1.4
+        padding-top: 3px
+        span
+          flex: 1 1 auto
+        a
+          display: inline-block
+          margin-left: 5px
+          color: $colorBlue
+          transition: all $transitionSpeed $ease
+          &:hover
+            color: $colorGreen
+        & + .messages__dialog__message__text
+          margin-top: 15px
+        &__actions
+          flex: 0 0 50px
+          margin-left: auto
+          font-size: 10px
+          text-align: right
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          opacity: 0
+          pointer-events: none
+          transform: translate3d(15px,0,0)
+          transition: all $transitionSpeed $ease
+          a
+            display: inline-block
+            margin-right: 15px
+            color: $colorMute
+            transition: all $transitionSpeed $ease
+            &:last-child
+              margin-right: 0
+            &:hover
+              color: $colorGreen
+        &:hover
+          .messages__dialog__message__text__actions
+            opacity: 1
+            pointer-events: all
+            transform: translate3d(0,0,0)
+
+
+    &__day
+      text-align: center
+      color: $fontColor50
+      font-size: 12px
+      font-weight: 700
+      margin-top: 25px
+      margin-bottom: 10px
+
+  &__scrollable
+    position: relative
+    margin-top: 50px
+    min-height: 400px
+    max-height: calc(100vh - 115px)
+    overflow-y: scroll

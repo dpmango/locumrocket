@@ -1,0 +1,207 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-f.pug
+    .page.page--bg.static-header
+      .page__content
+        
+        // MESSAGES
+        .messages
+          .container
+            .messages__wrapper
+              .messages__chats
+                .messages__chats__head
+                  .messages__chats__head__search
+                    button(type='submit')
+                      i.icon.icon-search
+                    input(type='text' placeholder='Search messages..')
+                  .messages__chats__head__plus
+                    a(href='#')
+                      i.icon.icon-plus
+                .messages__scrollable
+                      
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar
+                      i.icon.icon-no-avatar
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Mary Trove
+                        .messages__chat__date 1h ago
+                      .messages__chat__content 
+                        span Please find the detailed job description attached. 
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar
+                      img(src='images/tmp/doctorAvatar_1.jpg' srcset='images/tmp/doctorAvatar_1@2x.jpg 2x')
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author John Meyer
+                        .messages__chat__date 2h ago
+                      .messages__chat__content
+                        span Ok, I will
+                        .messages__chat__counter 1
+                  // chat
+                  .messages__chat.active
+                    .messages__chat__avatar
+                      img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Bob Dole
+                        .messages__chat__date 17 May
+                      .messages__chat__content You: Have you got my last message ?
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar
+                      i.icon.icon-no-avatar
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Mary Trove
+                        .messages__chat__date 17 May
+                      .messages__chat__content 
+                        span This is content of the message which goes a bit be
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar__online
+                    .messages__chat__avatar
+                      img(src='images/tmp/doctorAvatar_3.jpg' srcset='images/tmp/doctorAvatar_3@2x.jpg 2x')
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author John Meyer
+                        .messages__chat__date 15 May
+                      .messages__chat__content HI! How is it going?           
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar
+                      img(src='images/tmp/doctorAvatar_4.jpg' srcset='images/tmp/doctorAvatar_4@2x.jpg 2x')
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Aubree Warren
+                        .messages__chat__date 7 May
+                      .messages__chat__content OK              
+                                                      
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar__online
+                    .messages__chat__avatar
+                      i.icon.icon-no-avatar
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Mary Trove
+                        .messages__chat__date 17 May
+                      .messages__chat__content 
+                        span Yes, this sounds fantatic. Do you have detailed j
+                  // chat
+                  .messages__chat
+                    .messages__chat__avatar
+                      i.icon.icon-no-avatar
+                    .messages__chat__scope
+                      .messages__chat__scope__line
+                        .messages__chat__author Mary Trove
+                        .messages__chat__date 17 May
+                      .messages__chat__content 
+                        span This is content of the message which goes a bit be
+                          
+              .messages__dialog
+                .messages__dialog__head
+                  .messages__dialog__head__name
+                    span Bob Dole
+                    span Last seen 15 minutes ago
+                  .messages__dialog__head__cta
+                    a(href='#').btn.btn--message 
+                      i.icon.icon-call
+                      span CALL
+                    a(href='#').btn.btn--message 
+                      i.icon.icon-videocall
+                      span VIDEO CALL  
+                    .messages__dialog__head__avatar
+                      img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                .messages__scrollable
+                  // thread
+                  // message
+                  .messages__dialog__message(data-id='')
+                    .messages__dialog__message__avatar
+                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                    .messages__dialog__message__content
+                      .messages__dialog__message__name Savannah Nichols
+                      .messages__dialog__message__date 15:24
+                      .messages__dialog__message__text 
+                        span Hello! We are currently looking for a great Podiatrist specialist for our facility (BELMONT ALBANY VILLAGE). Our current MD is taking vacation. Would you be interested in taking shift for the following week or two?
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+                              
+                  // message
+                  .messages__dialog__message(data-id='')
+                    .messages__dialog__message__avatar
+                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                    .messages__dialog__message__content
+                      .messages__dialog__message__name Savannah Nichols
+                      .messages__dialog__message__date 15:24
+                      .messages__dialog__message__text 
+                        span Hello Bob! Yes, this sounds fantatic. Do you have detailed job description for this position?
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+                      .messages__dialog__message__text 
+                        span And yes, of course, I am interested. I have an MD in Internal Medicine
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+                    
+                    
+                  // message
+                  .messages__dialog__message(data-id='')
+                    .messages__dialog__message__avatar
+                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                    .messages__dialog__message__content
+                      .messages__dialog__message__name Savannah Nichols
+                      .messages__dialog__message__date 16:02
+                      .messages__dialog__message__text 
+                        span Please send the information at
+                          a(href='#') savannah.nichold@gmail.com
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+                              
+                  
+                  .messages__dialog__day 17 May
+                              
+                  // message
+                  .messages__dialog__message(data-id='')
+                    .messages__dialog__message__avatar
+                      img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                    .messages__dialog__message__content
+                      .messages__dialog__message__name Bob Dole
+                      .messages__dialog__message__date 12:34
+                      .messages__dialog__message__text 
+                        span Savannah, Sorry for my late reply. 
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+                      .messages__dialog__message__text 
+                        span Please find the detailed job description attached. <br>I will also send this via email to you shortly..
+                        .messages__dialog__message__text__actions
+                          a(href='#')
+                            i.icon.icon-forward
+                          a(href='#')
+                            i.icon.icon-rating
+        
+                    
+      include shared/footer.pug
+    include shared/modal-reg.pug
+    include shared/scripts.pug
