@@ -57,41 +57,44 @@
 .icon-linkedin:before {
     content: "\EA0A";
 }
-.icon-message:before {
+.icon-location:before {
     content: "\EA0B";
 }
-.icon-modal-close:before {
+.icon-message:before {
     content: "\EA0C";
 }
-.icon-next:before {
+.icon-modal-close:before {
     content: "\EA0D";
 }
-.icon-no-avatar:before {
+.icon-next:before {
     content: "\EA0E";
 }
-.icon-notification:before {
+.icon-no-avatar:before {
     content: "\EA0F";
 }
-.icon-plus:before {
+.icon-notification:before {
     content: "\EA10";
 }
-.icon-rating:before {
+.icon-plus:before {
     content: "\EA11";
 }
-.icon-search:before {
+.icon-rating:before {
     content: "\EA12";
 }
-.icon-select:before {
+.icon-search:before {
     content: "\EA13";
 }
-.icon-twitter:before {
+.icon-select:before {
     content: "\EA14";
 }
-.icon-verify:before {
+.icon-twitter:before {
     content: "\EA15";
 }
-.icon-videocall:before {
+.icon-verify:before {
     content: "\EA16";
+}
+.icon-videocall:before {
+    content: "\EA17";
 }
 /* ICONS */
 .icon {

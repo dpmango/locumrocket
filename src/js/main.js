@@ -240,15 +240,28 @@ $(document).ready(function () {
   // Universal toggler
   var saveTogglerStateText = '';
   $('.show-more').on('click', function () {
-    var alerts = $(this).closest('.js-showMoreList').find('div[data-visible="0"]').slideToggle();
+    var alerts = $(this).closest('.js-showMoreList').toggleClass('active').find('div[data-visible="0"]').slideToggle();
     if ($(this).data('hidden') == '1') {
-      saveTogglerStateText = $(this).find('a').text();
-      $(this).find('a').text($(this).data('alttext'));
+      saveTogglerStateText = $(this).find('a, span').text();
+      $(this).find('a, span').text($(this).data('alttext'));
       $(this).data('hidden', '0');
     } else {
-      $(this).find('a').text(saveTogglerStateText);
+      $(this).find('a, span').text(saveTogglerStateText);
       $(this).data('hidden', '1');
     }
+  });
+
+  /////////////////
+  // MESSAGES PAGE
+  ////////////////
+  $('.messages__scrollable').scrolled(15, function () {
+    $(this).find('.messages__dialog__day').each(function (i, val) {
+      if ($(val).offset().top < 165) {
+        $(val).addClass('sticky');
+      } else {
+        $(val).removeClass('sticky');
+      }
+    });
   });
 
   // Masked input

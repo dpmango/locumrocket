@@ -3097,6 +3097,115 @@ button:focus {
     min-height: 200px;
     -webkit-box-flex: 1;
 }
+.d-welcome__pro {
+    text-align: center;
+}
+.d-welcome__pro__avatar {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
+    border: 4px solid #EBEBEB;
+    border-radius: 50%;
+}
+.d-welcome__pro__avatar img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    max-width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+.d-welcome__pro__name {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Montserrat';
+}
+.d-welcome__pro__name span {
+    display: inline-block;
+    color: #1E8BC3;
+}
+.d-welcome__pro__name .icon-verify {
+    display: inline-block;
+    margin-left: 3px;
+    color: #3AC9D3;
+    vertical-align: 10px;
+    font-size: 15px;
+}
+.d-welcome__pro__name .icon-verify--unverified {
+    color: #A0B0B9;
+}
+.d-welcome__pro__location {
+    margin-top: 10px;
+    color: rgba(47, 49, 58, 0.7);
+    font-size: 14px;
+}
+.d-welcome__pro__location .icon {
+    display: inline-block;
+    margin-right: 10px;
+    color: #A0B0B9;
+    font-size: 12px;
+}
+.d-welcome__pro__rating {
+    margin: 15px auto;
+}
+.d-welcome__pro__rating .icon {
+    color: #FDB22B;
+    font-size: 16px;
+}
+.d-welcome__pro__rating span {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.d-welcome__pro__rating span span {
+    margin-left: 7px;
+    color: rgba(47, 49, 58, 0.5);
+    font-size: 14px;
+}
+.d-welcome__pro__jsr {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 230px;
+}
+.d-welcome__pro__jsr__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.d-welcome__pro__jsr__head span {}
+.d-welcome__pro__jsr__head span:first-child {
+    color: rgba(47, 49, 58, 0.5);
+}
+.d-welcome__pro__jsr__head span:last-child {
+    font-weight: 600;
+    font-size: 16px;
+}
+.d-welcome__pro__jsr__progress {
+    height: 5px;
+    background: #EBEBEB;
+}
+.d-welcome__pro__jsr__progress > div {
+    height: 5px;
+    background: #3AC9D3;
+}
 .d-welcome__right {
     -webkit-flex: 0 1 67.7%;
         -ms-flex: 0 1 67.7%;
@@ -3104,7 +3213,9 @@ button:focus {
     padding: 0 15px;
     -webkit-box-flex: 0;
 }
-.d-welcome__about {}
+.d-welcome__about {
+    margin-bottom: 15px;
+}
 .d-welcome__about__head {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3115,16 +3226,44 @@ button:focus {
     -webkit-justify-content: space-between;
             justify-content: space-between;
     padding-left: 25px;
+    min-height: 42px;
     border-bottom: 1px solid #EBEBEB;
     background: rgba(189, 205, 214, 0.1);
+    -webkit-transition: background .25s ease-in-out;
+    transition: background .25s ease-in-out;
     -webkit-box-align: center;
         -ms-flex-align: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
+.d-welcome__about__head__toggable {
+    color: rgba(47, 49, 58, 0.5);
+    font-size: 14px;
+}
+.d-welcome__about__head__toggable .icon {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 6px;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+}
 .d-welcome__about__head__name {
     font-weight: 600;
     font-size: 16px;
+}
+.d-welcome__about--toggable .d-welcome__about__head {
+    padding-right: 25px;
+    cursor: pointer;
+}
+.d-welcome__about--toggable .d-welcome__about__head:hover {
+    background: rgba(189, 205, 214, 0.2);
+}
+.d-welcome__about--toggable.active .d-welcome__about__head .icon {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 .d-welcome__about__row {
     display: -webkit-box;
@@ -3203,6 +3342,108 @@ button:focus {
     color: #1E8BC3;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
+}
+.d-welcome__about__hidden {
+    display: none;
+}
+.d-welcome__about__record {
+    padding: 20px 25px;
+    border-bottom: 1px solid #EBEBEB;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.d-welcome__about__record:last-child {
+    border-bottom: 0;
+}
+.d-welcome__about__record__top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.d-welcome__about__record__title {
+    font-weight: 600;
+    font-size: 18px;
+}
+.d-welcome__about__record__title span {
+    display: block;
+    margin-top: 7px;
+    color: rgba(47, 49, 58, 0.7);
+    font-weight: 600;
+    font-size: 16px;
+}
+.d-welcome__about__record__year {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    color: rgba(47, 49, 58, 0.5);
+    font-size: 14px;
+    -webkit-box-flex: 0;
+}
+.d-welcome__about__record__content {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.425;
+}
+.d-welcome__about__testimonial {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #EBEBEB;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.d-welcome__about__testimonial__content {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-flex: 1;
+}
+.d-welcome__about__testimonial__title {
+    font-weight: 600;
+    font-size: 18px;
+}
+.d-welcome__about__testimonial__text {
+    margin-top: 5px;
+    color: rgba(47, 49, 58, 0.7);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.425;
+}
+.d-welcome__about__testimonial__author {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.d-welcome__about__testimonial__rating {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding-left: 20px;
+    -webkit-box-flex: 0;
+}
+.d-welcome__about__testimonial__rating .icon {
+    margin-right: 4px;
+    color: #FDB22B;
+    font-size: 12px;
+}
+.d-welcome__about__testimonial__rating span {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 14px;
 }
 .d-search {
     margin-top: 55px;
@@ -4026,16 +4267,31 @@ button:focus {
             transform: translate3d(0,0,0);
     pointer-events: all;
 }
+.messages__dialog__thread {
+    position: relative;
+}
 .messages__dialog__day {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    color: rgba(47, 49, 58, 0.5);
+    position: relative;
+    margin: 20px auto 5px auto;
     text-align: center;
+}
+.messages__dialog__day span {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: rgba(47, 49, 58, 0.5);
     font-weight: 700;
     font-size: 12px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.messages__dialog__day.sticky span {
+    border-color: #A0B0B9;
+    -webkit-box-shadow: 0px 2px 4px rgba(160, 176, 185, 0.2);
+            box-shadow: 0px 2px 4px rgba(160, 176, 185, 0.2);
 }
 .messages__scrollable {
-    position: relative;
     overflow-y: scroll;
     margin-top: 50px;
     min-height: 400px;

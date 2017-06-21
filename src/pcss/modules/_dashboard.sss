@@ -86,20 +86,125 @@
     > div
       flex: 1 0 auto
       min-height: 200px
+  &__pro
+    text-align: center
+    &__avatar
+      position: relative
+      z-index: 2
+      display: inline-block
+      overflow: hidden
+      size: 230px
+      border-radius: 50%
+      border: 4px solid $borderColor
+      img
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 100%
+    &__name
+      margin-top: 15px
+      font-size: 18px
+      font-family: 'Montserrat'
+      font-weight: 600
+      span
+        color: $colorBlue
+        display: inline-block
+      .icon-verify
+        display: inline-block
+        font-size: 15px
+        color: $colorGreen
+        vertical-align: 10px
+        margin-left: 3px
+        &--unverified
+          color: $colorMute
+    &__location
+      color: $fontColor70
+      font-size: 14px
+      margin-top: 10px
+      .icon
+        color: $colorMute
+        display: inline-block
+        margin-right: 10px
+        font-size: 12px
+    &__rating
+      margin: 15px auto
+      .icon
+        color: #FDB22B
+        font-size: 16px
+      span
+        display: inline-block
+        font-size: 18px
+        font-weight: 700
+        margin-left: 5px
+        span
+          font-size: 14px
+          margin-left: 7px
+          color: color($fontColor a(50%))
+
+    &__jsr
+      max-width: 230px
+      margin-left: auto
+      margin-right: auto
+      &__head
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 14px
+        margin-bottom: 3px
+        span
+          &:first-child
+            color: $fontColor50
+          &:last-child
+            font-size: 16px
+            font-weight: 600
+      &__progress
+        height: 5px
+        background: #EBEBEB
+        > div
+          background: $colorGreen
+          height: 5px
+
+
+
+
   &__right
     flex: 0 1 67.7%
     padding: 0 15px
   &__about
+    margin-bottom: 15px
     &__head
       display: flex
       align-items: center
       justify-content: space-between
+      min-height: 42px
       background: color(#BDCDD6 a(10%))
       padding-left: 25px
       border-bottom: 1px solid $borderColor
+      transition: background $transitionSpeed $ease
+      &__toggable
+        font-size: 14px
+        color: $fontColor50
+        .icon
+          display: inline-block
+          margin-left: 15px
+          font-size: 6px
+          transition: transform $transitionSpeed $ease
       &__name
         font-size: 16px
         font-weight: 600
+    &--toggable
+      .d-welcome__about__head
+        cursor: pointer
+        padding-right: 25px
+        &:hover
+          background: color(#BDCDD6 a(20%))
+      &.active
+        .d-welcome__about__head
+          .icon
+            transform: rotate(180deg)
+
     &__row
       display: flex
       padding: 18px 15px
@@ -141,6 +246,70 @@
       a
         color: $colorBlue
         transition: all $transitionSpeed $ease
+
+    &__hidden
+      display: none
+    &__record
+      padding: 20px 25px
+      border-bottom: 1px solid $borderColor
+      transition: all $transitionSpeed $ease
+      &:last-child
+        border-bottom: 0
+      &__top
+        display: flex
+        justify-content: space-between
+      &__title
+        font-size: 18px
+        font-weight: 600
+        span
+          display: block
+          margin-top: 7px
+          font-size: 16px
+          font-weight: 600
+          color: $fontColor70
+      &__year
+        flex: 0 0 auto
+        font-size: 14px
+        color: $fontColor50
+
+      &__content
+        margin-top: 15px
+        font-size: 14px
+        line-height: 1.425
+
+    &__testimonial
+      padding: 20px 25px
+      border-bottom: 1px solid $borderColor
+      display: flex
+      align-items: center
+      &__content
+        flex: 1 1 auto
+      &__title
+        font-size: 18px
+        font-weight: 600
+      &__text
+        margin-top: 5px
+        font-size: 14px
+        line-height: 1.425
+        font-style: italic
+        font-weight: 400
+        color: $fontColor70
+      &__author
+        margin-top: 5px
+        font-size: 14px
+      &__rating
+        flex: 0 0 auto
+        display: flex
+        padding-left: 20px
+        .icon
+          color: #FDB22B
+          font-size: 12px
+          margin-right: 4px
+        span
+          font-size: 14px
+          font-weight: 700
+          display: inline-block
+          margin-left: 5px
 
 
 

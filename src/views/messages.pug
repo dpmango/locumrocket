@@ -122,85 +122,136 @@ doctype html
                       img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
                 .messages__scrollable
                   // thread
-                  // message
-                  .messages__dialog__message(data-id='')
-                    .messages__dialog__message__avatar
-                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
-                    .messages__dialog__message__content
-                      .messages__dialog__message__name Savannah Nichols
-                      .messages__dialog__message__date 15:24
-                      .messages__dialog__message__text 
-                        span Hello! We are currently looking for a great Podiatrist specialist for our facility (BELMONT ALBANY VILLAGE). Our current MD is taking vacation. Would you be interested in taking shift for the following week or two?
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
-                              
-                  // message
-                  .messages__dialog__message(data-id='')
-                    .messages__dialog__message__avatar
-                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
-                    .messages__dialog__message__content
-                      .messages__dialog__message__name Savannah Nichols
-                      .messages__dialog__message__date 15:24
-                      .messages__dialog__message__text 
-                        span Hello Bob! Yes, this sounds fantatic. Do you have detailed job description for this position?
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
-                      .messages__dialog__message__text 
-                        span And yes, of course, I am interested. I have an MD in Internal Medicine
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
+                  .messages__dialog__thread
                     
-                    
-                  // message
-                  .messages__dialog__message(data-id='')
-                    .messages__dialog__message__avatar
-                      img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
-                    .messages__dialog__message__content
-                      .messages__dialog__message__name Savannah Nichols
-                      .messages__dialog__message__date 16:02
-                      .messages__dialog__message__text 
-                        span Please send the information at
-                          a(href='#') savannah.nichold@gmail.com
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
-                              
+                    .messages__dialog__day
+                      span 15 May
+                      
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Savannah Nichols
+                        .messages__dialog__message__date 15:24
+                        .messages__dialog__message__text 
+                          span Hello! We are currently looking for a great Podiatrist specialist for our facility (BELMONT ALBANY VILLAGE). Our current MD is taking vacation. Would you be interested in taking shift for the following week or two?
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                                
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Savannah Nichols
+                        .messages__dialog__message__date 15:24
+                        .messages__dialog__message__text 
+                          span Hello Bob! Yes, this sounds fantatic. Do you have detailed job description for this position?
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                        .messages__dialog__message__text 
+                          span And yes, of course, I am interested. I have an MD in Internal Medicine
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                      
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Savannah Nichols
+                        .messages__dialog__message__date 16:02
+                        .messages__dialog__message__text 
+                          span Please send the information at
+                            a(href='#') savannah.nichold@gmail.com
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
                   
-                  .messages__dialog__day 17 May
-                              
-                  // message
-                  .messages__dialog__message(data-id='')
-                    .messages__dialog__message__avatar
-                      img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
-                    .messages__dialog__message__content
-                      .messages__dialog__message__name Bob Dole
-                      .messages__dialog__message__date 12:34
-                      .messages__dialog__message__text 
-                        span Savannah, Sorry for my late reply. 
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
-                      .messages__dialog__message__text 
-                        span Please find the detailed job description attached. <br>I will also send this via email to you shortly..
-                        .messages__dialog__message__text__actions
-                          a(href='#')
-                            i.icon.icon-forward
-                          a(href='#')
-                            i.icon.icon-rating
-        
+                  // thread          
+                  .messages__dialog__thread
+                    
+                    .messages__dialog__day 
+                      span 17 May
+                                
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Bob Dole
+                        .messages__dialog__message__date 12:34
+                        .messages__dialog__message__text 
+                          span Savannah, Sorry for my late reply. 
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                        .messages__dialog__message__text 
+                          span Please find the detailed job description attached. <br>I will also send this via email to you shortly..
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                  
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Bob Dole
+                        .messages__dialog__message__date 12:34
+                        .messages__dialog__message__text 
+                          span Savannah, Sorry for my late reply. 
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                        .messages__dialog__message__text 
+                          span Please find the detailed job description attached. <br>I will also send this via email to you shortly..
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                    
+                    // message
+                    .messages__dialog__message(data-id='')
+                      .messages__dialog__message__avatar
+                        img(src='images/tmp/doctorAvatar_2.jpg' srcset='images/tmp/doctorAvatar_2@2x.jpg 2x')
+                      .messages__dialog__message__content
+                        .messages__dialog__message__name Bob Dole
+                        .messages__dialog__message__date 12:34
+                        .messages__dialog__message__text 
+                          span Savannah, Sorry for my late reply. 
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating
+                        .messages__dialog__message__text 
+                          span Please find the detailed job description attached. <br>I will also send this via email to you shortly..
+                          .messages__dialog__message__text__actions
+                            a(href='#')
+                              i.icon.icon-forward
+                            a(href='#')
+                              i.icon.icon-rating                      
+                                        
                     
       include shared/footer.pug
     include shared/modal-reg.pug
