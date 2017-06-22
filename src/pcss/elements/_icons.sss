@@ -10,6 +10,13 @@
   &-logo
     background-image: url('../images/el/logo@2x.png')
     size: 205px 38px
+  &-rating-half
+    background-image: svg-load('../../images/svg/rating-half.svg')
+    size: 13px
+    &::before
+      display: none
+  &-rating-blank
+    color: $colorMute !important
 
 @media(width <= 480px)
   .icon-logo

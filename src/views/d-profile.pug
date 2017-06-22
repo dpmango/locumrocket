@@ -5,421 +5,160 @@ doctype html
   include shared/head.pug
 
   body
-    include shared/header-f.pug
+    include shared/header-pro.pug
     .page.page--bg.page--pad.static-header
       .page__content
-        // DASHBOARD ALERTS
-        .alerts
-          .alert.alert--green.visible
-            i.icon.icon-alert
-            .alert__text A candidate has accepted your job. Go to 
-              a(href='#') My Jobs/Filled
-            i.icon.icon-close
-          .alert.alert--red.js-toggableAlert
-            i.icon.icon-alert
-            .alert__text You have unapproved timesheet(s). Go to
-              a(href='#') BILLING
-            i.icon.icon-close
-          .alert.alert--red.js-toggableAlert
-            i.icon.icon-alert
-            .alert__text You have unpaid job(s). Go to
-              a(href='#') BILLING
-            i.icon.icon-close
-          .alerts__toggler(data-hidden='1')
-            a(href='#') show 2 more
-        
         // DASHBOARD
         .d-welcome
           .container
+            a(href='#').d-title-back 
+              i.icon.icon-forward
+              span Back to dashboard
             .d-title My Dashboard
             .d-welcome__wrapper
               // facility image and maps
               .d-welcome__left
-                .d-welcome__facility-image.d-box
-                  img(src='images/tmp/dashHospital.jpg' srcset='images/tmp/dashHospital@2x.jpg 2x')
-                .d-welcome__facility-map.d-box
-                  // GOOGLE API
-                  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdDq67GS9ongMkjzokPsC5fTxdvEKidfI')
-                  script(type='text/javascript', src='js/maps.js')
-                  .js-facilityMap
+                .d-welcome__pro
+                  .d-welcome__pro__avatar
+                    img(src='images/tmp/dashProfessional.jpg' srcset='images/tmp/dashProfessional@2x.jpg 2x')
+                  .d-welcome__pro__name
+                    span Bob Macron, MD
+                    i.icon.icon-verify
+                  .d-welcome__pro__location
+                    i.icon.icon-location
+                    span Oakland, CA
+                  .d-welcome__pro__rating
+                    i.icon.icon-rating
+                    span 4.9
+                      span 10 reviews
+                  .d-welcome__pro__jsr
+                    .d-welcome__pro__jsr__head
+                      span Job Sucess
+                      span 95%
+                    .d-welcome__pro__jsr__progress
+                      div(style='width: 95%')
+                  .d-welcome__pro__actions
+                    .d-welcome__pro__actions__btns
+                      a(href='#').btn.btn--round 
+                        i.icon.icon-chat
+                      a(href='#').btn.btn--round 
+                        i.icon.icon-call
+                      a(href='#').btn.btn--round 
+                        i.icon.icon-videocall
+                    
+                    a(href='#').btn.btn--red.btn--150 Hire
+                    
+                    
+                    
+                      
               // facility description
               .d-welcome__right
                 .d-welcome__about.d-box
                   .d-welcome__about__head
-                    .d-welcome__about__head__name Facility details
-                    a(href='#').btn.btn--red.btn--150.btn--head Edit
+                    .d-welcome__about__head__name My profile details
                   // row
                   .d-welcome__about__row.d-welcome__about__row--2col
                     .d-welcome__about__item
-                      .d-welcome__about__label Facility
-                      .d-welcome__about__value BELMONT ALBANY VILLAGE
+                      .d-welcome__about__label Specialty
+                      .d-welcome__about__value INTERNAL MEDICINE
                     .d-welcome__about__item
-                      .d-welcome__about__label Type
-                      .d-welcome__about__value Community Hospital
+                      .d-welcome__about__label Degree
+                      .d-welcome__about__value MD
                   // row
-                  .d-welcome__about__row.d-welcome__about__row--3col
+                  .d-welcome__about__row.d-welcome__about__row--2col
                     .d-welcome__about__item
-                      .d-welcome__about__label Doctors
-                      .d-welcome__about__value 15
+                      .d-welcome__about__label Availability
+                      .d-welcome__about__value Less than 20h/week
                     .d-welcome__about__item
-                      .d-welcome__about__label Clinical staff
-                      .d-welcome__about__value 200
-                    .d-welcome__about__item
-                      .d-welcome__about__label Rooms
-                      .d-welcome__about__value 500
+                      .d-welcome__about__label Experience
+                      .d-welcome__about__value >10 years
                   // row
                   .d-welcome__about__row
                     .d-welcome__about__item
-                      .d-welcome__about__label Adress
-                      .d-welcome__about__value 23, University Avenue, Berkeley, 94608
+                      .d-welcome__about__label Introduction
+                      .d-welcome__about__value 
+                        p Accumsan sit simpliciter phantasma illud ex volutpat. Illud phantasma industria vexillum scriptor accumsan fuit unquam cum 1500s, cum incognita est a printer tulit unam, et diripienda autem genus est genus ut libero. Non remansit quinque saecula non tantum, sed etiam in saltu electronic condimentum, remanserant per se unum. Is eram in 1960 popularized cum release Cum incognita est a printer tulit unam, et diripienda
+                
+                // next info section    
+                .d-welcome__about.d-box
+                  .d-welcome__about__head
+                    .d-welcome__about__head__name Employment history
                   // row
-                  .d-welcome__about__row
-                    .d-welcome__about__item
-                      .d-welcome__about__label Description
-                      .d-welcome__about__value 
-                        p BELMONT ALBANY VILLAGE is the only Level One trauma center in Berkeley and Northern San Mateo County. We provide life-saving medical care to the 1.5 million adults and children of Berkeley, San Francisco and northern San Mateo County. We offer comprehensive tertiary services designed to meet the needs of diverse communities. Services include 24-hour emergency care, minimally invasive surgery, high risk obstetrics and Level III Newborn Intensive Care Nursery
+                  .d-welcome__about__hidden.active(data-visible='0')
+                    // single record
+                    .d-welcome__about__record
+                      .d-welcome__about__record__top
+                        .d-welcome__about__record__title
+                          | Medical Doctor - Department of cardiology
+                          span SF GENERAL HOSPITAL
+                        .d-welcome__about__record__year 2012 - present
+                      .d-welcome__about__record__content The UF Health Cardiology Ocala Heath Brook location is part of UF Health, the Southeast's most comprehensive academic health center, but maintains a community practice environment and has many ancillary services located directly in the practice. 
+                    // single record
+                    .d-welcome__about__record
+                      .d-welcome__about__record__top
+                        .d-welcome__about__record__title
+                          | Resident – Department of cardiology
+                          span SF GENERAL HOSPITAL
+                        .d-welcome__about__record__year 2011 - 2012
+                      .d-welcome__about__record__content Responsibilities include providing outpatient general and/or interventional cardiology and cardiac imaging services, as well as shared night and weekend call.
+                          
+                // next info section    
+                .d-welcome__about.d-box
+                  .d-welcome__about__head
+                    .d-welcome__about__head__name Education history
                   // row
-                  .d-welcome__about__row.d-welcome__about__row--contacts
-                    .d-welcome__about__item
-                      .d-welcome__about__label Contact
-                      .d-welcome__about__value 
-                        | Mary Tyller
-                        p Sr. Vice President
-                    .d-welcome__about__item
-                      .d-welcome__about__value 
-                        | (510) 345-564
-                        p Phone
-                    .d-welcome__about__item
-                      .d-welcome__about__value 
-                        a(href='mailto:mtyller@vill.com') mtyller@vill.com
-                        p Email
+                  .d-welcome__about__hidden.active(data-visible='0')
+                    // single record
+                    .d-welcome__about__record
+                      .d-welcome__about__record__top
+                        .d-welcome__about__record__title
+                          | Medical Doctor - MD
+                          span University of California, Los Angeles (UCLA)
+                        .d-welcome__about__record__year 2008 - 2012
                       
-            
-        // SEARCH
-        .d-search
-          .container
-            .d-title Find a medical professional
-            .d-search__box.d-box
-              .d-search__top
-                .d-search__main
-                  input(type='text' placeholder='i.e. MD, California, Internal Medicine ')
-                  button(type='submit')
-                    i.icon.icon-search
-                a(href='#').btn.btn--ghost.btn--150.js-toggleSearchFilters Advanced search
-              .d-search__collapsable
-                .d-search__collapsable__wrapper
-                  .d-search__col
-                    .ui-group.ui-filtrable
-                      label Job Title
-                      a(href='#' data-id='') Physicians
-                      a(href='#' data-id='').active Advanced Practitioners
-                      a(href='#' data-id='') Allied Health
-                      a(href='#' data-id='') Nursing
-                  .d-search__col
-                    .ui-group
-                      label Specialty
-                      .ui-select
-                        .ui-select__visible 
-                          span Select Allied Health Specialty
-                          i.icon.icon-select
-                        .ui-select__dropdown
-                          span.ui-select__dropdown__placeholder Select Allied Health Specialty
-                          span(data-value='Specialty 1') Specialty 1
-                          span(data-value='Specialty 2') Specialty 2
-                          span(data-value='Specialty 3') Specialty 3
-                          span(data-value='Specialty 4') Specialty 4
-                          span(data-value='Specialty 5') Specialty 5
-                    .ui-group.js-showMoreList
-                      label Other
-                      .ui-radio(data-visible='1')
-                        input(type='checkbox' name='checkbox_1' id='checkbox_1')
-                        label(for='checkbox_1') Board Certified
-                      .ui-radio(data-visible='1')
-                        input(type='checkbox' name='checkbox_2' id='checkbox_2')
-                        label(for='checkbox_2') Board Eligible
-                      .ui-radio(data-visible='0')
-                        input(type='checkbox' name='checkbox_3' id='checkbox_3')
-                        label(for='checkbox_3') Board Certified
-                      .ui-radio(data-visible='0')
-                        input(type='checkbox' name='checkbox_4' id='checkbox_4')
-                        label(for='checkbox_4') Board Eligible
-                      .show-more(data-alttext='Show less' data-hidden='1')
-                        a(href='#') See more
-                  .d-search__col
-                    .ui-group
-                      label Town
-                      input(type='text' placeholder='Berkeley').ui-input
-                    .ui-group
-                      label State
-                      input(type='text' placeholder='CA').ui-input  
-                  .d-search__col
-                    .ui-group
-                      label Weekly Time commitment
-                      .ui-radio
-                        input(type='checkbox' name='radio' id='radio_1')
-                        label(for='radio_1') Less than 5 hours
-                      .ui-radio
-                        input(type='checkbox' name='radio' id='radio_2')
-                        label(for='radio_2') 5 to 10 hours
-                      .ui-radio
-                        input(type='checkbox' name='radio' id='radio_3')
-                        label(for='radio_3') Over 10 hours
-                      .ui-radio
-                        input(type='checkbox' name='radio' id='radio_4')
-                        label(for='radio_4') Flexible
-                    
-                .d-search__collapsable__cta
-                  .d-search__collapsable__cta__applied
-                    label Filters applied
-                    .ui-tag
-                      span 10+ h commitment
-                      i.icon.icon-close
-                  .d-search__collapsable__cta__btns
-                    a(href='#').btn.btn--ghost.btn--150 RESET
-                    a(href='#').btn.btn--ghost.btn--150 UPDATE
-                    
-
-        // SEARCH
-        .d-results
-          .container
-            .d-results__head
-              .d-title Showing 103 results 
-              .sortable
-                .sortable__label Sort by:
-                .sortable__filter
-                  span Relevancy
-                  i.icon.icon-select
-                  .sortable__dropdown
-                    span(data-val='Relevancy') Relevancy
-                    span(data-val='Experience') Experience
-                    span(data-val='Rate') Rate
-            
-            // card
-            .d-results__card
-              .d-results__card__content
-                .d-results__card__col
-                  .d-results__card__primary
-                    .d-results__card__primary-avatar
-                      .d-results__card__avatar
-                        img(src='images/tmp/doctor_1.jpg' srcset='images/tmp/doctor_1@2x.jpg')
-                      .d-results__card__item.d-results__card__item--jsr
-                        .d-results__card__item__label Job Sucess
-                        .d-results__card__item__value 80%
-                    .d-results__card__primary-content
-                      .d-results__card__item
-                        .d-results__card__item__label Specialty
-                        .d-results__card__item__value Internal Medicine
-                      .d-results__card__item
-                        .d-results__card__item__label Location
-                        .d-results__card__item__value Oakland, CA
-                      .d-results__card__item
-                        .d-results__card__item__label Verification
-                        .d-results__card__item__value 
-                          span Verified
-                          i.icon.icon-verified
-                            
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Experience:
-                      .d-results__card__item__value > 10 years
-                    .d-results__card__item
-                      .d-results__card__item__label Availability:
-                      .d-results__card__item__value < 20 h / week
-                    .d-results__card__item
-                      .d-results__card__item__label Skills:
-                      .d-results__card__item__value Fellowship, Board certified
-                    
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Undergraduate
-                      .d-results__card__item__value UNIVERSITY OF CALIFORNIA, BERKELEY
-                    .d-results__card__item
-                      .d-results__card__item__label University:
-                      .d-results__card__item__value UCLA
-                    .d-results__card__item
-                      .d-results__card__item__label Residency:
-                      .d-results__card__item__value SF GENERAL HOSPITAL
-                                        
-              .d-results__card__cta
-                .d-results__card__name Bob Macron, MD
-                .d-results__card__rating
-                  i.icon.icon-rating
-                  span 4.9
-                    span 10 reviews
-                a(href='#').btn.btn--ghost.btn--fill.btn--150 SEE MORE
-                    
-            // card
-            .d-results__card
-              .d-results__card__content
-                .d-results__card__col
-                  .d-results__card__primary
-                    .d-results__card__primary-avatar
-                      .d-results__card__avatar
-                        img(src='images/tmp/doctor_1.jpg' srcset='images/tmp/doctor_1@2x.jpg')
-                      .d-results__card__item.d-results__card__item--jsr
-                        .d-results__card__item__label Job Sucess
-                        .d-results__card__item__value 80%
-                    .d-results__card__primary-content
-                      .d-results__card__item
-                        .d-results__card__item__label Specialty
-                        .d-results__card__item__value Internal Medicine
-                      .d-results__card__item
-                        .d-results__card__item__label Location
-                        .d-results__card__item__value Oakland, CA
-                      .d-results__card__item
-                        .d-results__card__item__label Verification
-                        .d-results__card__item__value 
-                          span Verified
-                          i.icon.icon-verified
-                            
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Experience:
-                      .d-results__card__item__value > 10 years
-                    .d-results__card__item
-                      .d-results__card__item__label Availability:
-                      .d-results__card__item__value < 20 h / week
-                    .d-results__card__item
-                      .d-results__card__item__label Skills:
-                      .d-results__card__item__value Fellowship, Board certified
-                    
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Undergraduate
-                      .d-results__card__item__value UNIVERSITY OF CALIFORNIA, BERKELEY
-                    .d-results__card__item
-                      .d-results__card__item__label University:
-                      .d-results__card__item__value UCLA
-                    .d-results__card__item
-                      .d-results__card__item__label Residency:
-                      .d-results__card__item__value SF GENERAL HOSPITAL
-                                        
-              .d-results__card__cta
-                .d-results__card__name Bob Macron, MD
-                .d-results__card__rating
-                  i.icon.icon-rating
-                  span 4.9
-                    span 10 reviews
-                a(href='#').btn.btn--ghost.btn--fill.btn--150 SEE MORE
-                    
-            // card
-            .d-results__card
-              .d-results__card__content
-                .d-results__card__col
-                  .d-results__card__primary
-                    .d-results__card__primary-avatar
-                      .d-results__card__avatar
-                        img(src='images/tmp/doctor_1.jpg' srcset='images/tmp/doctor_1@2x.jpg')
-                      .d-results__card__item.d-results__card__item--jsr
-                        .d-results__card__item__label Job Sucess
-                        .d-results__card__item__value 80%
-                    .d-results__card__primary-content
-                      .d-results__card__item
-                        .d-results__card__item__label Specialty
-                        .d-results__card__item__value Internal Medicine
-                      .d-results__card__item
-                        .d-results__card__item__label Location
-                        .d-results__card__item__value Oakland, CA
-                      .d-results__card__item
-                        .d-results__card__item__label Verification
-                        .d-results__card__item__value 
-                          span Verified
-                          i.icon.icon-verified
-                            
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Experience:
-                      .d-results__card__item__value > 10 years
-                    .d-results__card__item
-                      .d-results__card__item__label Availability:
-                      .d-results__card__item__value < 20 h / week
-                    .d-results__card__item
-                      .d-results__card__item__label Skills:
-                      .d-results__card__item__value Fellowship, Board certified
-                    
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Undergraduate
-                      .d-results__card__item__value UNIVERSITY OF CALIFORNIA, BERKELEY
-                    .d-results__card__item
-                      .d-results__card__item__label University:
-                      .d-results__card__item__value UCLA
-                    .d-results__card__item
-                      .d-results__card__item__label Residency:
-                      .d-results__card__item__value SF GENERAL HOSPITAL
-                                        
-              .d-results__card__cta
-                .d-results__card__name Bob Macron, MD
-                .d-results__card__rating
-                  i.icon.icon-rating
-                  span 4.9
-                    span 10 reviews
-                a(href='#').btn.btn--ghost.btn--fill.btn--150 SEE MORE
-                    
-            // card
-            .d-results__card
-              .d-results__card__content
-                .d-results__card__col
-                  .d-results__card__primary
-                    .d-results__card__primary-avatar
-                      .d-results__card__avatar
-                        img(src='images/tmp/doctor_1.jpg' srcset='images/tmp/doctor_1@2x.jpg')
-                      .d-results__card__item.d-results__card__item--jsr
-                        .d-results__card__item__label Job Sucess
-                        .d-results__card__item__value 80%
-                    .d-results__card__primary-content
-                      .d-results__card__item
-                        .d-results__card__item__label Specialty
-                        .d-results__card__item__value Internal Medicine
-                      .d-results__card__item
-                        .d-results__card__item__label Location
-                        .d-results__card__item__value Oakland, CA
-                      .d-results__card__item
-                        .d-results__card__item__label Verification
-                        .d-results__card__item__value 
-                          span Verified
-                          i.icon.icon-verified
-                            
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Experience:
-                      .d-results__card__item__value > 10 years
-                    .d-results__card__item
-                      .d-results__card__item__label Availability:
-                      .d-results__card__item__value < 20 h / week
-                    .d-results__card__item
-                      .d-results__card__item__label Skills:
-                      .d-results__card__item__value Fellowship, Board certified
-                    
-                .d-results__card__col
-                  .d-results__card__col__wrapper
-                    .d-results__card__item
-                      .d-results__card__item__label Undergraduate
-                      .d-results__card__item__value UNIVERSITY OF CALIFORNIA, BERKELEY
-                    .d-results__card__item
-                      .d-results__card__item__label University:
-                      .d-results__card__item__value UCLA
-                    .d-results__card__item
-                      .d-results__card__item__label Residency:
-                      .d-results__card__item__value SF GENERAL HOSPITAL
-                                        
-              .d-results__card__cta
-                .d-results__card__name Bob Macron, MD
-                .d-results__card__rating
-                  i.icon.icon-rating
-                  span 4.9
-                    span 10 reviews
-                a(href='#').btn.btn--ghost.btn--fill.btn--150 SEE MORE
-                                  
-                    
-                    
+                    // single record
+                    .d-welcome__about__record
+                      .d-welcome__about__record__top
+                        .d-welcome__about__record__title
+                          | Bachelor of Science - BS
+                          span Los Angeles High scool
+                        .d-welcome__about__record__year 2003 - 2008
+                      .d-welcome__about__record__content Biology major
+                
+                // next info section    
+                .d-welcome__about.d-box
+                  .d-welcome__about__head
+                    .d-welcome__about__head__name Reviews and LocumRocket history
+                  // row
+                  .d-welcome__about__hidden.active(data-visible='0')
+                    // single testimonial
+                    .d-welcome__about__testimonial
+                      .d-welcome__about__testimonial__content
+                        .d-welcome__about__testimonial__title Cardiologist
+                        .d-welcome__about__testimonial__text Dr. Macron is a great doctor. He has a amazing bedside manner and is very professional. I can't recommend him enough.
+                        .d-welcome__about__testimonial__author - Bob Dole, SF GENERAL HOSPITAL
+                      .d-welcome__about__testimonial__rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating.icon-rating-blank
+                        span 4
+                    // single testimonial
+                    .d-welcome__about__testimonial
+                      .d-welcome__about__testimonial__content
+                        .d-welcome__about__testimonial__title Rock star cardiologist needed!
+                        .d-welcome__about__testimonial__text He went above and beyond to make sure that patients received the best care.. 100% recommend.
+                        .d-welcome__about__testimonial__author - John Smith, Sacramento state hosital
+                      .d-welcome__about__testimonial__rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating
+                        i.icon.icon-rating-half
+                        span 4.5
+                              
+                      
       include shared/footer.pug
       include shared/feedback.pug
     include shared/modal-reg.pug

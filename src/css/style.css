@@ -580,6 +580,17 @@ body, html {
     height: 38px;
     background-image: url('../images/el/logo@2x.png');
 }
+.icon-rating-half {
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='13px' height='12px' viewBox='0 0 13 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Erating-half%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Pages' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='3.1.1-Dash---Freelancer-Profile' transform='translate(-1319.000000, -1269.000000)' fill-rule='nonzero'%3E %3Cg id='facility-details-copy-3' transform='translate(616.000000, 1165.000000)'%3E %3Cg id='row-copy-3' transform='translate(-1.000000, 44.000000)'%3E %3Cg id='card'%3E %3Cg id='rate' transform='translate(636.000000, 57.000000)'%3E %3Cg id='rating-half' transform='translate(68.000000, 3.000000)'%3E %3Cpath d='M12.6951763,4.65021982 C12.6951763,4.46368981 12.5527989,4.34776736 12.2678306,4.30234652 L8.43804667,3.75046348 L6.72147553,0.309974045 C6.62490053,0.103289369 6.50018678,0 6.34762821,0 C6.19509636,0 6.07046278,0.103289369 5.97380761,0.309974045 L4.2571563,3.75046348 L0.427185366,4.30234652 C0.142430752,4.34776736 0,4.46368981 0,4.65021982 C0,4.75613115 0.0635994727,4.87711214 0.190771696,5.01321574 L2.96787741,7.6899465 L2.31176066,11.4705758 C2.3015794,11.5411833 2.29652886,11.5917421 2.29652886,11.621855 C2.29652886,11.7277133 2.32319788,11.8171513 2.37658937,11.8903014 C2.42995414,11.9635574 2.51001465,12 2.6168778,12 C2.70848242,12 2.81016141,11.9698872 2.92204838,11.9093437 L6.34754804,10.1246623 L9.77328821,11.9093437 C9.88028497,11.9698872 9.98199068,12 10.0783519,12 C10.180405,12 10.2577933,11.9635574 10.3111848,11.8903014 C10.3644159,11.8172573 10.3911117,11.7277133 10.3911117,11.621855 C10.3911117,11.5564119 10.3885463,11.506012 10.3834423,11.4705758 L9.72727212,7.6899465 L12.4967085,5.01321574 C12.629145,4.88214418 12.6951763,4.76111023 12.6951763,4.65021982 Z' id='Shape-Copy-4' fill='%23FDB22B'/%3E %3Cpath d='M12.6951763,4.65021982 C12.6951763,4.46368981 12.5527989,4.34776736 12.2678306,4.30234652 L8.43804667,3.75046348 L6.72147553,0.309974045 C6.62490053,0.103289369 6.50018678,0 6.34762821,0 C6.19509636,0 6.34754804,10.1246623 6.34754804,10.1246623 L9.77328821,11.9093437 C9.88028497,11.9698872 9.98199068,12 10.0783519,12 C10.180405,12 10.2577933,11.9635574 10.3111848,11.8903014 C10.3644159,11.8172573 10.3911117,11.7277133 10.3911117,11.621855 C10.3911117,11.5564119 10.3885463,11.506012 10.3834423,11.4705758 L9.72727212,7.6899465 L12.4967085,5.01321574 C12.629145,4.88214418 12.6951763,4.76111023 12.6951763,4.65021982 Z' id='Shape-Copy-4' fill='%23A0B0B9'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.icon-rating-half:before {
+    display: none;
+}
+.icon-rating-blank {
+    color: #A0B0B9 !important;
+}
 @media(max-width: 480px) {
     .icon-logo {
         width: 190px;
@@ -758,6 +769,41 @@ button:focus {
 }
 .btn--message:hover {
     background: #3AC9D3;
+}
+.btn--round {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #3AC9D3;
+    color: white;
+    font-size: 18px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.btn--round .icon {
+    margin-top: 2px;
+}
+.btn--round .icon-chat {
+    font-size: 18px;
+}
+.btn--round .icon-call {
+    font-size: 19px;
+}
+.btn--round .icon-videocall {
+    font-size: 16px;
+}
+.btn--round:hover {
+    background: #EF4836;
 }
 .btn--150 {
     width: 150px;
@@ -3070,11 +3116,29 @@ button:focus {
     font-size: 24px;
     font-family: 'Montserrat';
 }
+.d-title-back {
+    display: block;
+    margin-bottom: 3px;
+    color: #A0B0B9;
+    font-weight: 600;
+    font-size: 13px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.d-title-back .icon {
+    margin-right: 4px;
+    font-size: 11px;
+}
+.d-title-back:hover {
+    color: #1E8BC3;
+}
 .d-box {
     border: 4px solid #EBEBEB;
     background: white;
 }
-.d-welcome {}
+.d-welcome {
+    margin-top: 30px;
+}
 .d-welcome__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3226,6 +3290,31 @@ button:focus {
     height: 5px;
     background: #3AC9D3;
 }
+.d-welcome__pro__actions {
+    margin-top: 40px;
+    text-align: center;
+}
+.d-welcome__pro__actions__btns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-bottom: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.d-welcome__pro__actions__btns .btn {
+    margin-right: 15px;
+}
+.d-welcome__pro__actions__btns .btn:last-child {
+    margin-right: 0;
+}
 .d-welcome__right {
     -webkit-flex: 0 1 67.7%;
         -ms-flex: 0 1 67.7%;
@@ -3365,6 +3454,9 @@ button:focus {
 }
 .d-welcome__about__hidden {
     display: none;
+}
+.d-welcome__about__hidden.active {
+    display: block;
 }
 .d-welcome__about__record {
     padding: 20px 25px;
