@@ -1,0 +1,86 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-pro.pug
+    .page.page--bg.page--pad.static-header
+      .page__content
+        // DASHBOARD
+        .d-settings
+          .container
+            a(href='#').d-title-back 
+              i.icon.icon-forward
+              span Back to dashboard
+            .d-title My profile
+            .d-settings__wrapper
+              // sidebar
+              .d-settings__sidebar
+                .d-settings__sidebar__wrapper
+                  .d-settings__sidebar__head Personal settings
+                  .d-settings__sidebar__menu
+                    a(href='#').active Contact information
+                    a(href='#') Payment methods
+                    a(href='#') Change password
+                    a(href='#') Notifications
+              .d-settings__content
+                .d-settings__heading Contact Information
+                .d-settings__section
+                  .d-settings__row
+                    .ui-group
+                      label First name
+                      input(type='text' value='Sergey' disabled).ui-input
+                    .ui-group
+                      label Last name
+                      input(type='text' value='Khmelevskoy' disabled).ui-input
+                  .d-settings__row
+                    .ui-group
+                      label Email
+                      input(type='email' value='xs290@me.com' disabled).ui-input
+                    .ui-group
+                      a(href='#').blue-link Request primary contact information change  
+                .d-settings__section
+                  .d-settings__row
+                    .ui-group
+                      label Phone
+                      input(type='tel' value='+358 (46) 646 1777').ui-input
+                  .ui-group
+                    label Address
+                    input(type='text' value='Your full adress .. ').ui-input
+                .d-settings__section
+                  .ui-group
+                    label Profile picture
+                    .d-settings__profile-picture
+                      .d-settings__profile-picture__image
+                        img(src='images/tmp/headerAvatar.jpg' srcset='images/tmp/headerAvatar@2x.jpg 2x')
+                      .d-settings__profile-picture__remove
+                        a(href='#')
+                          i.icon.icon-close
+                          span remove
+                    .ui-file
+                      .ui-file__box
+                        input#file.ui-file__input(type='file', name='file', data-multiple-caption='{count} files selected', multiple='')
+                        label(for='file') 
+                          i.icon.icon-attach
+                          span select new picture
+                      .ui-file__info Maximum 300x300px and 2 Mb
+                .d-settings__cta
+                  a(href='#').btn.btn--red.btn--150 Update
+                  .d-settings__cta__sep or
+                  a(href='#').btn.btn--ghost.btn--100 Cancel
+
+
+                          
+                      
+                    
+                    
+                
+              
+
+    
+      include shared/footer.pug
+      include shared/feedback.pug
+    include shared/modal-reg.pug
+    include shared/scripts.pug

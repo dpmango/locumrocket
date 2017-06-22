@@ -95,7 +95,8 @@
     border-color: $colorGreen
   &.has-error
     border-color: $colorRed
-
+  &[disabled]
+    background: color(#F8F8F8 a(50%))
 
 @media($mobile-s)
   .ui-input
@@ -383,3 +384,38 @@
   &:hover
     background: color($borderColor a(50%))
     border: 1px solid color($fontColor a(25%))
+
+
+// FILE
+.ui-file
+  margin-top: 15px
+  display: flex
+  align-items: center
+  &__box
+    flex: 0 0 auto
+    cursor: pointer
+  &__input
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+  label
+    cursor: pointer
+    display: inline-block
+    background: $colorBlue
+    color: white
+    border-radius: 4px
+    padding: 6px 15px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $colorRed
+    .icon
+      font-size: 16px
+      margin-right: 10px
+  &__info
+    flex: 0 1 auto
+    margin-left: 20px
+    color: $fontColor50
+    font-size: 14px
