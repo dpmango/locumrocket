@@ -69,6 +69,7 @@
   .alerts
     padding: 0 15px
 
+// GENERIC
 .d-title
   font-size: 24px
   font-family: 'Montserrat'
@@ -91,6 +92,7 @@
   border: 4px solid #EBEBEB
   background: white
 
+// WELCOME
 .d-welcome
   margin-top: 30px
   &__wrapper
@@ -362,99 +364,6 @@
           margin-left: 5px
 
 
-
-.d-search
-  margin-top: 55px
-  &__box
-    margin-top: 20px
-    padding: 25px 35px
-  &__top
-    display: flex
-    align-items: center
-    justify-content: space-between
-  &__main
-    position: relative
-    border: 2px solid $borderColor
-    flex: 0 1 640px
-    input
-      display: block
-      width: 100%
-      padding: 15px 80px 15px 20px
-      font-size: 14px
-      border: 0
-      background: transparent
-    button
-      background: $colorRed
-      position: absolute
-      top: 0
-      right: 0
-      font-size: 18px
-      color: white
-      padding: 12px
-      width: 46px
-      text-align: center
-      cursor: pointer
-      transition: all $transitionSpeed $ease
-      .icon
-        margin-top: 2px
-      &:hover
-        background: $colorGreen
-  &__collapsable
-    display: none
-    &__wrapper
-      display: flex
-      justify-content: space-between
-      border-top: 1px solid $borderColor
-      border-bottom: 1px solid $borderColor
-      margin: 25px 0 20px 0
-      padding: 25px 0
-    &__cta
-      display: flex
-      align-items: center
-      justify-content: space-between
-      &__applied
-        > label
-          display: block
-          margin-bottom: 3px
-          font-size: 12px
-          color: color($fontColor a(50%))
-
-      &__btns
-        flex: 0 1 auto
-        .btn
-          margin-right: 35px
-          &:last-child
-            margin-right: 0
-  &__col
-    flex: 0 1 165px
-    padding: 0 10px
-    &:nth-child(2)
-      flex-basis: 260px
-      padding-left: 0
-    &:nth-child(3)
-      flex-basis: 220px
-    &:nth-child(4)
-      flex-basis: 175px
-      padding-right: 0
-    .ui-group
-      margin-bottom: 30px
-      &:last-child
-        margin-bottom: 0
-
-
-.show-more
-  a
-    color: $colorBlue
-    border-bottom: 1px dashed $colorBlue
-    transition: all $transitionSpeed $ease
-    &:hover
-      border-color: transparent
-      color: $colorRed
-
-.js-showMoreList
-  > div[data-visible="0"]
-    display: none
-
 @media($desktop)
   .d-welcome
     &__wrapper
@@ -536,6 +445,166 @@
               flex-basis: 100%
             &:nth-child(3)
               padding-left: 10px
+
+// SEARCH
+.d-search
+  margin-top: 55px
+  &__box
+    margin-top: 20px
+    padding: 25px 35px
+  &__top
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__main
+    position: relative
+    border: 2px solid $borderColor
+    flex: 0 1 640px
+    margin-right: 20px
+    input
+      display: block
+      width: 100%
+      padding: 15px 80px 15px 20px
+      font-size: 14px
+      border: 0
+      background: transparent
+    button
+      background: $colorRed
+      position: absolute
+      top: 0
+      right: 0
+      font-size: 18px
+      color: white
+      padding: 12px
+      width: 46px
+      text-align: center
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      .icon
+        margin-top: 2px
+      &:hover
+        background: $colorGreen
+  .btn--ghost
+    flex: 0 0 auto
+  &__collapsable
+    display: none
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid $borderColor
+      border-bottom: 1px solid $borderColor
+      margin: 25px 0 20px 0
+      padding: 10px 0
+    &__cta
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &__applied
+        > label
+          display: block
+          margin-bottom: 3px
+          font-size: 12px
+          color: color($fontColor a(50%))
+
+      &__btns
+        flex: 0 0 auto
+        .btn
+          margin-right: 35px
+          &:last-child
+            margin-right: 0
+  &__col
+    flex: 0 1 165px
+    padding: 15px 10px
+    &:nth-child(1)
+      padding-left: 0
+    &:nth-child(2)
+      flex-basis: 260px
+    &:nth-child(3)
+      flex-basis: 220px
+    &:nth-child(4)
+      flex-basis: 175px
+      padding-right: 0
+    .ui-group
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+
+@media($desktop)
+  .d-search
+    &__collapsable
+      &__wrapper
+        flex-wrap: wrap
+      &__cta
+        &__btns
+          .btn
+            margin-right: 20px
+            width: 125px
+            &:last-child
+              margin-right: 0
+
+
+@media($tablet)
+  .d-search
+    &__box
+      padding: 25px
+    &__collapsable
+      &__wrapper
+        flex-wrap: wrap
+        justify-content: flex-start
+    &__col
+      flex: 0 1 50%
+      &:nth-child(2)
+        flex-basis: 50%
+        padding-right: 0
+      &:nth-child(3)
+        flex-basis: 50%
+        padding-left: 0
+      &:nth-child(4)
+        flex-basis: 50%
+
+@media($mobile)
+  .d-search
+    &__box
+      padding: 25px 20px
+    &__top
+      flex-direction: column
+    &__main
+      flex: 0 0 auto
+      width: 100%
+      margin-right: 0
+      margin-bottom: 15px
+    &__collapsable
+      &__cta
+        flex-direction: column
+        &__btns
+          margin-top: 20px
+          flex: 0 0 auto
+
+@media(width <= 450px)
+  .d-search
+    &__col
+      flex: 0 1 100%
+      padding-left: 0
+      padding-right: 0
+      &:nth-child(2)
+        flex-basis: 100%
+      &:nth-child(3)
+        flex-basis: 100%
+      &:nth-child(4)
+        flex-basis: 100%
+
+.show-more
+  a
+    color: $colorBlue
+    border-bottom: 1px dashed $colorBlue
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: transparent
+      color: $colorRed
+
+.js-showMoreList
+  > div[data-visible="0"]
+    display: none
 
 // RESULTS
 .d-results
