@@ -64,24 +64,42 @@
 
   &__search
     position: relative
-    flex: 0 1 165px
+    flex: 0 1 220px
     margin-left: auto
     padding-right: 25px
     border-right: 1px solid $borderColor
+    min-height: 75px
+    display: flex
+    align-items: center
+    &__box
+      position: relative
     input
-      padding: 30px 30px 30px 15px
+      padding: 12px 50px 12px 15px
       font-size: 12px
-      border: 0
+      width: 100%
+      background: transparent
+      border-radius: 25px
+      border: 1px solid transparent
+      transition: border $transitionSpeed $ease, background $transitionSpeed $ease
+      &:focus
+        font-weight: 600
+        background: #FAFBFC
+        border-color: $colorMute
+        + button
+          transform: translate3d(-12px,-50%,0)
+      &::placeholder
+        font-weight: 400
     button
       position: absolute
       top: 50%
-      right: 25px
+      right: 0px
+      margin-top: 1px
       border: 0
       background: transparent
       transform: translateY(-50%)
       color: $colorMute
       font-size: 18px
-      transition: color $transitionSpeed $ease
+      transition: all $transitionSpeed $ease
       &:hover
         color: $colorRed
   &__icons
@@ -113,7 +131,7 @@
       left: 50%
       max-height: 300px
       overflow: hidden
-      transform: translate3d(-50%, 25px,0)
+      transform: translate3d(-50%, 15px,0)
       opacity: 0
       pointer-events: none
       overflow: hidden
@@ -175,8 +193,13 @@
       img
         max-width: 100%
     &__name
+      min-width: 0
       font-size: 13px
       margin: 0 15px
+      max-width: 110px
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
     .icon-select
       font-size: 8px
       color: color($fontColor a(50%))
@@ -184,8 +207,8 @@
     &__dropdown
       position: absolute
       top: 68px
-      left: 0
       right: 0
+      min-width: 200px
       opacity: 0
       background: white
       overflow: hidden
@@ -234,6 +257,16 @@
     box-shadow: 0px 0px 6px color(black a(10%))
 
 
+@media($wide)
+  .header
+    &__navi
+      &--dashboard
+        margin-left: 30px
+        flex-shrink: 0
+    &__user
+      &__name
+        font-size: 0
+        margin: 0 5px
 
 
 @media($desktop)
@@ -243,6 +276,24 @@
         width: 120px
       .btn--muted
         margin-right: 0px
+    &__search
+      flex: 0 1 40px
+      &__box
+        position: absolute
+        right: 25px
+        top: 50%
+        transform: translate3d(0,-50%,0)
+      input
+        &:focus
+          width: 200px
+          + button
+            pointer-events: all
+
+      button
+        pointer-events: none
+    &__user
+      margin-right: -20px
+
 
 @media(width <= 850px)
   .header
@@ -258,16 +309,53 @@
     &__navi
       a
         font-size: 0
+      &--dashboard
+        display: none
+      .header__navi__tag
+        display: none
       .btn
         font-size: 15px
     .hamburger
       display: block
+    &__search
+      min-height: 65px
+      &__box
+        right: 15px
+    &__icons
+      padding: 0
+      a
+        padding-top: 21px
+        padding-bottom: 21px
+    &__user
+      margin-right: 0
+      border-right: 1px solid $borderColor
+      &__clickable
+        padding: 18px 20px 17px 20px
 
 @media($mobile)
   .header
     &__navi
       .btn--muted
         display: none
+
+
+@media(width <= 568px)
+  .header
+    &__search
+      flex: 0 1 0px
+      overflow: hidden
+      &__box
+        display: none
+    &__user
+      &__clickable
+        padding-left: 15px
+        padding-right: 15px
+
+
+@media(width <= 500px)
+  .header
+    &__user
+      display: none
 
 
 @media(width <= 480px)
@@ -279,7 +367,33 @@
         display: none
       .btn
         display: none
+    &__search
+      min-height: 55px
+    &__icons
+      a
+        padding-top: 15px
+        padding-bottom: 15px
+    &__notification
+      &__dropdown
+        top: 55px
+        left: auto
+        right: 0
+        transform: translate3d(17%, 15px,0)
+      &:hover
+        .header__notification__dropdown
+          transform: translate3d(17%, 0,0)
 
+@media($mobile-s)
+  .header
+    &__search
+      border-right: 0
+
+    &__notification
+      display: none !important
+    &__icons
+      a
+        padding-top: 18px
+        padding-bottom: 18px
 
 .mobile-navi
   display: none
@@ -303,10 +417,18 @@
     display: flex
     flex-direction: column
     a
+      position: relative
       padding: 10px
       transition: all $transitionSpeed $ease
       &:hover
         color: $colorRed
+      .header__navi__tag
+        top: 50%
+        right: -15px
+        font-size: 10px
+        min-height: 14px
+        min-width: 14px
+        transform: translate(-50%, -50%)
   .btn--muted
     margin-top: 20px
   &.active
