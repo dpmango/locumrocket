@@ -305,6 +305,8 @@ $(document).ready(function(){
     multipleDatesSeparator: " - "
   });
 
+  // BOOTSTRAP TOOLTIP
+  $('[data-toggle="tooltip"]').tooltip()
 
   // custom selects
   $('.ui-select__visible').on('click', function(e){

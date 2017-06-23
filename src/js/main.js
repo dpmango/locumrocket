@@ -293,8 +293,11 @@ $(document).ready(function () {
     multipleDatesSeparator: " - "
   });
 
+  // BOOTSTRAP TOOLTIP
+  $('[data-toggle="tooltip"]').tooltip
+
   // custom selects
-  $('.ui-select__visible').on('click', function (e) {
+  ();$('.ui-select__visible').on('click', function (e) {
     var that = this;
     // hide parents
     $(this).parent().parent().parent().find('.ui-select__visible').each(function (i, val) {
