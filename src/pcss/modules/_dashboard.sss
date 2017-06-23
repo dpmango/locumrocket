@@ -144,6 +144,10 @@
         left: 50%
         transform: translate(-50%, -50%)
         max-width: 100%
+
+    &__content
+      opacity: 1
+
     &__name
       margin-top: 15px
       font-size: 18px
@@ -219,7 +223,6 @@
           margin-right: 15px
           &:last-child
             margin-right: 0
-
 
   &__right
     flex: 0 1 67.7%
@@ -322,6 +325,7 @@
           font-weight: 600
           color: $fontColor70
       &__year
+        padding-left: 15px
         flex: 0 0 auto
         font-size: 14px
         color: $fontColor50
@@ -365,7 +369,6 @@
           display: inline-block
           margin-left: 5px
 
-
 @media($desktop)
   .d-welcome
     &__wrapper
@@ -374,7 +377,7 @@
       margin-right: auto
     &__left
       flex: 0 0 auto
-      order: 2
+      order: 1
       padding: 0
       &--facility
         display: flex
@@ -386,9 +389,19 @@
       flex: 0 1 50%
       margin-left: 15px
     &__right
-      order: 1
+      margin-top: 25px
+      order: 2
       flex: 0 0 auto
       padding: 0
+    &__pro
+      margin-bottom: 25px
+      display: flex
+      align-items: center
+      &__avatar
+        margin-left: auto
+      &__content
+        margin-left: 35px
+        margin-right: auto
 
 @media($mobile)
   .d-welcome
@@ -404,6 +417,19 @@
       flex: 0 1 100%
       margin-left: 0px
     &__about
+      &__head
+        padding-left: 15px
+        &__toggable
+          span
+            font-size: 0
+          .icon
+            margin-left: 10px
+        &__name
+          padding-top: 10px
+          padding-bottom: 10px
+      &--toggable
+        .d-welcome__about__head
+          padding-right: 15px
       &__row
         flex-wrap: wrap
         padding: 5px 15px
@@ -419,6 +445,41 @@
               padding-left: 105px
       &__item
         padding: 7px 10px
+      &__label
+        font-size: 12px
+        flex: 0 0 80px
+
+      &__value
+        font-size: 14px
+        p
+          font-size: 12px
+
+      &__record
+        padding: 15px
+        &__title
+          font-size: 16px
+          span
+            font-size: 14px
+        &__top
+          flex-direction: column-reverse
+        &__year
+          margin-bottom: 5px
+          padding-left: 0
+        &__content
+          font-size: 13px
+      &__testimonial
+        padding: 15px
+        flex-direction: column
+        &__content
+          flex: 0 0 auto
+        &__title
+          font-size: 16px
+        &__text
+          font-size: 13px
+        &__rating
+          margin-top: 15px
+          padding-left: 0
+
 
 @media(width < 580px)
   .d-welcome
@@ -427,6 +488,12 @@
         &--2col
           .d-welcome__about__item
             flex: 0 1 100%
+    &__pro
+      &__avatar
+        size: 180px
+      &__name
+        margin-top: 0
+
 
 @media($mobile-s)
   .d-welcome
@@ -447,6 +514,16 @@
               flex-basis: 100%
             &:nth-child(3)
               padding-left: 10px
+
+    &__pro
+      flex-direction: column
+      &__name
+        margin-top: 15px
+      &__avatar
+        margin-right: auto
+      &__content
+        margin-left: auto
+
 
 // SEARCH
 .d-search
