@@ -3,6 +3,7 @@
 // ALERTS
 .alerts
   margin: 20px auto
+  padding: 0 20px
   &__toggler
     text-align: center
     font-size: 12px
@@ -38,6 +39,8 @@
     margin-left: auto
     margin-right: auto
     font-size: 14px
+    line-height: 1.3
+    padding: 0 10px
     a
       color: $colorBlue
       transition: all $transitionSpeed $ease
@@ -47,7 +50,9 @@
   .icon-alert
     color: color($fontColor a(50%))
     font-size: 18px
+    flex: 0 0 20px
   .icon-close
+    flex: 0 0 10px
     font-size: 10px
     color: color($fontColor a(50%))
     cursor: pointer
@@ -55,6 +60,14 @@
     &:hover
       color: $fontColor
 
+@media($mobile)
+  .alert
+    &__text
+      font-size: 13px
+
+@media($mobile-s)
+  .alerts
+    padding: 0 15px
 
 .d-title
   font-size: 24px
@@ -85,15 +98,25 @@
     margin-left: -15px
     margin-right: -15px
     display: flex
-    width: 100%
+
   &__left
     flex: 0 1 33.3%
     padding: 0 15px
   &__facility-image
+    position: relative
     font-size: 0
-    margin-bottom: 30px
+    min-height: 200px
+    margin-bottom: 15px
+    overflow: hidden
     img
-      max-width: 100%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      min-width: 100%
+      min-height: 100%
+      height: auto
+      width: auto
   &__facility-map
     display: flex
     flex-direction: column
@@ -432,6 +455,87 @@
   > div[data-visible="0"]
     display: none
 
+@media($desktop)
+  .d-welcome
+    &__wrapper
+      flex-direction: column
+      margin-left: auto
+      margin-right: auto
+    &__left
+      flex: 0 0 auto
+      order: 2
+      padding: 0
+      &--facility
+        display: flex
+    &__facility-image
+      flex: 0 1 50%
+      margin-right: 15px
+      margin-bottom: 0
+    &__facility-map
+      flex: 0 1 50%
+      margin-left: 15px
+    &__right
+      order: 1
+      flex: 0 0 auto
+      padding: 0
+
+@media($mobile)
+  .d-welcome
+    &__left
+      &--facility
+        display: flex
+        flex-wrap: wrap
+    &__facility-image
+      flex: 0 1 100%
+      margin-right: 0px
+      margin-bottom: 15px
+    &__facility-map
+      flex: 0 1 100%
+      margin-left: 0px
+    &__about
+      &__row
+        flex-wrap: wrap
+        padding: 5px 15px
+        &--3col
+          .d-welcome__about__item
+            flex: 0 1 50%
+        &--contacts
+          .d-welcome__about__item
+            flex: 0 1 55%
+            &:nth-child(2), &:nth-child(3)
+              flex-basis: 45%
+            &:nth-child(3)
+              padding-left: 105px
+      &__item
+        padding: 7px 10px
+
+@media(width < 580px)
+  .d-welcome
+    &__about
+      &__row
+        &--2col
+          .d-welcome__about__item
+            flex: 0 1 100%
+
+@media($mobile-s)
+  .d-welcome
+    &__about
+      &__head
+        padding-left: 15px
+        &--toggable
+          padding-right: 15px
+      &__row
+        padding: 12px 5px
+        &--3col
+          .d-welcome__about__item
+            flex: 0 1 100%
+        &--contacts
+          .d-welcome__about__item
+            flex: 0 1 100%
+            &:nth-child(2), &:nth-child(3)
+              flex-basis: 100%
+            &:nth-child(3)
+              padding-left: 10px
 
 // RESULTS
 .d-results
