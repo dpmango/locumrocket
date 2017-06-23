@@ -69,7 +69,8 @@ $(document).ready(function(){
   });
 
   // Create pseudo links
-  $('[data-link]').on('click', function(){
+  $('[data-link]').on('click', function(e){
+    // log target and compare ?
     var parsedLink = $(this).data('link')
     if ( parsedLink.length >= 2 ){
       window.location.href = parsedLink

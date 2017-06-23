@@ -94,6 +94,12 @@ body, html {
         min-height: calc(100vh - 60px);
     }
 }
+@media(max-width: 640px) {
+    .page {}
+    .page--pad .page__content {
+        padding-bottom: 50px;
+    }
+}
 @media(max-width: 480px) {
     .page {
         margin-top: 55px;
@@ -3295,6 +3301,11 @@ button:focus {
     font-size: 24px;
     font-family: 'Montserrat';
 }
+@media(max-width: 414px) {
+    .d-title {
+        font-size: 22px;
+    }
+}
 .d-title-back {
     display: block;
     margin-bottom: 3px;
@@ -4108,7 +4119,9 @@ button:focus {
     }
 }
 @media(max-width: 640px) {
-    .d-search {}
+    .d-search {
+        margin-top: 45px;
+    }
     .d-search__box {
         padding: 25px 20px;
     }
@@ -4192,12 +4205,17 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+            align-items: center;
     -webkit-justify-content: space-between;
             justify-content: space-between;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
 }
 .d-results__card {
+    display: block;
     margin-top: 15px;
     border: 4px solid #EBEBEB;
     background: white;
@@ -4207,6 +4225,11 @@ button:focus {
 }
 .d-results__card:hover {
     border-color: #3AC9D3;
+}
+.d-results__card:hover .btn--ghost {
+    border-color: #3AC9D3;
+    background: #3AC9D3;
+    color: white;
 }
 .d-results__card__content {
     display: -webkit-box;
@@ -4310,13 +4333,21 @@ button:focus {
     display: flex;
     margin-bottom: 13px;
 }
+.d-results__card__item .icon-verify {
+    margin-left: 7px;
+    color: #2AC7A8;
+    font-size: 15px;
+}
+.d-results__card__item .icon-verify--not {
+    color: #A0B0B9;
+}
 .d-results__card__item:last-child {
     margin-bottom: 0;
 }
 .d-results__card__item__label {
-    -webkit-flex: 0 1 95px;
-        -ms-flex: 0 1 95px;
-            flex: 0 1 95px;
+    -webkit-flex: 0 0 95px;
+        -ms-flex: 0 0 95px;
+            flex: 0 0 95px;
     color: rgba(47, 49, 58, 0.5);
     font-size: 14px;
     -webkit-box-flex: 0;
@@ -4530,8 +4561,149 @@ button:focus {
     font-weight: 600;
     font-size: 14px;
 }
+@media(max-width: 1280px) {
+    .d-results {}
+    .d-results__card {}
+    .d-results__card__col {}
+    .d-results__card__col:nth-child(3) .d-results__card__item__label {
+        -webkit-flex-basis: 110px;
+                flex-basis: 110px;
+            -ms-flex-preferred-size: 110px;
+    }
+    .d-results__card__item {}
+    .d-results__card__item__label {
+        -webkit-flex-basis: 80px;
+                flex-basis: 80px;
+            -ms-flex-preferred-size: 80px;
+    }
+}
+@media(max-width: 992px) {
+    .d-results {}
+    .d-results__card {}
+    .d-results__card__col {}
+    .d-results__card__col:nth-child(1) {
+        -webkit-flex-basis: 450px;
+                flex-basis: 450px;
+            -ms-flex-preferred-size: 450px;
+    }
+    .d-results__card__col:nth-child(2) {
+        -webkit-flex-basis: 350px;
+                flex-basis: 350px;
+            -ms-flex-preferred-size: 350px;
+    }
+    .d-results__card__col:nth-child(3) {
+        display: none;
+    }
+}
+@media(max-width: 768px) {
+    .d-results {}
+    .d-results__card {}
+    .d-results__card__col {}
+    .d-results__card__col:nth-child(1) {
+        padding-left: 20px;
+    }
+    .d-results__card__cta {
+        padding-left: 20px;
+    }
+    .d-results__card__name {
+        font-size: 16px;
+    }
+    .d-results__card__rating {
+        margin-right: 30px;
+    }
+    .d-results__card__rating .icon {
+        font-size: 14px;
+    }
+    .d-results__card__rating span {
+        font-size: 16px;
+    }
+    .d-results__card__rating span span {
+        margin-right: 5px;
+        font-size: 13px;
+    }
+}
+@media(max-width: 640px) {
+    .d-results {
+        margin-top: 40px;
+    }
+    .d-results__card {}
+    .d-results__card__col {
+        border-right: 0;
+    }
+    .d-results__card__col:nth-child(2) {
+        display: none;
+    }
+    .d-results__card__cta {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        min-height: 40px;
+    }
+    .d-results__card__cta .btn {
+        display: none;
+    }
+    .d-results__card__rating {
+        margin-right: 20px;
+    }
+    .d-results__card__item {
+        -webkit-align-items: baseline;
+                align-items: baseline;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+    }
+    .d-results__card__item__label {
+        -webkit-flex: 0 0 70px;
+            -ms-flex: 0 0 70px;
+                flex: 0 0 70px;
+        font-size: 12px;
+        -webkit-box-flex: 0;
+    }
+}
+@media(max-width: 414px) {
+    .d-results {}
+    .d-results__card {}
+    .d-results__card__col {}
+    .d-results__card__col:nth-child(1) {
+        padding-left: 15px;
+    }
+    .d-results__card__primary {}
+    .d-results__card__primary-avatar {
+        -webkit-flex: 0 1 85px;
+            -ms-flex: 0 1 85px;
+                flex: 0 1 85px;
+        margin-right: 20px;
+        -webkit-box-flex: 0;
+    }
+    .d-results__card__avatar {
+        width: 85px;
+        height: 85px;
+    }
+    .d-results__card__item {}
+    .d-results__card__item--jsr .d-results__card__item__label {
+        font-size: 11px;
+    }
+    .d-results__card__item--jsr .d-results__card__item__value {
+        font-size: 13px;
+    }
+    .d-results__card__cta {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 10px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .d-results__card__name {
+        margin-bottom: 5px;
+    }
+    .d-results__card__rating {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 /* SORTABLE */
 .sortable {
+    text-align: right;
     font-size: 14px;
 }
 .sortable__label {
@@ -4542,6 +4714,7 @@ button:focus {
     position: relative;
     display: inline-block;
     margin-left: 5px;
+    text-align: left;
     cursor: pointer;
 }
 .sortable__filter > span {
@@ -5236,6 +5409,11 @@ button:focus {
     display: block;
     -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
+}
+@media(max-width: 640px) {
+    .h-feedback {
+        display: none;
+    }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -58,6 +58,12 @@ body, html
     margin-top: 60px
     min-height: calc(100vh - 60px)
 
+@media($mobile)
+  .page
+    &--pad
+      .page__content
+        padding-bottom: 50px
+
 @media(width <= 480px)
   .page
     margin-top: 55px

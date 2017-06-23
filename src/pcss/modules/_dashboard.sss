@@ -74,6 +74,8 @@
   font-size: 24px
   font-family: 'Montserrat'
   font-weight: 500
+  @media($mobile-s)
+    font-size: 22px
 
 .d-title-back
   display: block
@@ -542,7 +544,6 @@
             &:last-child
               margin-right: 0
 
-
 @media($tablet)
   .d-search
     &__box
@@ -564,6 +565,7 @@
 
 @media($mobile)
   .d-search
+    margin-top: 45px
     &__box
       padding: 25px 20px
     &__top
@@ -612,7 +614,9 @@
   &__head
     display: flex
     justify-content: space-between
+    align-items: center
   &__card
+    display: block
     margin-top: 15px
     border: 4px solid $borderColor
     cursor: pointer
@@ -620,6 +624,10 @@
     transition: border $transitionSpeed $ease
     &:hover
       border-color: $colorGreen
+      .btn--ghost
+        background: $colorGreen
+        color: white
+        border-color: $colorGreen
     &__content
       display: flex
       justify-content: space-between
@@ -670,13 +678,19 @@
       &:last-child
         margin-bottom: 0
       &__label
-        flex: 0 1 95px
+        flex: 0 0 95px
         font-size: 14px
         color: color($fontColor a(50%))
       &__value
         flex: 0 1 auto
         font-size: 14px
         font-weight: 600
+      .icon-verify
+        color: $colorForest
+        font-size: 15px
+        margin-left: 7px
+      .icon-verify--not
+        color: $colorMute
       &--jsr
         margin-top: 5px
         margin-bottom: 0
@@ -792,10 +806,107 @@
       font-weight: 600
       margin-right: 20px
 
+@media($wide)
+  .d-results
+    &__card
+      &__col
+        &:nth-child(3)
+          .d-results__card__item__label
+            flex-basis: 110px
+
+      &__item
+        &__label
+          flex-basis: 80px
+
+@media($desktop)
+  .d-results
+    &__card
+      &__col
+        &:nth-child(1)
+          flex-basis: 450px
+        &:nth-child(2)
+          flex-basis: 350px
+        &:nth-child(3)
+          display: none
+
+@media($tablet)
+  .d-results
+    &__card
+      &__col
+        &:nth-child(1)
+          padding-left: 20px
+      &__cta
+        padding-left: 20px
+      &__name
+        font-size: 16px
+      &__rating
+        margin-right: 30px
+        .icon
+          font-size: 14px
+        span
+          font-size: 16px
+          span
+            font-size: 13px
+            margin-right: 5px
+
+@media($mobile)
+  .d-results
+    margin-top: 40px
+    &__card
+      &__col
+        border-right: 0
+        &:nth-child(2)
+          display: none
+      &__cta
+        min-height: 40px
+        flex-wrap: wrap
+        .btn
+          display: none
+      &__rating
+        margin-right: 20px
+      &__item
+        align-items: baseline
+        &__label
+          font-size: 12px
+          flex: 0 0 70px
+
+
+
+@media($mobile-s)
+  .d-results
+    &__card
+      &__col
+        &:nth-child(1)
+          padding-left: 15px
+
+      &__primary
+        &-avatar
+          flex: 0 1 85px
+          margin-right: 20px
+      &__avatar
+        size: 85px
+      &__item
+        &--jsr
+          .d-results__card__item__label
+            font-size: 11px
+          .d-results__card__item__value
+            font-size: 13px
+
+      &__cta
+        padding: 10px
+        flex-direction: column
+      &__name
+        margin-bottom: 5px
+      &__rating
+        margin-left: auto
+        margin-right: auto
+
+
 
 // SORTABLE
 .sortable
   font-size: 14px
+  text-align: right
   &__label
     display: inline-block
     font-weight: 600
@@ -804,6 +915,7 @@
     margin-left: 5px
     position: relative
     cursor: pointer
+    text-align: left
     > span
       display: inline-block
       color: $colorBlue
@@ -844,7 +956,6 @@
       opacity: 1
       pointer-events: all
       transform: translate3d(0,0,0)
-
 
 
 // SETTINGS
