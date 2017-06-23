@@ -97,6 +97,7 @@
         color: $fontColor
 
   &__notification
+    position: relative
     font-size: 20px
     .icon-mark
       position: absolute
@@ -106,6 +107,53 @@
       border: 1px solid white
       background: $colorRed
       border-radius: 50%
+    &__dropdown
+      position: absolute
+      top: 68px
+      left: 50%
+      max-height: 300px
+      overflow: hidden
+      transform: translate3d(-50%, 25px,0)
+      opacity: 0
+      pointer-events: none
+      overflow: hidden
+      background: #FAFBFC
+      border-radius: 8px
+      font-size: 14px
+      min-width: 280px
+      box-shadow: 0px 5px 10px color(black a(15%))
+      transition: all $transitionSpeed $ease
+      &__head
+        position: relative
+        background: white
+        font-weight: 600
+        color: $colorMute
+        padding: 10px 20px
+        text-align: center
+        .header__navi__tag
+          position: static
+          display: inline-block
+          margin-top: -2px
+          font-size: 10px
+          min-width: 14px
+          min-height: 14px
+      &__item
+        color: $fontColor
+        font-size: 13px
+        display: block
+        border-top: 1px solid $borderColor
+        padding: 10px 20px
+        cursor: pointer
+        transition: background $transitionSpeed $ease
+        &:hover
+          background: color(#BDCDD6 a(20%))
+
+    &:hover
+      .header__notification__dropdown
+        transform: translate3d(-50%, 0,0)
+        opacity: 1
+        pointer-events: all
+
   &__messages
     font-size: 15px
 

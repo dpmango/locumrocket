@@ -1619,6 +1619,7 @@ button:focus {
     color: #2F313A;
 }
 .header__notification {
+    position: relative;
     font-size: 20px;
 }
 .header__notification .icon-mark {
@@ -1630,6 +1631,61 @@ button:focus {
     border: 1px solid white;
     border-radius: 50%;
     background: #EF4836;
+}
+.header__notification__dropdown {
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    overflow: hidden;
+    overflow: hidden;
+    min-width: 280px;
+    max-height: 300px;
+    border-radius: 8px;
+    background: #FAFBFC;
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(-50%, 25px,0);
+            transform: translate3d(-50%, 25px,0);
+    pointer-events: none;
+}
+.header__notification__dropdown__head {
+    position: relative;
+    padding: 10px 20px;
+    background: white;
+    color: #A0B0B9;
+    text-align: center;
+    font-weight: 600;
+}
+.header__notification__dropdown__head .header__navi__tag {
+    position: static;
+    display: inline-block;
+    margin-top: -2px;
+    min-width: 14px;
+    min-height: 14px;
+    font-size: 10px;
+}
+.header__notification__dropdown__item {
+    display: block;
+    padding: 10px 20px;
+    border-top: 1px solid #EBEBEB;
+    color: #2F313A;
+    font-size: 13px;
+    cursor: pointer;
+    -webkit-transition: background .25s ease-in-out;
+    transition: background .25s ease-in-out;
+}
+.header__notification__dropdown__item:hover {
+    background: rgba(189, 205, 214, 0.2);
+}
+.header__notification:hover .header__notification__dropdown {
+    opacity: 1;
+    -webkit-transform: translate3d(-50%, 0,0);
+            transform: translate3d(-50%, 0,0);
+    pointer-events: all;
 }
 .header__messages {
     font-size: 15px;

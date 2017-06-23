@@ -27,7 +27,16 @@
           <input type="text" placeholder="Search professionals ...">
           <button type="submit"><i class="icon icon-search"></i></button>
         </div>
-        <div class="header__icons"><a class="header__notification" href="#"><i class="icon icon-notification"></i><i class="icon-mark"></i></a><a class="header__messages" href="#"><i class="icon icon-message"></i></a></div>
+        <div class="header__icons"><a class="header__notification" href="#"><i class="icon icon-notification"></i><i class="icon-mark"></i>
+            <div class="header__notification__dropdown">
+              <div class="header__notification__dropdown__head">
+                 Notifications
+                <div class="header__navi__tag header__navi__tag--red">2</div>
+              </div>
+              <div class="header__notification__dropdown__item">A candidate has accepted your job. Go to My Jobs/Filled</div>
+              <div class="header__notification__dropdown__item">Contract #3341242 was completed. Please update billing information</div>
+              <div class="header__notification__dropdown__item">A candidate has accepted your job. Go to My Jobs/Filled</div>
+            </div></a><a class="header__messages" href="#"><i class="icon icon-message"></i></a></div>
         <div class="header__user">
           <div class="header__user__clickable"><a class="header__user__avatar" href="#"><img src="images/tmp/headerAvatar.jpg" srcset="images/tmp/headerAvatar@2x.jpg 2x"></a><a class="header__user__name" href="#">Savannah Nichols</a><i class="icon icon-select"></i></div>
           <div class="header__user__dropdown"><a href="#">Profile settings</a><a href="#">Sign Out</a></div>
@@ -90,7 +99,7 @@
                 </div>
                 <div class="ui-group">
                   <label>Address</label>
-                  <input class="ui-input" type="text" value="Your full adress .. ">
+                  <input class="ui-input" type="text" placeholder="Your full adress .. " autocompleate="false">
                 </div>
               </div>
               <div class="d-settings__section">
