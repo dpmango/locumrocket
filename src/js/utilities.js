@@ -33,7 +33,12 @@ $(document).one('focus.autoExpand', 'textarea.autoExpand', function () {
 }).on('input.autoExpand', 'textarea.autoExpand', function () {
     var minRows = this.getAttribute('data-min-rows') | 0,
         rows;
+    var maxRows = this.getAttribute('data-max-rows') | 10;
     this.rows = minRows;
     rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
-    this.rows = minRows + rows;
+    if (rows >= maxRows) {
+        this.rows = maxRows;
+    } else {
+        this.rows = minRows + rows;
+    }
 });

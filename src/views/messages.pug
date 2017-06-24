@@ -251,7 +251,22 @@ doctype html
                               i.icon.icon-forward(data-toggle="tooltip" data-placement="top" title="Forward message")
                             a(href='#')
                               i.icon.icon-rating(data-toggle="tooltip" data-placement="top" title="Save message")                      
-                                        
+                
+                .messages__post
+                  form(action='#')
+                    .messages__post__wrapper
+                      .messages__post__attach
+                        input(type='file' name='file' id='file')
+                        label(for='file')
+                          i.icon.icon-attach
+                      .messages__post__input
+                        textarea(type='text' rows='1' data-max-rows='10' placeholder='Write you message … ').autoExpand.js-emodji
+                        i.icon.icon-smile
+                          
+                          
+                      button(type='submit').messages__post__send
+                        i.icon.icon-send
+                                      
                     
       include shared/footer.pug
     include shared/modal-reg.pug

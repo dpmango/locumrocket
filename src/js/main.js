@@ -337,6 +337,15 @@ $(document).ready(function () {
     });
   });
 
+  // EMODJI PICKER
+  $('.js-emodji').emojiPicker({
+    height: '220px',
+    width: '350px'
+  });
+  $('.messages__post .icon-smile').on('click', function () {
+    $(this).closest('.messages__post').find('.emojiPickerIcon').click();
+  });
+
   // RANGESLIDER
   var rangeSlider = document.querySelector('.js-rangeslider');
 

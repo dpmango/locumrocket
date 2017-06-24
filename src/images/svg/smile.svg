@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>smile</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.3-Dash---Messages" transform="translate(-1284.000000, -673.000000)" fill-rule="nonzero" fill="#A0B0B9">
+            <g id="messages" transform="translate(215.000000, 95.000000)">
+                <g id="content-part" transform="translate(330.000000, -2.000000)">
+                    <g id="new-message" transform="translate(0.000000, 557.000000)">
+                        <path d="M752.5,32 C753.3,32 754,31.3 754,30.5 C754,29.7 753.3,29 752.5,29 C751.7,29 751,29.7 751,30.5 C751,31.3 751.7,32 752.5,32 Z M745.5,32 C746.3,32 747,31.3 747,30.5 C747,29.7 746.3,29 745.5,29 C744.7,29 744,29.7 744,30.5 C744,31.3 744.7,32 745.5,32 Z M749,39 C751.6,39 753.8,37.3 754.7,35 L743.3,35 C744.2,37.3 746.4,39 749,39 Z M749,23 C743.5,23 739,27.5 739,33 C739,38.5 743.5,43 749,43 C754.5,43 759,38.5 759,33 C759,27.5 754.5,23 749,23 Z M749,41 C744.6,41 741,37.4 741,33 C741,28.6 744.6,25 749,25 C753.4,25 757,28.6 757,33 C757,37.4 753.4,41 749,41 Z" id="smile"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
