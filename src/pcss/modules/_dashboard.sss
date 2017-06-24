@@ -821,7 +821,7 @@
     &__description
       flex: 0 1 auto
     &__numbers
-      flex: 0 1 auto
+      flex: 0 0 auto
       text-align: right
     &__price
       color: $colorGreen
@@ -859,6 +859,7 @@
 
     &__text
       font-size: 14px
+      line-height: 1.3
       margin-top: 10px
 
     &__cta
@@ -890,7 +891,6 @@
         &:nth-child(3)
           .d-results__card__item__label
             flex-basis: 110px
-
       &__item
         &__label
           flex-basis: 80px
@@ -905,6 +905,12 @@
           flex-basis: 350px
         &:nth-child(3)
           display: none
+    &__job
+      padding: 20px 25px 15px 25px
+      &__cta
+        &__btns
+          .btn
+            width: 120px
 
 @media($tablet)
   .d-results
@@ -925,6 +931,10 @@
           span
             font-size: 13px
             margin-right: 5px
+    &__job
+      &__cta
+        .show-more
+          display: none
 
 @media($mobile)
   .d-results
@@ -947,6 +957,36 @@
           font-size: 12px
           flex: 0 0 70px
 
+    &__job
+      &__content
+        flex-direction: column
+        justify-content: flex-start
+      &__description
+        flex: 0 0 auto
+        margin-bottom: 15px
+      &__numbers
+        text-align: left
+      &__scope
+        flex-wrap: wrap
+        margin-top: 5px
+        &__item
+          padding: 5px 0
+          .icon
+            flex: 0 0 15px
+          span
+            flex: 1 0 auto
+      &__text
+        margin-top: 5px
+      &__cta
+        flex-direction: column
+        .d-results__card__rating
+          margin-right: 0
+        &__btns
+          flex: 0 0 auto
+          margin-top: 10px
+          margin-right: auto
+          .btn--action-green
+            margin-left: 0
 
 
 @media($mobile-s)
@@ -978,6 +1018,21 @@
         margin-left: auto
         margin-right: auto
 
+    &__job
+      padding-left: 15px
+      padding-right: 15px
+      &__name
+        font-size: 16px
+        margin-bottom: 10px
+      &__text
+        margin-top: 10px
+      &__cta
+        &__btns
+          .btn
+            width: 110px
+            margin-left: 10px
+          .btn--action-green
+            margin-left: 0
 
 
 // SORTABLE
