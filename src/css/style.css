@@ -5358,7 +5358,7 @@ button:focus {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 9;
+    z-index: 7;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5673,6 +5673,39 @@ button:focus {
 .messages__post__send:hover .icon {
     color: #EF4836;
 }
+.messages__chat-toggler {
+    position: absolute;
+    top: 50%;
+    left: -44px;
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(0,-50%,0);
+            transform: translate3d(0,-50%,0);
+}
+.messages__chat-toggler span {
+    display: inline-block;
+    padding: 7px 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #1E8BC3;
+    color: white;
+    font-size: 15px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+.messages__chat-toggler.active {
+    -webkit-transform: translate3d(295px,-50%,0);
+            transform: translate3d(295px,-50%,0);
+}
+.messages__chat-toggler.active span {
+    background: #EF4836;
+}
 .emojiPickerIconWrap {
     display: block !important;
 }
@@ -5729,10 +5762,20 @@ button:focus {
     }
     .messages__chats {
         position: absolute;
-        top: 0;
+        top: -20px;
         left: 0;
+        z-index: 8;
         -webkit-transform: translate3d(-120%,0,0);
                 transform: translate3d(-120%,0,0);
+    }
+    .messages__chats .messages__scrollable {
+        height: -webkit-calc(100vh - 112px);
+        height: calc(100vh - 112px);
+    }
+    .messages__chats.active {
+        margin-left: -25px;
+        -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
     }
     .messages__dialog {
         margin-top: -50px;
@@ -5740,6 +5783,9 @@ button:focus {
     .messages__scrollable {
         max-height: -webkit-calc(100vh - 105px);
         max-height: calc(100vh - 105px);
+    }
+    .messages__chat-toggler {
+        display: block;
     }
 }
 @media(max-width: 500px) {
@@ -5773,6 +5819,15 @@ button:focus {
     .messages__wrapper {
         margin-right: -20px;
         margin-left: -20px;
+    }
+    .messages__chats {
+        left: 20px;
+    }
+    .messages__chat-toggler {
+        left: -20px;
+    }
+    .messages__chat-toggler.active {
+        left: -24px;
     }
     .messages__dialog {}
     .messages__dialog__head {}

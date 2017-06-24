@@ -277,6 +277,11 @@ $(document).ready(function () {
     });
   });
 
+  $('.messages__chat-toggler ').on('click', function () {
+    $('.messages__chats').toggleClass('active');
+    $(this).toggleClass('active');
+  });
+
   // DASHBOARD HELPERS
 
   $('.h-feedback__title').on('click', function () {
