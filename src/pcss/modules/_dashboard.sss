@@ -102,14 +102,17 @@
     margin-left: -15px
     margin-right: -15px
     display: flex
-
   &__left
     flex: 0 1 33.3%
     padding: 0 15px
+    &--facility
+      display: flex
+      flex-direction: column
+
   &__facility-image
+    flex: 1 1 50%
     position: relative
     font-size: 0
-    min-height: 200px
     margin-bottom: 15px
     overflow: hidden
     img
@@ -122,11 +125,11 @@
       height: auto
       width: auto
   &__facility-map
+    flex: 1 1 50%
     display: flex
     flex-direction: column
     > div
       flex: 1 0 auto
-      min-height: 200px
   &__pro
     text-align: center
     &__avatar
@@ -227,6 +230,9 @@
   &__right
     flex: 0 1 67.7%
     padding: 0 15px
+    &--facility
+      .d-welcome__about
+        margin-bottom: 0
   &__about
     margin-bottom: 15px
     &__head
@@ -380,7 +386,8 @@
       order: 1
       padding: 0
       &--facility
-        display: flex
+        flex-direction: row
+        height: 220px
     &__facility-image
       flex: 0 1 50%
       margin-right: 15px
@@ -407,6 +414,7 @@
   .d-welcome
     &__left
       &--facility
+        height: 420px
         display: flex
         flex-wrap: wrap
     &__facility-image
@@ -709,7 +717,7 @@
       display: flex
       justify-content: space-between
     &__col
-      flex: 0 1 400px
+      flex: 0 1 420px
       display: flex
       flex-direction: column
       padding: 15px
@@ -719,8 +727,10 @@
         margin: auto 0
       &:nth-child(1)
         padding-left: 35px
+        .d-results__card__item__label
+          flex-basis: 100px
       &:nth-child(2)
-        flex-basis: 330px
+        flex-basis: 310px
       &:nth-child(3)
         flex-basis: 420px
         border-right: 0
@@ -774,8 +784,8 @@
         align-items: center
         justify-content: space-between
         .d-results__card__item__label
+          flex: 0 0 auto !important
           font-size: 12px
-          flex-basis: auto
         .d-results__card__item__value
           font-weight: 700
     &__cta
@@ -900,7 +910,9 @@
     &__card
       &__col
         &:nth-child(1)
-          flex-basis: 450px
+          flex-basis: 480px
+          .d-results__card__item__label
+            flex-basis: 90px
         &:nth-child(2)
           flex-basis: 350px
         &:nth-child(3)
@@ -995,7 +1007,6 @@
       &__col
         &:nth-child(1)
           padding-left: 15px
-
       &__primary
         &-avatar
           flex: 0 1 85px
@@ -1034,6 +1045,17 @@
           .btn--action-green
             margin-left: 0
 
+@media(width <= 370px)
+  .d-results
+    &__card
+      &__col
+        &:nth-child(1)
+          padding-left: 15px
+          .d-results__card__item__label
+            flex-basis: 70px
+            font-size: 11px
+          .d-results__card__item__value
+            font-size: 12px
 
 // SORTABLE
 .sortable
@@ -1145,7 +1167,7 @@
     padding-top: 25px
   &__row
     display: flex
-    .ui-group
+    .ui-group, .ui-select
       flex: 0 1 300px
       margin-right: 7%
       &:last-child

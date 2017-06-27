@@ -46,9 +46,45 @@ doctype html
                     .ui-group
                       label Phone
                       input(type='tel' value='+358 (46) 646 1777').ui-input
-                  .ui-group
-                    label Address
-                    input(type='text' placeholder='Your full adress .. ' autocompleate='false').ui-input
+                  .d-settings__row
+                    .ui-group
+                      label Address
+                      input(type='text' placeholder='' autocompleate='false').ui-input
+                    .ui-group
+                      label Address 2
+                      input(type='text' placeholder='' autocompleate='false').ui-input
+                  .d-settings__row
+                    .ui-group
+                      label Country
+                      .ui-select
+                        .ui-select__visible 
+                          span Select Country
+                          i.icon.icon-select
+                        .ui-select__dropdown
+                          span.ui-select__dropdown__placeholder Select Country
+                          span(data-value='USA') USA
+                          span(data-value='Canada') Canada
+                          span(data-value='UK') UK
+                    .ui-group
+                      label State
+                      .ui-select
+                        .ui-select__visible 
+                          span Select State
+                          i.icon.icon-select
+                        .ui-select__dropdown
+                          span.ui-select__dropdown__placeholder Select Country
+                          span(data-value='USA') USA
+                          span(data-value='Canada') Canada
+                          span(data-value='UK') UK
+                                
+                  .d-settings__row
+                    .ui-group
+                      label ZIP / Postal code
+                      input(type='text' placeholder='' autocompleate='false').ui-input
+                    .ui-group
+                      label City
+                      input(type='text' placeholder='' autocompleate='false').ui-input
+
                 .d-settings__section
                   .ui-group
                     label Profile picture
